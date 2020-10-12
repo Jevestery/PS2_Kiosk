@@ -11,35 +11,35 @@
 
 /* ICON BASE COLORS */
 
-.material-icons.b-white {
+.material-icons-outlined.b-white {
   color: var(--b-white);
 }
 
-.material-icons.b-gray-100 {
+.material-icons-outlined.b-gray-100 {
   color: var(--b-gray-100);
 }
 
-.material-icons.b-gray-200 {
+.material-icons-outlined.b-gray-200 {
   color: var(--b-gray-200);
 }
 
-.material-icons.b-gray-300 {
+.material-icons-outlined.b-gray-300 {
   color: var(--b-gray-300);
 }
 
-.material-icons.b-gray-400 {
+.material-icons-outlined.b-gray-400 {
   color: var(--b-gray-400);
 }
 
-.material-icons.b-gray-500 {
+.material-icons-outlined.b-gray-500 {
   color: var(--b-gray-500);
 }
 
-.material-icons.b-gray-600 {
+.material-icons-outlined.b-gray-600 {
   color: var(--b-gray-600);
 }
 
-.material-icons.b-black {
+.material-icons-outlined.b-black {
   color: var(--b-black);
 }
 
@@ -47,23 +47,23 @@
 
 /* ICON PRIMARY COLORS */
 
-.material-icons.p-green {
+.material-icons-outlined.p-green {
   color: var(--p-green);
 }
 
-.material-icons.p-lime {
+.material-icons-outlined.p-lime {
   color: var(--p-lime);
 }
 
-.material-icons.p-orange {
+.material-icons-outlined.p-orange {
   color: var(--p-orange);
 }
 
-.material-icons.p-yellow {
+.material-icons-outlined.p-yellow {
   color: var(--p-yellow);
 }
 
-.material-icons.p-mint {
+.material-icons-outlined.p-mint {
   color: var(--p-mint);
 }
 
@@ -71,10 +71,10 @@
 
 /* ICON ACTIONABLE COLORS */
 
-.material-icons.a-blue {
+.material-icons-outlined.a-blue {
   color: var(--a-blue);
 }
-.material-icons.a-red {
+.material-icons-outlined.a-red {
   color: var(--a-red);
 }
 
@@ -90,26 +90,26 @@
 
 
 
-.material-icons.extra-small {
+.material-icons-outlined.extra-small {
   font-size: 18px;
 }
 
-.material-icons.small {
+.material-icons-outlined.small {
   font-size: 22px;
 }
 
-.material-icons.regular {
+.material-icons-outlined.regular {
   font-size: 26px;
 }
 
-.material-icons.medium {
+.material-icons-outlined.medium {
   font-size: 30px;
 }
 
-.material-icons.large {
+.material-icons-outlined.large {
   font-size: 40px;
 }
 
-.material-icons.extra-large {
-  font-size: 55px;
+.material-icons-outlined.extra-large {
+  font-size: 90px;
 }

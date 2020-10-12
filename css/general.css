@@ -57,12 +57,16 @@
 
 /* STYLES */
 
+.clickable {
+  cursor: pointer;
+}
+
 .margin0 {
   margin: 0 !important;
 }
 
-.margin10 {
-  margin: 5px 0 !important;
+.margin15 {
+  margin: 7.5px 0 !important;
 }
 
 .colorWhite {
@@ -147,6 +151,24 @@ html {
 }
 
 body {
-  background: white;
   margin: 0;
+}
+
+:root {
+  --screen-width: 1368px;
+  --screen-height: 912px;
+}
+
+main {
+
+  /********************************************************
+  ****** KIOSK DIMENSIONS: 1368px wide x 912px heigh ******
+  *********************************************************
+  *************** DELETE FOR FINAL PROTOTYPE **************
+  ********************************************************/
+
+  width: var(--screen-width);
+  height: var(--screen-height);
+  overflow: hidden;
+  background: var(--p-orange);
 }

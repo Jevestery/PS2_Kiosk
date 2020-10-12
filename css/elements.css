@@ -1,0 +1,160 @@
+
+
+
+
+
+/*-----------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------- Map ------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+/* MAP MAIN */
+
+#map {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+
+
+
+/*-----------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------- RIGHT SIDE MENU -------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+/* BUTTON ARRANGEMENT */
+
+#rightMenu {
+  position: fixed;
+  right: calc(100vw - var(--screen-width));
+  top: 50px;
+  margin-right: 50px;
+}
+
+
+
+/* INFO BUTTON */
+
+#infoBtnBG, #compassBG {
+  width: 100px;
+  height: 100px;
+  background-color: var(--a-blue);
+  border-radius: 100%;
+  box-shadow: 0 2px 10px var(--b-gray-600);
+  z-index: -1;
+}
+
+#infoIcon {
+  position: absolute;
+  margin: -95px 0 0 5px;
+}
+
+
+
+/* COLOR BUTTONS */
+
+#colorBtns {
+  margin: 75px 0;
+}
+
+.colorBtnBG {
+  width: 60px;
+  height: 60px;
+  background-color: var(--b-white);
+  box-shadow: 0 2px 10px var(--b-gray-500);
+  border-radius: 100%;
+  margin-left: 20px;
+}
+
+.colorBtn {
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  border-radius: 100%;
+  margin: -56px 0 0 24px;
+}
+
+#greenBtn {
+  background-color: var(--p-green);
+}
+
+#limeBtn {
+  background-color: var(--p-lime);
+}
+
+#yellowBtn {
+  background-color: var(--p-yellow);
+}
+
+#orangeBtn {
+  background-color: var(--p-orange);
+}
+
+#redBtn {
+  background-color: var(--a-red);
+}
+
+
+
+
+/* COMPASS */
+
+#compassBG {
+  margin-top: -10px;
+}
+
+#compassIcon {
+  position: absolute;
+  margin: -95px 0 0 5px;
+  transform: rotate(-45deg);
+}
+
+#north {
+  height: 43px;
+  width: 50px;
+  text-align: center;
+  background-color: var(--a-blue);
+  border-radius: 100% 100% 0 0;
+  box-shadow: 0 2px 10px var(--b-gray-600);
+  margin-left: 25px;
+}
+
+#north p {
+  font-family: proxima-nova, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 27px;
+  color: var(--b-white);
+  padding-top: 5px;
+}
+
+
+
+
+
+/*-----------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------ Buttons ----------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+/* MAIN */
+
+#buttons {
+  position: fixed;
+  bottom: calc(100vh - var(--screen-height));
+  left: 0;
+  height: 100px;
+  width: var(--screen-width);
+  background-color: var(--p-mint);
+  margin: 0 auto;
+}
