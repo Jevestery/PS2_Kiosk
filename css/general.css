@@ -31,6 +31,7 @@
   --p-lime: #9DDB57;
   --p-orange: #FB9D50;
   --p-yellow: #FFE39E;
+  --p-yellow-alt: #EDCE80;
   --p-mint: #86DFC6;
 }
 
@@ -41,6 +42,42 @@
 :root {
   --a-blue: #005AE6;
   --a-red: #E10000;
+}
+
+
+
+/* SHORTHAND CLASSES */
+
+.colorWhite {
+  color: var(--b-white) !important;
+}
+
+.colorBlack {
+  color: var(--b-black) !important;
+}
+
+.colorGreen {
+  color: var(--p-green) !important;
+}
+
+.colorLime {
+  color: var(--p-lime) !important;
+}
+
+.colorYellow {
+  color: var(--p-yellow) !important;
+}
+
+.colorYellowAlt {
+  color: var(--p-yellow-alt) !important;
+}
+
+.colorOrange {
+  color: var(--p-orange) !important;
+}
+
+.colorRed {
+  color: var(--a-red) !important;
 }
 
 
@@ -69,12 +106,24 @@
   margin: 7.5px 0 !important;
 }
 
-.colorWhite {
-  color: var(--b-white) !important;
+@keyframes opacity {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
 
-.colorBlack {
-  color: var(--b-black) !important;
+@keyframes opacity-rev {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+
+@keyframes opacity-9 {
+  from {opacity: 0;}
+  to {opacity: 0.9;}
+}
+
+@keyframes opacity-9-rev {
+  from {opacity: 0.9;}
+  to {opacity: 0;}
 }
 
 

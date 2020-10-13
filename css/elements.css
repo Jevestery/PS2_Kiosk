@@ -50,10 +50,9 @@
   background-color: var(--a-blue);
   border-radius: 100%;
   box-shadow: 0 2px 10px var(--b-gray-600);
-  z-index: -1;
 }
 
-#infoIcon {
+#infoIcon, #compassIcon {
   position: absolute;
   margin: -95px 0 0 5px;
 }
@@ -105,6 +104,70 @@
 
 
 
+/* COLOR BTN LABELS */
+
+.btnLabel {
+  position: absolute;
+  right: 20px;
+  height: 60px;
+  width: 175px;
+  background-color: var(--b-white);
+  border-radius: 30px;
+  box-shadow: 0 2px 10px var(--b-gray-500);
+  animation: labelAppear 0.6s forwards;
+  display: none;
+}
+
+.btnLabel p {
+  font-family: proxima-nova, sans-serif;
+  font-weight: 700;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 0;
+  padding-top: 2px;
+  margin-left: 22px;
+}
+
+.btnLabelClose {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  background-color: var(--b-white);
+  border-radius: 100%;
+  box-shadow: 0 2px 10px var(--b-gray-500);
+  margin-top: 15px;
+  animation: labelCloseAppear 0.6s forwards;
+  display: none;
+}
+
+.btnLabelCloseIcon {
+  padding: 4px 0 0 4px;
+}
+
+@keyframes labelAppear {
+  from {width: 100px; opacity: 0;}
+  to {width: 175px; opacity: 1;}
+}
+
+@keyframes labelDisappear {
+  from {width: 175px; opacity: 1;}
+  to {width: 100px; opacity: 0;}
+}
+
+@keyframes labelCloseAppear {
+  from {margin-left: 40px; opacity: 0;}
+  to {margin-left: 90px; opacity: 1;}
+}
+
+@keyframes labelCloseDisappear {
+  from {margin-left: 90px; opacity: 1;}
+  to {margin-left: 40px; opacity: 0;}
+}
+
+
+
+
+
 
 /* COMPASS */
 
@@ -113,8 +176,6 @@
 }
 
 #compassIcon {
-  position: absolute;
-  margin: -95px 0 0 5px;
   transform: rotate(-45deg);
 }
 
@@ -137,6 +198,38 @@
   padding-top: 5px;
 }
 
+@keyframes buurtOpacityOut {
+  from {opacity: 1;}
+  to {opacity: 0.1;}
+}
+
+@keyframes buurtOpacityIn {
+  from {opacity: 0.1;}
+  to {opacity: 1;}
+}
+
+
+
+
+
+/*-----------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------- RIGHT SIDE MENU -------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------*/
+
+
+/* OPACITY */
+
+#Path_288-2_1_, #Path_294-2_1_, #Path_285-2_1_, #Path_284-2_1_, #Path_291-2_1_, #Path_293-2_1_, #Path_295-2_1_, #Path_286-2_1_, #Path_283-2_1_, #Path_290-2_1_, #Path_292-2_1_, #Path_287-2_1_, #Path_289-2_1_ {
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+
+
+
+
+
+
 
 
 
@@ -157,4 +250,50 @@
   width: var(--screen-width);
   background-color: var(--p-mint);
   margin: 0 auto;
+}
+
+
+
+
+
+
+
+/*-----------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------ INFORMATION PAGES ------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+/* OVERLAY */
+
+#blackout {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--screen-width);
+  height: var(--screen-height);
+  background-color: black;
+  animation: opacity-9 0.4s forwards;
+  display: none;
+}
+
+#closeInfoBtn {
+  position: fixed;
+  right: calc(100vw - var(--screen-width));
+  top: 50px;
+  margin-right: 50px;
+  display: none;
+}
+
+#closeInfoBtnBG {
+  width: 100px;
+  height: 100px;
+  background-color: var(--a-blue);
+  border-radius: 100%;
+  box-shadow: 0 2px 10px var(--b-gray-600);
+}
+
+#closeInfoIcon {
+  position: absolute;
+  margin: -95px 0 0 5px;
 }

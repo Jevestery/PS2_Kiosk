@@ -15,13 +15,17 @@
       <link rel="stylesheet" href="css/general.css">
       <link rel="stylesheet" href="css/icons.css">
       <link rel="stylesheet" href="css/elements.css">
-      <script src="scripts/smoothScroll.js" defer></script>
 
+      <script src="scripts/smoothScroll.js" defer></script>
+      <script src="scripts/infoOverlay.js" defer></script>
+      <script src="scripts/colorButtons.js" defer></script>
 
 
       <!-- Fonts and Icons -->
       <link rel="stylesheet" href="https://use.typekit.net/ahj7nfe.css">
       <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined|Material+Icons+Round" rel="stylesheet">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
 
 
   </head>
@@ -2609,33 +2613,43 @@
 
       <div id="rightMenu">
 
-        <div id="infoBtnBG" class="clickable"></div>
-        <i id="infoIcon" class="material-icons-outlined b-white extra-large clickable">info</i>
+        <div id="infoBtnBG" class="clickable" onclick="infoBlackout()"></div>
+        <i id="infoIcon" class="material-icons-outlined b-white extra-large clickable" onclick="infoBlackout()">info</i>
 
 
         <div id="colorBtns">
-          <div class="colorBtnBG clickable"></div>
-          <div id="greenBtn" class="colorBtn clickable"></div>
+          <div id="greenBtnLabel" class="btnLabel"><p class="colorGreen">&gt;&nbsp;100&nbsp;<i class="fas fa-star"></i></p></div>
+          <div id="greenBtnClose" class="btnLabelClose clickable" onclick="activateBtn(greenBtn)"><i class="material-icons-outlined btnLabelCloseIcon b-black small clickable">close</i></div>
+          <div id="greenBtnBG" class="colorBtnBG clickable"></div>
+          <div id="greenBtn" class="colorBtn clickable" onclick="activateBtn(greenBtn)"></div>
 
           <div class="margin15"></div>
 
-          <div class="colorBtnBG clickable"></div>
-          <div id="limeBtn" class="colorBtn clickable"></div>
+          <div id="limeBtnLabel" class="btnLabel"><p class="colorLime">80-99&nbsp;<i class="fas fa-star"></i></p></div>
+          <div id="limeBtnClose" class="btnLabelClose clickable" onclick="activateBtn(limeBtn)"><i class="material-icons-outlined btnLabelCloseIcon b-black small clickable">close</i></div>
+          <div id="limeBtnBG" class="colorBtnBG clickable"></div>
+          <div id="limeBtn" class="colorBtn clickable" onclick="activateBtn(limeBtn)"></div>
 
           <div class="margin15"></div>
 
-          <div class="colorBtnBG clickable"></div>
-          <div id="yellowBtn" class="colorBtn clickable"></div>
+          <div id="yellowBtnLabel" class="btnLabel"><p class="colorYellowAlt">60-79&nbsp;<i class="fas fa-star"></i></p></div>
+          <div id="yellowBtnClose" class="btnLabelClose clickable" onclick="activateBtn(yellowBtn)"><i class="material-icons-outlined btnLabelCloseIcon b-black small clickable">close</i></div>
+          <div id="yellowBtnBG" class="colorBtnBG clickable"></div>
+          <div id="yellowBtn" class="colorBtn clickable" onclick="activateBtn(yellowBtn)"></div>
 
           <div class="margin15"></div>
 
-          <div class="colorBtnBG clickable"></div>
-          <div id="orangeBtn" class="colorBtn clickable"></div>
+          <div id="orangeBtnLabel" class="btnLabel"><p class="colorOrange">40-59&nbsp;<i class="fas fa-star"></i></p></div>
+          <div id="orangeBtnClose" class="btnLabelClose clickable" onclick="activateBtn(orangeBtn)"><i class="material-icons-outlined btnLabelCloseIcon b-black small clickable">close</i></div>
+          <div id="orangeBtnBG" class="colorBtnBG clickable"></div>
+          <div id="orangeBtn" class="colorBtn clickable" onclick="activateBtn(orangeBtn)"></div>
 
           <div class="margin15"></div>
 
-          <div class="colorBtnBG clickable"></div>
-          <div id="redBtn" class="colorBtn clickable"></div>
+          <div id="redBtnLabel" class="btnLabel"><p class="colorRed">&lt;&nbsp;40&nbsp;<i class="fas fa-star"></i></p></div>
+          <div id="redBtnClose" class="btnLabelClose clickable" onclick="activateBtn(redBtn)"><i class="material-icons-outlined btnLabelCloseIcon b-black small clickable">close</i></div>
+          <div id="redBtnBG" class="colorBtnBG clickable"></div>
+          <div id="redBtn" class="colorBtn clickable" onclick="activateBtn(redBtn)"></div>
         </div>
 
 
@@ -2656,6 +2670,20 @@
         <div class="menuBtn"></div>
         <div class="menuBtn"></div>
         <div class="menuBtn"></div>
+      </div>
+
+
+
+
+      <!-- ++++++++++++++++++++++++++++++++||
+      ||____________ INFO PAGES ___________||
+      ||+++++++++++++++++++++++++++++++++ -->
+
+      <div id="blackout"></div>
+
+      <div id="closeInfoBtn">
+        <div id="closeInfoBtnBG" class="clickable" onclick="infoBlackout()"></div>
+        <i id="closeInfoIcon" class="material-icons-outlined b-white extra-large clickable" onclick="infoBlackout()">highlight_off</i>
       </div>
 
 
