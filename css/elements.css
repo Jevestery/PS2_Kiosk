@@ -36,7 +36,7 @@
 #rightMenu {
   position: fixed;
   right: calc(100vw - var(--screen-width));
-  top: 50px;
+  top: 40px;
   margin-right: 50px;
 }
 
@@ -62,7 +62,7 @@
 /* COLOR BUTTONS */
 
 #colorBtns {
-  margin: 75px 0;
+  margin: 50px 0;
 }
 
 .colorBtnBG {
@@ -79,7 +79,7 @@
   width: 52px;
   height: 52px;
   border-radius: 100%;
-  margin: -56px 0 0 24px;
+  margin: -55.5px 0 0 23.8px;
 }
 
 #greenBtn {
@@ -141,7 +141,7 @@
 }
 
 .btnLabelCloseIcon {
-  padding: 4px 0 0 4px;
+  padding: 5.5px 0 0 4px;
 }
 
 @keyframes labelAppear {
@@ -243,13 +243,180 @@
 /* MAIN */
 
 #buttons {
+
+}
+
+
+
+/* INTERACTIVE BUTTONS */
+
+#menuBtn1, #menuBtn2, #menuBtn3 {
   position: fixed;
   bottom: calc(100vh - var(--screen-height));
-  left: 0;
-  height: 100px;
-  width: var(--screen-width);
-  background-color: var(--p-mint);
-  margin: 0 auto;
+  margin-bottom: 75px;
+}
+
+#menuBtn1 {
+  left: 50px;
+}
+
+#menuBtn2 {
+  left: 485px;
+}
+
+#menuBtn3 {
+  right: calc(100vw - var(--screen-width));
+  margin-right: 450px;
+}
+
+.menuBtn, .leftMenuBtn, .rightMenuBtn {
+  position: absolute;
+  text-align: center;
+  box-shadow: 0 2px 10px var(--b-gray-500);
+}
+
+.menuBtn {
+  width: 400px;
+  height: 70px;
+  background-color: var(--b-white);
+  border-radius: 35px 35px 0 0;
+  bottom: 0;
+}
+
+.menuBtn h3 {
+  color: var(--b-black);
+  padding-top: 4px;
+}
+
+.leftMenuBtn, .rightMenuBtn {
+  width: 200px;
+  height: 55px;
+  border-bottom: var(--b-white) 3px solid;
+  border-left: var(--b-white) 3px solid;
+}
+
+.leftMenuBtn i, .rightMenuBtn i {
+  display: inline-block;
+  padding-top: 11px;
+}
+
+.leftMenuBtn {
+  background-color: var(--p-lime);
+  border-radius: 0 0 0 35px;
+}
+
+.rightMenuBtn {
+  left: 200px;
+  background-color: var(--p-lime);
+  border-right: var(--b-white) 3px solid;
+  border-radius: 0 0 35px 0;
+}
+
+.btnText {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+@keyframes btnActive {
+  from {background-color: var(--p-lime);}
+  to {background-color: var(--b-black);}
+}
+
+@keyframes btnDeactive {
+  from {background-color: var(--b-black);}
+  to {background-color: var(--p-lime);}
+}
+
+@keyframes btnIconActive {
+  from {color: var(--b-black);}
+  to {color: var(--b-white);}
+}
+
+@keyframes btnIconDeactive {
+  from {color: var(--b-white);}
+  to {color: var(--b-black);}
+}
+
+#menuBtn1Left, #menuBtn2Left, #menuBtn3Left, #menuBtn1Right, #menuBtn2Right, #menuBtn3Right, #menuBtn1LeftIcon, #menuBtn2LeftIcon, #menuBtn3LeftIcon, #menuBtn1RightIcon, #menuBtn2RightIcon, #menuBtn3RightIcon {
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+
+
+/* INTERACTIVE BUTTONS SUB MENU */
+
+.menuBtnSubBtn {
+  position: fixed;
+  height: 50px;
+  width: 133px;
+  text-align: center;
+  background-color: var(--b-white);
+  box-shadow: 0 2px 10px var(--b-gray-500);
+  animation: subIn 0.5s forwards;
+}
+
+#menuBtn1Sub, #menuBtn2Sub, #menuBtn3Sub {
+  display: none;
+}
+
+.menuBtnSub div h4 {
+  margin-top: 15px;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.leftMenuBtnSub {
+  border-radius: 25px 0 0 25px;
+}
+
+.middleMenuBtnSub {
+  left: 183px;
+  border-left: var(--b-gray-400) 3px solid;
+  border-right: var(--b-gray-400) 3px solid;
+}
+
+.rightMenuBtnSub {
+  left: 316px;
+  border-radius: 0 25px 25px 0;
+}
+
+@keyframes subIn {
+  from {bottom: 250px; opacity: 0;}
+  to {bottom: 295px; opacity: 1;}
+}
+
+@keyframes subOut {
+  from {bottom: 295px; opacity: 1;}
+  to {bottom: 250px; opacity: 1;}
+}
+
+#menuBtn1SubMiddle, #menuBtn2SubMiddle, #menuBtn3SubMiddle {
+  background-color: var(--b-black);
+}
+
+#menuBtn1SubMiddleText, #menuBtn2SubMiddleText, #menuBtn3SubMiddleText {
+  color: var(--b-white);
+}
+
+@keyframes subBtnIn {
+  from {background-color: var(--b-white);}
+  to {background-color: var(--b-black);}
+}
+
+@keyframes subBtnOut {
+  from {background-color: var(--b-black);}
+  to {background-color: var(--b-white);}
+}
+
+@keyframes subBtnTextIn {
+  from {color: var(--b-black);}
+  to {color: var(--b-white);}
+}
+
+@keyframes subBtnTextOut {
+  from {color: var(--b-white);}
+  to {color: var(--b-black);}
 }
 
 

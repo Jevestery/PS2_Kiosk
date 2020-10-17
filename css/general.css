@@ -156,6 +156,25 @@ h1 {
   color: var(--b-black);
 }
 
+h2 {}
+
+h3 {
+  font-family: proxima-nova, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 1.8rem;
+  color: var(--b-gray-600);
+}
+
+h4 {
+  font-family: proxima-nova, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 17px;
+  color: var(--b-black);
+}
+
 
 
 /* PARAGRAPHS */
