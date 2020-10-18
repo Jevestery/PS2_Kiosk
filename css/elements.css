@@ -213,13 +213,39 @@
 
 
 /*-----------------------------------------------------------------------------------------------------------------------------
-------------------------------------------------------- RIGHT SIDE MENU -------------------------------------------------------
+------------------------------------------------------------- MAP -------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+/* COLORS */
+
+.greenBuurt {
+  fill: var(--p-green) !important;
+}
+
+.limeBuurt {
+  fill: var(--p-lime) !important;
+}
+
+.yellowBuurt {
+  fill: var(--p-yellow) !important;
+}
+
+.orangeBuurt {
+  fill: var(--p-orange) !important;
+}
+
+.redBuurt {
+  fill: var(--a-red) !important;
+}
+
 
 
 /* OPACITY */
 
 #Path_288-2_1_, #Path_294-2_1_, #Path_285-2_1_, #Path_284-2_1_, #Path_291-2_1_, #Path_293-2_1_, #Path_295-2_1_, #Path_286-2_1_, #Path_283-2_1_, #Path_290-2_1_, #Path_292-2_1_, #Path_287-2_1_, #Path_289-2_1_ {
+  fill: var(--b-white);
   animation-duration: 0.3s;
   animation-fill-mode: forwards;
 }
@@ -348,6 +374,7 @@
 
 .menuBtnSubBtn {
   position: fixed;
+  bottom: calc(100vh - var(--screen-height));
   height: 50px;
   width: 133px;
   text-align: center;
@@ -390,13 +417,13 @@
 }
 
 @keyframes subIn {
-  from {bottom: 250px; opacity: 0;}
-  to {bottom: 295px; opacity: 1;}
+  from {margin-bottom: 125px; opacity: 0;}
+  to {margin-bottom: 165px; opacity: 1;}
 }
 
 @keyframes subOut {
-  from {bottom: 295px; opacity: 1;}
-  to {bottom: 250px; opacity: 1;}
+  from {margin-bottom: 165px; opacity: 1;}
+  to {margin-bottom: 125px; opacity: 1;}
 }
 
 #menuBtn1SubMiddle, #menuBtn2SubMiddle, #menuBtn3SubMiddle {

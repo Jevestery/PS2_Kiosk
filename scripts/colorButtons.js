@@ -2,8 +2,9 @@
 
 
 // ---------------------------------------------------------------------- //
-// ---------------------- COLOR BUTTONS INFO LABEL ---------------------- //
+// ------------------------------ VARIABLES ----------------------------- //
 // ---------------------------------------------------------------------- //
+
 
 
 var greenActive = false;
@@ -33,23 +34,33 @@ var redBtnClose = document.getElementById('redBtnClose');
 
 
 
+
+
+
+// ---------------------------------------------------------------------- //
+// ---------------------- OPEN AND ACTIVATE LABELS ---------------------- //
+// ---------------------------------------------------------------------- //
+
+
+
 function activateBtn(btnColor, btnColorBG) {
 
 
 	if (btnColor == greenBtn) {
 
+		limeActive = false;
+		yellowActive = false;
+		orangeActive = false;
+		redActive = false;
+
 		if (greenActive == false) {
 
-			greenBtnLabel.style.animationName = 'labelAppear';
-			greenBtnClose.style.animationName = 'labelCloseAppear';
-			greenBtnLabel.style.display = 'block';
-			greenBtnClose.style.display = 'block';
-
+			showAnim(greenBtnLabel, greenBtnClose);
 			closeAllOther(btnColor);
 
 			allOpacityOut();
 			setTimeout(function(){
-				greenOpacityOut();
+				greenOpacityIn();
 			}, 300);
 
 			setTimeout(function(){
@@ -58,32 +69,32 @@ function activateBtn(btnColor, btnColorBG) {
 
 		} else {
 
-			greenBtnLabel.style.animationName = 'labelDisappear';
-			greenBtnClose.style.animationName = 'labelCloseDisappear';
-
+			closeOneAnim(greenBtnLabel, greenBtnClose);
 			allOpacityIn();
 
 			setTimeout(function(){
-				greenBtnLabel.style.display = 'none';
-				greenBtnClose.style.display = 'none';
+				closeOneDisplay(greenBtnLabel, greenBtnClose);
 				greenActive = false;
 			}, 600);
 		};
 
+
+
 	} else if (btnColor == limeBtn) {
+
+		greenActive = false;
+		yellowActive = false;
+		orangeActive = false;
+		redActive = false;
 
 		if (limeActive == false) {
 
-			limeBtnLabel.style.animationName = 'labelAppear';
-			limeBtnClose.style.animationName = 'labelCloseAppear';
-			limeBtnLabel.style.display = 'block';
-			limeBtnClose.style.display = 'block';
-
+			showAnim(limeBtnLabel, limeBtnClose);
 			closeAllOther(btnColor);
 
 			allOpacityOut();
 			setTimeout(function(){
-				limeOpacityOut();
+				limeOpacityIn();
 			}, 300);
 
 			setTimeout(function(){
@@ -92,32 +103,32 @@ function activateBtn(btnColor, btnColorBG) {
 
 		} else {
 
-			limeBtnLabel.style.animationName = 'labelDisappear';
-			limeBtnClose.style.animationName = 'labelCloseDisappear';
-
+			closeOneAnim(limeBtnLabel, limeBtnClose);
 			allOpacityIn();
 
 			setTimeout(function(){
-				limeBtnLabel.style.display = 'none';
-				limeBtnClose.style.display = 'none';
+				closeOneDisplay(limeBtnLabel, limeBtnClose);
 				limeActive = false;
 			}, 600);
 		};
 
+
+
 	} else if (btnColor == yellowBtn) {
+
+		greenActive = false;
+		limeActive = false;
+		orangeActive = false;
+		redActive = false;
 
 		if (yellowActive == false) {
 
-			yellowBtnLabel.style.animationName = 'labelAppear';
-			yellowBtnClose.style.animationName = 'labelCloseAppear';
-			yellowBtnLabel.style.display = 'block';
-			yellowBtnClose.style.display = 'block';
-
+			showAnim(yellowBtnLabel, yellowBtnClose);
 			closeAllOther(btnColor);
 
 			allOpacityOut();
 			setTimeout(function(){
-				yellowOpacityOut();
+				yellowOpacityIn();
 			}, 300);
 
 			setTimeout(function(){
@@ -126,32 +137,32 @@ function activateBtn(btnColor, btnColorBG) {
 
 		} else {
 
-			yellowBtnLabel.style.animationName = 'labelDisappear';
-			yellowBtnClose.style.animationName = 'labelCloseDisappear';
-
+			closeOneAnim(yellowBtnLabel, yellowBtnClose);
 			allOpacityIn();
 
 			setTimeout(function(){
-				yellowBtnLabel.style.display = 'none';
-				yellowBtnClose.style.display = 'none';
+				closeOneDisplay(yellowBtnLabel, yellowBtnClose);
 				yellowActive = false;
 			}, 600);
 		};
 
+
+
 	} else if (btnColor == orangeBtn) {
+
+		greenActive = false;
+		limeActive = false;
+		yellowActive = false;
+		redActive = false;
 
 		if (orangeActive == false) {
 
-			orangeBtnLabel.style.animationName = 'labelAppear';
-			orangeBtnClose.style.animationName = 'labelCloseAppear';
-			orangeBtnLabel.style.display = 'block';
-			orangeBtnClose.style.display = 'block';
-
+			showAnim(orangeBtnLabel, orangeBtnClose);
 			closeAllOther(btnColor);
 
 			allOpacityOut();
 			setTimeout(function(){
-				orangeOpacityOut();
+				orangeOpacityIn();
 			}, 300);
 
 			setTimeout(function(){
@@ -160,32 +171,32 @@ function activateBtn(btnColor, btnColorBG) {
 
 		} else {
 
-			orangeBtnLabel.style.animationName = 'labelDisappear';
-			orangeBtnClose.style.animationName = 'labelCloseDisappear';
-
+			closeOneAnim(orangeBtnLabel, orangeBtnClose);
 			allOpacityIn();
 
 			setTimeout(function(){
-				orangeBtnLabel.style.display = 'none';
-				orangeBtnClose.style.display = 'none';
+				closeOneDisplay(orangeBtnLabel, orangeBtnClose);
 				orangeActive = false;
 			}, 600);
 		};
 
+
+
 	} else if (btnColor == redBtn) {
+
+		greenActive = false;
+		limeActive = false;
+		orangeActive = false;
+		orangeActive = false;
 
 		if (redActive == false) {
 
-			redBtnLabel.style.animationName = 'labelAppear';
-			redBtnClose.style.animationName = 'labelCloseAppear';
-			redBtnLabel.style.display = 'block';
-			redBtnClose.style.display = 'block';
-
+			showAnim(redBtnLabel, redBtnClose);
 			closeAllOther(btnColor);
 
 			allOpacityOut();
 			setTimeout(function(){
-				redOpacityOut();
+				redOpacityIn();
 			}, 300);
 
 			setTimeout(function(){
@@ -194,21 +205,61 @@ function activateBtn(btnColor, btnColorBG) {
 
 		} else {
 
-			redBtnLabel.style.animationName = 'labelDisappear';
-			redBtnClose.style.animationName = 'labelCloseDisappear';
-
+			closeOneAnim(redBtnLabel, redBtnClose);
 			allOpacityIn();
 
 			setTimeout(function(){
-				redBtnLabel.style.display = 'none';
-				redBtnClose.style.display = 'none';
+				closeOneDisplay(redBtnLabel, redBtnClose);
 				redActive = false;
 			}, 600);
 		};
 
 	};
+
+	setTimeout(function(){
+		console.log(greenActive);
+		console.log(limeActive);
+		console.log(yellowActive);
+		console.log(orangeActive);
+		console.log(redActive);
+	}, 650);
 };
 
+
+
+
+function showAnim(label, close) {
+	label.style.animationName = 'labelAppear';
+	close.style.animationName = 'labelCloseAppear';
+	label.style.display = 'block';
+	close.style.display = 'block';
+}
+
+
+
+
+function closeOneAnim(label, close) {
+	label.style.animationName = 'labelDisappear';
+	close.style.animationName = 'labelCloseDisappear';
+}
+
+
+
+
+function closeOneDisplay(label, close) {
+	label.style.display = 'none';
+	close.style.display = 'none';
+}
+
+
+
+
+
+
+
+// ---------------------------------------------------------------------- //
+// --------------------- CLOSE AND DEACTIVATE LABELS -------------------- //
+// ---------------------------------------------------------------------- //
 
 
 
@@ -216,136 +267,95 @@ function closeAllOther(btnColor) {
 
 	if (btnColor == greenBtn) {
 
-		limeBtnLabel.style.animationName = 'labelDisappear';
-		limeBtnClose.style.animationName = 'labelCloseDisappear';
-		yellowBtnLabel.style.animationName = 'labelDisappear';
-		yellowBtnClose.style.animationName = 'labelCloseDisappear';
-		orangeBtnLabel.style.animationName = 'labelDisappear';
-		orangeBtnClose.style.animationName = 'labelCloseDisappear';
-		redBtnLabel.style.animationName = 'labelDisappear';
-		redBtnClose.style.animationName = 'labelCloseDisappear';
+		closeAnim(limeBtnLabel, limeBtnClose, limeBtnLabel, yellowBtnClose, orangeBtnLabel, orangeBtnClose, redBtnLabel, redBtnClose);
 
 		setTimeout(function(){
-			limeBtnLabel.style.display = 'none';
-			limeBtnClose.style.display = 'none';
+			closeDisplay(limeBtnLabel, limeBtnClose, limeBtnLabel, yellowBtnClose, orangeBtnLabel, orangeBtnClose, redBtnLabel, redBtnClose);
 			limeActive = false;
-			yellowBtnLabel.style.display = 'none';
-			yellowBtnClose.style.display = 'none';
 			yellowActive = false;
-			orangeBtnLabel.style.display = 'none';
-			orangeBtnClose.style.display = 'none';
 			orangeActive = false;
-			redBtnLabel.style.display = 'none';
-			redBtnClose.style.display = 'none';
 			redActive = false;
 		}, 700);
 
 	} else if (btnColor == limeBtn) {
 
-		greenBtnLabel.style.animationName = 'labelDisappear';
-		greenBtnClose.style.animationName = 'labelCloseDisappear';
-		yellowBtnLabel.style.animationName = 'labelDisappear';
-		yellowBtnClose.style.animationName = 'labelCloseDisappear';
-		orangeBtnLabel.style.animationName = 'labelDisappear';
-		orangeBtnClose.style.animationName = 'labelCloseDisappear';
-		redBtnLabel.style.animationName = 'labelDisappear';
-		redBtnClose.style.animationName = 'labelCloseDisappear';
+		closeAnim(greenBtnLabel, greenBtnClose, yellowBtnLabel, yellowBtnClose, orangeBtnLabel, orangeBtnClose, redBtnLabel, redBtnClose);
 
 		setTimeout(function(){
-			greenBtnLabel.style.display = 'none';
-			greenBtnClose.style.display = 'none';
+			closeDisplay(greenBtnLabel, greenBtnClose, yellowBtnLabel, yellowBtnClose, orangeBtnLabel, orangeBtnClose, redBtnLabel, redBtnClose);
 			greenActive = false;
-			yellowBtnLabel.style.display = 'none';
-			yellowBtnClose.style.display = 'none';
 			yellowActive = false;
-			orangeBtnLabel.style.display = 'none';
-			orangeBtnClose.style.display = 'none';
 			orangeActive = false;
-			redBtnLabel.style.display = 'none';
-			redBtnClose.style.display = 'none';
 			redActive = false;
 		}, 700);
 
 	} else if (btnColor == yellowBtn) {
 
-		greenBtnLabel.style.animationName = 'labelDisappear';
-		greenBtnClose.style.animationName = 'labelCloseDisappear';
-		limeBtnLabel.style.animationName = 'labelDisappear';
-		limeBtnClose.style.animationName = 'labelCloseDisappear';
-		orangeBtnLabel.style.animationName = 'labelDisappear';
-		orangeBtnClose.style.animationName = 'labelCloseDisappear';
-		redBtnLabel.style.animationName = 'labelDisappear';
-		redBtnClose.style.animationName = 'labelCloseDisappear';
+		closeAnim(greenBtnLabel, greenBtnClose, limeBtnLabel, limeBtnClose, orangeBtnLabel, orangeBtnClose, redBtnLabel, redBtnClose);
 
 		setTimeout(function(){
-			greenBtnLabel.style.display = 'none';
-			greenBtnClose.style.display = 'none';
+			closeDisplay(greenBtnLabel, greenBtnClose, limeBtnLabel, limeBtnClose, orangeBtnLabel, orangeBtnClose, redBtnLabel, redBtnClose);
 			greenActive = false;
-			limeBtnLabel.style.display = 'none';
-			limeBtnClose.style.display = 'none';
 			limeActive = false;
-			orangeBtnLabel.style.display = 'none';
-			orangeBtnClose.style.display = 'none';
 			orangeActive = false;
-			redBtnLabel.style.display = 'none';
-			redBtnClose.style.display = 'none';
 			redActive = false;
 		}, 700);
 
 	} else if (btnColor == orangeBtn) {
 
-		greenBtnLabel.style.animationName = 'labelDisappear';
-		greenBtnClose.style.animationName = 'labelCloseDisappear';
-		limeBtnLabel.style.animationName = 'labelDisappear';
-		limeBtnClose.style.animationName = 'labelCloseDisappear';
-		yellowBtnLabel.style.animationName = 'labelDisappear';
-		yellowBtnClose.style.animationName = 'labelCloseDisappear';
-		redBtnLabel.style.animationName = 'labelDisappear';
-		redBtnClose.style.animationName = 'labelCloseDisappear';
+		closeAnim(greenBtnLabel, greenBtnClose, limeBtnLabel, limeBtnClose, yellowBtnLabel, yellowBtnClose, redBtnLabel, redBtnClose);
 
 		setTimeout(function(){
-			greenBtnLabel.style.display = 'none';
-			greenBtnClose.style.display = 'none';
+			closeDisplay(greenBtnLabel, greenBtnClose, limeBtnLabel, limeBtnClose, yellowBtnLabel, yellowBtnClose, redBtnLabel, redBtnClose);
 			greenActive = false;
-			limeBtnLabel.style.display = 'none';
-			limeBtnClose.style.display = 'none';
 			limeActive = false;
-			yellowBtnLabel.style.display = 'none';
-			yellowBtnClose.style.display = 'none';
 			yellowActive = false;
-			redBtnLabel.style.display = 'none';
-			redBtnClose.style.display = 'none';
 			redActive = false;
 		}, 700);
 
 	} else if (btnColor == redBtn) {
 
-		greenBtnLabel.style.animationName = 'labelDisappear';
-		greenBtnClose.style.animationName = 'labelCloseDisappear';
-		limeBtnLabel.style.animationName = 'labelDisappear';
-		limeBtnClose.style.animationName = 'labelCloseDisappear';
-		yellowBtnLabel.style.animationName = 'labelDisappear';
-		yellowBtnClose.style.animationName = 'labelCloseDisappear';
-		orangeBtnLabel.style.animationName = 'labelDisappear';
-		orangeBtnClose.style.animationName = 'labelCloseDisappear';
+		closeAnim(greenBtnLabel, greenBtnClose, limeBtnLabel, limeBtnClose, yellowBtnLabel, yellowBtnClose, orangeBtnLabel, orangeBtnClose);
 
 		setTimeout(function(){
-			greenBtnLabel.style.display = 'none';
-			greenBtnClose.style.display = 'none';
+			closeDisplay(greenBtnLabel, greenBtnClose, limeBtnLabel, limeBtnClose, yellowBtnLabel, yellowBtnClose, orangeBtnLabel, orangeBtnClose);
 			greenActive = false;
-			limeBtnLabel.style.display = 'none';
-			limeBtnClose.style.display = 'none';
 			limeActive = false;
-			yellowBtnLabel.style.display = 'none';
-			yellowBtnClose.style.display = 'none';
 			yellowActive = false;
-			orangeBtnLabel.style.display = 'none';
-			orangeBtnClose.style.display = 'none';
 			orangeActive = false;
 		}, 700);
 
 	};
 };
+
+
+
+
+function closeAnim(label1, close1, label2, close2, label3, close3, label4, close4) {
+	label1.style.animationName = 'labelDisappear';
+	close1.style.animationName = 'labelCloseDisappear';
+	label2.style.animationName = 'labelDisappear';
+	close2.style.animationName = 'labelCloseDisappear';
+	label3.style.animationName = 'labelDisappear';
+	close3.style.animationName = 'labelCloseDisappear';
+	label4.style.animationName = 'labelDisappear';
+	close4.style.animationName = 'labelCloseDisappear';
+}
+
+
+
+
+function closeDisplay(label1, close1, label2, close2, label3, close3, label4, close4) {
+	label1.style.display = 'none';
+	close1.style.display = 'none';
+	label2.style.display = 'none';
+	close2.style.display = 'none';
+	label3.style.display = 'none';
+	close3.style.display = 'none';
+	label4.style.display = 'none';
+	close4.style.display = 'none';
+}
+
 
 
 
@@ -357,89 +367,77 @@ function closeAllOther(btnColor) {
 // ---------------------------------------------------------------------- //
 
 
-var buurtGreen1 = document.getElementById('Path_288-2_1_');
-var buurtGreen2 = document.getElementById('Path_294-2_1_');
+var greenBuurts = document.getElementsByClassName('greenBuurt');
+var limeBuurts = document.getElementsByClassName('limeBuurt');
+var yellowBuurts = document.getElementsByClassName('yellowBuurt');
+var orangeBuurts = document.getElementsByClassName('orangeBuurt');
+var redBuurts = document.getElementsByClassName('redBuurt');
 
-var buurtLime1 = document.getElementById('Path_285-2_1_');
-var buurtLime2 = document.getElementById('Path_284-2_1_');
-var buurtLime3 = document.getElementById('Path_291-2_1_');
-var buurtLime4 = document.getElementById('Path_293-2_1_');
-var buurtLime5 = document.getElementById('Path_295-2_1_');
-
-var buurtYellow1 = document.getElementById('Path_286-2_1_');
-var buurtYellow2 = document.getElementById('Path_283-2_1_');
-var buurtYellow3 = document.getElementById('Path_290-2_1_');
-var buurtYellow4 = document.getElementById('Path_292-2_1_');
-
-var buurtOrange1 = document.getElementById('Path_287-2_1_');
-var buurtOrange2 = document.getElementById('Path_289-2_1_');
 
 
 
 function allOpacityIn() {
-	buurtGreen1.style.animationName = 'buurtOpacityIn';
-	buurtGreen2.style.animationName = 'buurtOpacityIn';
-	buurtLime1.style.animationName = 'buurtOpacityIn';
-	buurtLime2.style.animationName = 'buurtOpacityIn';
-	buurtLime3.style.animationName = 'buurtOpacityIn';
-	buurtLime4.style.animationName = 'buurtOpacityIn';
-	buurtLime5.style.animationName = 'buurtOpacityIn';
-	buurtYellow1.style.animationName = 'buurtOpacityIn';
-	buurtYellow2.style.animationName = 'buurtOpacityIn';
-	buurtYellow3.style.animationName = 'buurtOpacityIn';
-	buurtYellow4.style.animationName = 'buurtOpacityIn';
-	buurtOrange1.style.animationName = 'buurtOpacityIn';
-	buurtOrange2.style.animationName = 'buurtOpacityIn';
+	greenOpacityIn();
+	limeOpacityIn();
+	yellowOpacityIn();
+	orangeOpacityIn();
+	redOpacityIn();
 }
 
 
 
 function allOpacityOut() {
-	buurtGreen1.style.animationName = 'buurtOpacityOut';
-	buurtGreen2.style.animationName = 'buurtOpacityOut';
-	buurtLime1.style.animationName = 'buurtOpacityOut';
-	buurtLime2.style.animationName = 'buurtOpacityOut';
-	buurtLime3.style.animationName = 'buurtOpacityOut';
-	buurtLime4.style.animationName = 'buurtOpacityOut';
-	buurtLime5.style.animationName = 'buurtOpacityOut';
-	buurtYellow1.style.animationName = 'buurtOpacityOut';
-	buurtYellow2.style.animationName = 'buurtOpacityOut';
-	buurtYellow3.style.animationName = 'buurtOpacityOut';
-	buurtYellow4.style.animationName = 'buurtOpacityOut';
-	buurtOrange1.style.animationName = 'buurtOpacityOut';
-	buurtOrange2.style.animationName = 'buurtOpacityOut';
+
+	for (i = 0; i < greenBuurts.length; i++) {
+		greenBuurts[i].style.animationName = 'buurtOpacityOut';
+	}
+	for (i = 0; i < limeBuurts.length; i++) {
+		limeBuurts[i].style.animationName = 'buurtOpacityOut';
+	}
+	for (i = 0; i < yellowBuurts.length; i++) {
+		yellowBuurts[i].style.animationName = 'buurtOpacityOut';
+	}
+	for (i = 0; i < orangeBuurts.length; i++) {
+		orangeBuurts[i].style.animationName = 'buurtOpacityOut';
+	}
+	for (i = 0; i < redBuurts.length; i++) {
+		redBuurts[i].style.animationName = 'buurtOpacityOut';
+	}
+
 }
 
 
 
-function greenOpacityOut() {
-	buurtGreen1.style.animationName = 'buurtOpacityIn';
-	buurtGreen2.style.animationName = 'buurtOpacityIn';
+function greenOpacityIn() {
+	for (i = 0; i < greenBuurts.length; i++) {
+		greenBuurts[i].style.animationName = 'buurtOpacityIn';
+	}
 }
 
 
-function limeOpacityOut() {
-	buurtLime1.style.animationName = 'buurtOpacityIn';
-	buurtLime2.style.animationName = 'buurtOpacityIn';
-	buurtLime3.style.animationName = 'buurtOpacityIn';
-	buurtLime4.style.animationName = 'buurtOpacityIn';
-	buurtLime5.style.animationName = 'buurtOpacityIn';
+function limeOpacityIn() {
+	for (i = 0; i < limeBuurts.length; i++) {
+		limeBuurts[i].style.animationName = 'buurtOpacityIn';
+	}
 }
 
 
-function yellowOpacityOut() {
-	buurtYellow1.style.animationName = 'buurtOpacityIn';
-	buurtYellow2.style.animationName = 'buurtOpacityIn';
-	buurtYellow3.style.animationName = 'buurtOpacityIn';
-	buurtYellow4.style.animationName = 'buurtOpacityIn';
+function yellowOpacityIn() {
+	for (i = 0; i < yellowBuurts.length; i++) {
+		yellowBuurts[i].style.animationName = 'buurtOpacityIn';
+	}
 }
 
 
-function orangeOpacityOut() {
-	buurtOrange1.style.animationName = 'buurtOpacityIn';
-	buurtOrange2.style.animationName = 'buurtOpacityIn';
+function orangeOpacityIn() {
+	for (i = 0; i < orangeBuurts.length; i++) {
+		orangeBuurts[i].style.animationName = 'buurtOpacityIn';
+	}
 }
 
 
-function redOpacityOut() {
+function redOpacityIn() {
+	for (i = 0; i < redBuurts.length; i++) {
+		redBuurts[i].style.animationName = 'buurtOpacityIn';
+	}
 }

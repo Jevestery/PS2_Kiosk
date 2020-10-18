@@ -399,18 +399,18 @@ function subBtnActive(menu, menuBtn) {
 
 function switchSubMenu(menuBtn, menuBtnText, menuBtnAlt1, menuBtnAlt1Text, menuBtnAlt1Active, menuBtnAlt2, menuBtnAlt2Text, menuBtnAlt2Active) {
 
-	menuBtn.style.bottom = '295px';
+	menuBtn.style.marginBottom = '165px';
 	menuBtn.style.animationName = 'subBtnIn';
 	menuBtnText.style.animationName = 'subBtnTextIn';
 
 	if (menuBtnAlt1Active) {
-		menuBtnAlt1.style.bottom = '295px';
+		menuBtnAlt1.style.marginBottom = '165px';
 		menuBtnAlt1.style.animationName = 'subBtnOut';
 		menuBtnAlt1Text.style.animationName = 'subBtnTextOut';
 	}
 
 	if (menuBtnAlt2Active) {
-		menuBtnAlt2.style.bottom = '295px';
+		menuBtnAlt2.style.marginBottom = '165px';
 		menuBtnAlt2.style.animationName = 'subBtnOut';
 		menuBtnAlt2Text.style.animationName = 'subBtnTextOut';
 	}
@@ -424,15 +424,15 @@ function resetSubMenu(subMenu, btn1, btn1Text, btn2, btn2Text, btn3, btn3Text) {
 
 	subMenu.style.display = 'none';
 
-	btn1.style.bottom = '250px';
+	btn1.style.marginBottom = '125px';
 	btn1.style.animationName = 'subIn';
 	btn1Text.style.animationName = 'none';
 
-	btn2.style.bottom = '250px';
+	btn2.style.marginBottom = '125px';
 	btn2.style.animationName = 'subIn';
 	btn2Text.style.animationName = 'none';
 
-	btn3.style.bottom = '250px';
+	btn3.style.marginBottom = '125px';
 	btn3.style.animationName = 'subIn';
 	btn3Text.style.animationName = 'none';
 
@@ -466,3 +466,61 @@ function closeOther(subMenuAlt, subMenuAltBtnLeft, subMenuAltBtnLeftText, subMen
 	};
 
 };
+
+
+
+
+
+
+
+// ---------------------------------------------------------------------- //
+// ----------------------------- CHANGE MAP ----------------------------- //
+// ---------------------------------------------------------------------- //
+
+
+var buurtGreen1 = document.getElementById('Path_288-2_1_');
+var buurtGreen2 = document.getElementById('Path_294-2_1_');
+
+var buurtLime1 = document.getElementById('Path_285-2_1_');
+var buurtLime2 = document.getElementById('Path_284-2_1_');
+var buurtLime3 = document.getElementById('Path_291-2_1_');
+var buurtLime4 = document.getElementById('Path_293-2_1_');
+var buurtLime5 = document.getElementById('Path_295-2_1_');
+
+var buurtYellow1 = document.getElementById('Path_286-2_1_');
+var buurtYellow2 = document.getElementById('Path_283-2_1_');
+var buurtYellow3 = document.getElementById('Path_290-2_1_');
+var buurtYellow4 = document.getElementById('Path_292-2_1_');
+
+var buurtOrange1 = document.getElementById('Path_287-2_1_');
+var buurtOrange2 = document.getElementById('Path_289-2_1_');
+
+
+
+
+
+function originalColors() {
+
+	buurtGreen1.style.fill = 'var(--p-green)';
+	buurtGreen2.style.fill = 'var(--p-green)';
+	buurtLime1.style.fill = 'var(--p-lime)';
+	buurtLime2.style.fill = 'var(--p-lime)';
+	buurtLime3.style.fill = 'var(--p-lime)';
+	buurtLime4.style.fill = 'var(--p-lime)';
+	buurtLime5.style.fill = 'var(--p-lime)';
+	buurtYellow1.style.fill = 'var(--p-yellow)';
+	buurtYellow2.style.fill = 'var(--p-yellow)';
+	buurtYellow3.style.fill = 'var(--p-yellow)';
+	buurtYellow4.style.fill = 'var(--p-yellow)';
+	buurtOrange1.style.fill = 'var(--p-orange)';
+	buurtOrange2.style.fill = 'var(--p-orange)';
+
+}
+
+
+function bikeColor() {
+
+	buurtLime2.style.fill = "var(--p-green)";
+	buurtLime3.style.fill = "var(--p-green)";
+
+}
