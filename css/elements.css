@@ -337,7 +337,7 @@
   to {color: var(--b-black);}
 }
 
-#menuBtn1Left, #menuBtn2Left, #menuBtn3Left, #menuBtn1Right, #menuBtn2Right, #menuBtn3Right, #menuBtn1LeftIcon, #menuBtn2LeftIcon, #menuBtn3LeftIcon, #menuBtn1RightIcon, #menuBtn2RightIcon, #menuBtn3RightIcon {
+#menuBtn1Left, #menuBtn2Left, #menuBtn3Left, #menuBtn1Right, #menuBtn2Right, #menuBtn3Right, #menuBtn1LeftIcon, #menuBtn2LeftIcon, #menuBtn3LeftIcon, #menuBtn1RightIcon, #menuBtn2RightIcon, #menuBtn3RightIcon, #menuBtn2LeftIconText, #menuBtn2RightIconText, #menuBtn3LeftIconText, #menuBtn3RightIconText {
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
 }
@@ -379,6 +379,14 @@
 .rightMenuBtnSub {
   left: 316px;
   border-radius: 0 25px 25px 0;
+}
+
+#menuBtn2SubMiddle, #menuBtn2SubRight {
+  margin-left: 434px;
+}
+
+#menuBtn3SubMiddle, #menuBtn3SubRight {
+  margin-left: 868px;
 }
 
 @keyframes subIn {

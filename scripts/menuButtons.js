@@ -9,9 +9,11 @@
 // BTN SET 1 //
 
 var btn1Left = document.getElementById('menuBtn1Left');
-var btn1Right = document.getElementById('menuBtn1Right');
 var btn1LeftIcon = document.getElementById('menuBtn1LeftIcon');
+var btn1LeftIconText = false;
+var btn1Right = document.getElementById('menuBtn1Right');
 var btn1RightIcon = document.getElementById('menuBtn1RightIcon');
+var btn1RightIconText = false;
 
 var subMenu1 = document.getElementById('menuBtn1Sub');
 var subMenu1BtnLeft = document.getElementById('menuBtn1SubLeft');
@@ -32,9 +34,11 @@ var subMenu1BtnRightActive = false;
 // BTN SET 2 //
 
 var btn2Left = document.getElementById('menuBtn2Left');
-var btn2Right = document.getElementById('menuBtn2Right');
 var btn2LeftIcon = document.getElementById('menuBtn2LeftIcon');
+var btn2LeftIconText = document.getElementById('menuBtn2LeftIconText');
+var btn2Right = document.getElementById('menuBtn2Right');
 var btn2RightIcon = document.getElementById('menuBtn2RightIcon');
+var btn2RightIconText = document.getElementById('menuBtn2RightIconText');
 
 var subMenu2 = document.getElementById('menuBtn2Sub');
 var subMenu2BtnLeft = document.getElementById('menuBtn2SubLeft');
@@ -55,9 +59,11 @@ var subMenu2BtnRightActive = false;
 // BTN SET 3 //
 
 var btn3Left = document.getElementById('menuBtn3Left');
-var btn3Right = document.getElementById('menuBtn3Right');
 var btn3LeftIcon = document.getElementById('menuBtn3LeftIcon');
+var btn3LeftIconText = document.getElementById('menuBtn3LeftIconText');
+var btn3Right = document.getElementById('menuBtn3Right');
 var btn3RightIcon = document.getElementById('menuBtn3RightIcon');
+var btn3RightIconText = document.getElementById('menuBtn3RightIconText');
 
 var subMenu3 = document.getElementById('menuBtn3Sub');
 var subMenu3BtnLeft = document.getElementById('menuBtn3SubLeft');
@@ -95,14 +101,32 @@ var left= "left";
 function subAppear(subMenu, clicked) {
 
 	if (subMenu == subMenu1) {
-		activateSubMenu(subMenu, menu1LeftActive, menu1RightActive, clicked);
-	} else if (subMenu == subMenu2) {
-		activateSubMenu(subMenu, menu2LeftActive, menu2RightActive, clicked);
-	} else if (subMenu == subMenu3) {
-		activateSubMenu(subMenu, menu3LeftActive, menu3RightActive, clicked);
-	};
 
-};
+		activateSubMenu(subMenu, menu1LeftActive, menu1RightActive, clicked);
+		closeOther(subMenu2, subMenu2BtnLeft, subMenu2BtnLeftText, subMenu2BtnMiddle, subMenu2BtnMiddleText, subMenu2BtnRight, subMenu2BtnRightText, menu2LeftActive, menu2RightActive);
+		closeOther(subMenu3, subMenu3BtnLeft, subMenu3BtnLeftText, subMenu3BtnMiddle, subMenu3BtnMiddleText, subMenu3BtnRight, subMenu3BtnRightText, menu3LeftActive, menu3RightActive);
+		deactivateAllBtns(btn2Left, btn2LeftIcon, btn2LeftIconText, menu2LeftActive, btn2Right, btn2RightIcon, btn2RightIconText, menu2RightActive);
+		deactivateAllBtns(btn3Left, btn3LeftIcon, btn3LeftIconText, menu3LeftActive, btn3Right, btn3RightIcon, btn3RightIconText, menu3RightActive);
+
+	} else if (subMenu == subMenu2) {
+
+		activateSubMenu(subMenu, menu2LeftActive, menu2RightActive, clicked);
+		closeOther(subMenu1, subMenu1BtnLeft, subMenu1BtnLeftText, subMenu1BtnMiddle, subMenu1BtnMiddleText, subMenu1BtnRight, subMenu1BtnRightText, menu1LeftActive, menu1RightActive);
+		closeOther(subMenu3, subMenu3BtnLeft, subMenu3BtnLeftText, subMenu3BtnMiddle, subMenu3BtnMiddleText, subMenu3BtnRight, subMenu3BtnRightText, menu3LeftActive, menu3RightActive);
+		deactivateAllBtns(btn1Left, btn1LeftIcon, btn1LeftIconText, menu1LeftActive, btn1Right, btn1RightIcon, btn1RightIconText, menu1RightActive);
+		deactivateAllBtns(btn3Left, btn3LeftIcon, btn3LeftIconText, menu3LeftActive, btn3Right, btn3RightIcon, btn3RightIconText, menu3RightActive);
+
+	} else if (subMenu == subMenu3) {
+
+		activateSubMenu(subMenu, menu3LeftActive, menu3RightActive, clicked);
+		closeOther(subMenu1, subMenu1BtnLeft, subMenu1BtnLeftText, subMenu1BtnMiddle, subMenu1BtnMiddleText, subMenu1BtnRight, subMenu1BtnRightText, menu1LeftActive, menu1RightActive);
+		closeOther(subMenu2, subMenu2BtnLeft, subMenu2BtnLeftText, subMenu2BtnMiddle, subMenu2BtnMiddleText, subMenu2BtnRight, subMenu2BtnRightText, menu2LeftActive, menu2RightActive);
+		deactivateAllBtns(btn1Left, btn1LeftIcon, btn1LeftIconText, menu1LeftActive, btn1Right, btn1RightIcon, btn1RightIconText, menu1RightActive);
+		deactivateAllBtns(btn2Left, btn2LeftIcon, btn2LeftIconText, menu2LeftActive, btn2Right, btn2RightIcon, btn2RightIconText, menu2RightActive);
+
+	}
+
+}
 
 
 
@@ -122,10 +146,10 @@ function activateSubMenu(subMenu, leftActive, rightActive, clicked) {
 			resetSubMenu(subMenu, subMenu2BtnLeft, subMenu2BtnLeftText, subMenu2BtnMiddle, subMenu2BtnMiddleText, subMenu2BtnRight, subMenu2BtnRightText);
 		} else if (subMenu == subMenu3) {
 			resetSubMenu(subMenu, subMenu3BtnLeft, subMenu3BtnLeftText, subMenu3BtnMiddle, subMenu3BtnMiddleText, subMenu3BtnRight, subMenu3BtnRightText);
-		};
-	};
+		}
+	}
 
-};
+}
 
 
 
@@ -133,7 +157,7 @@ function activateSubMenu(subMenu, leftActive, rightActive, clicked) {
 function btnActive(btn, btnIcon) {
 
 	if (btn == btn1Right) {
-		showBtnActivityRight(btn, btnIcon, menu1LeftActive, menu1RightActive, btn1Left, btn1LeftIcon);
+		showBtnActivityRight(btn, btnIcon, btn1RightIconText, menu1LeftActive, menu1RightActive, btn1Left, btn1LeftIcon, btn1LeftIconText);
 		if (menu1LeftActive) {
 			menu1LeftActive = !menu1LeftActive;
 		}
@@ -142,7 +166,7 @@ function btnActive(btn, btnIcon) {
 
 
 	if (btn == btn1Left) {
-		showBtnActivityLeft(btn, btnIcon, menu1LeftActive, menu1RightActive, btn1Right, btn1RightIcon);
+		showBtnActivityLeft(btn, btnIcon, btn1LeftIconText, menu1LeftActive, menu1RightActive, btn1Right, btn1RightIcon, btn1RightIconText);
 		if (menu1RightActive) {
 			menu1RightActive = !menu1RightActive;
 		}
@@ -151,7 +175,7 @@ function btnActive(btn, btnIcon) {
 
 
 	if (btn == btn2Right) {
-		showBtnActivityRight(btn, btnIcon, menu2LeftActive, menu2RightActive, btn2Left, btn2LeftIcon);
+		showBtnActivityRight(btn, btnIcon, btn2RightIconText, menu2LeftActive, menu2RightActive, btn2Left, btn2LeftIcon, btn2LeftIconText);
 		if (menu2LeftActive) {
 			menu2LeftActive = !menu2LeftActive;
 		}
@@ -160,7 +184,7 @@ function btnActive(btn, btnIcon) {
 
 
 	if (btn == btn2Left) {
-		showBtnActivityLeft(btn, btnIcon, menu2LeftActive, menu2RightActive, btn2Right, btn2RightIcon);
+		showBtnActivityLeft(btn, btnIcon, btn2LeftIconText, menu2LeftActive, menu2RightActive, btn2Right, btn2RightIcon, btn2RightIconText);
 		if (menu2RightActive) {
 			menu2RightActive = !menu2RightActive;
 		}
@@ -169,7 +193,7 @@ function btnActive(btn, btnIcon) {
 
 
 	if (btn == btn3Right) {
-		showBtnActivityRight(btn, btnIcon, menu3LeftActive, menu3RightActive, btn3Left, btn3LeftIcon);
+		showBtnActivityRight(btn, btnIcon, btn3RightIconText, menu3LeftActive, menu3RightActive, btn3Left, btn3LeftIcon, btn3LeftIconText);
 		if (menu3LeftActive) {
 			menu3LeftActive = !menu3LeftActive;
 		}
@@ -178,7 +202,7 @@ function btnActive(btn, btnIcon) {
 
 
 	if (btn == btn3Left) {
-		showBtnActivityLeft(btn, btnIcon, menu3LeftActive, menu3RightActive, btn3Right, btn3RightIcon);
+		showBtnActivityLeft(btn, btnIcon, btn3LeftIconText, menu3LeftActive, menu3RightActive, btn3Right, btn3RightIcon, btn3RightIconText);
 		if (menu3RightActive) {
 			menu3RightActive = !menu3RightActive;
 		}
@@ -189,19 +213,28 @@ function btnActive(btn, btnIcon) {
 
 
 
-function showBtnActivityRight(btn, btnIcon, leftActive, rightActive, otherBtn, otherBtnIcon) {
+function showBtnActivityRight(btn, btnIcon, btnIconText, leftActive, rightActive, otherBtn, otherBtnIcon, otherBtnIconText) {
 
 	if (!rightActive) {
 		btn.style.animationName = 'btnActive';
 		btnIcon.style.animationName = 'btnIconActive';
+		if (btnIconText != false) {
+			btnIconText.style.animationName = 'btnIconActive';
+		}
 	} else {
 		btn.style.animationName = 'btnDeactive';
 		btnIcon.style.animationName = 'btnIconDeactive';
+		if (btnIconText != false) {
+			btnIconText.style.animationName = 'btnIconDeactive';
+		}
 	}
 
 	if (leftActive) {
 		otherBtn.style.animationName = 'btnDeactive';
 		otherBtnIcon.style.animationName = 'btnIconDeactive';
+		if (btnIconText != false) {
+			otherBtnIconText.style.animationName = 'btnIconDeactive';
+		}
 	}
 
 }
@@ -209,19 +242,67 @@ function showBtnActivityRight(btn, btnIcon, leftActive, rightActive, otherBtn, o
 
 
 
-function showBtnActivityLeft(btn, btnIcon, leftActive, rightActive, otherBtn, otherBtnIcon) {
+function showBtnActivityLeft(btn, btnIcon, btnIconText, leftActive, rightActive, otherBtn, otherBtnIcon, otherBtnIconText) {
 
 	if (!leftActive) {
 		btn.style.animationName = 'btnActive';
 		btnIcon.style.animationName = 'btnIconActive';
+		if (btnIconText != false) {
+			btnIconText.style.animationName = 'btnIconActive';
+		}
 	} else {
 		btn.style.animationName = 'btnDeactive';
 		btnIcon.style.animationName = 'btnIconDeactive';
+		if (btnIconText != false) {
+			btnIconText.style.animationName = 'btnIconDeactive';
+		}
 	}
 
 	if (rightActive) {
 		otherBtn.style.animationName = 'btnDeactive';
 		otherBtnIcon.style.animationName = 'btnIconDeactive';
+		if (btnIconText != false) {
+			otherBtnIconText.style.animationName = 'btnIconDeactive';
+		}
+	}
+
+}
+
+
+
+
+function deactivateAllBtns(leftBtn, leftBtnIcon, leftBtnIconText, leftActive, rightBtn, rightBtnIcon, rightBtnIconText, rightActive) {
+
+	if (leftActive) {
+		leftBtn.style.animationName = 'btnDeactive';
+		leftBtnIcon.style.animationName = 'btnIconDeactive';
+		if (leftBtnIconText != false) {
+			leftBtnIconText.style.animationName = 'btnIconDeactive';
+		}
+
+		if (leftActive = menu1LeftActive) {
+			menu1LeftActive = ! menu1LeftActive;
+		} else if (leftActive = menu2LeftActive) {
+			menu2LeftActive = ! menu2LeftActive;
+		} else if (leftActive = menu3LeftActive) {
+			menu3LeftActive = ! menu3LeftActive;
+		}
+	}
+
+	if (rightActive) {
+		rightBtn.style.animationName = 'btnDeactive';
+		rightBtnIcon.style.animationName = 'btnIconDeactive';
+		if (rightBtnIconText != false) {
+			rightBtnIconText.style.animationName = 'btnIconDeactive';
+		}
+
+		if (rightActive = menu1RightActive) {
+			menu1RightActive = ! menu1RightActive;
+		} else if (rightActive = menu2RightActive) {
+			menu2RightActive = ! menu2RightActive;
+		} else if (rightActive = menu3RightActive) {
+			menu3RightActive = ! menu3RightActive;
+		}
 	}
 
 }
@@ -322,13 +403,13 @@ function switchSubMenu(menuBtn, menuBtnText, menuBtnAlt1, menuBtnAlt1Text, menuB
 	menuBtn.style.animationName = 'subBtnIn';
 	menuBtnText.style.animationName = 'subBtnTextIn';
 
-	if (menuBtnAlt1Active == true) {
+	if (menuBtnAlt1Active) {
 		menuBtnAlt1.style.bottom = '295px';
 		menuBtnAlt1.style.animationName = 'subBtnOut';
 		menuBtnAlt1Text.style.animationName = 'subBtnTextOut';
 	}
 
-	if (menuBtnAlt2Active == true) {
+	if (menuBtnAlt2Active) {
 		menuBtnAlt2.style.bottom = '295px';
 		menuBtnAlt2.style.animationName = 'subBtnOut';
 		menuBtnAlt2Text.style.animationName = 'subBtnTextOut';
@@ -374,3 +455,14 @@ function resetSubMenu(subMenu, btn1, btn1Text, btn2, btn2Text, btn3, btn3Text) {
 	}
 
 }
+
+
+
+
+function closeOther(subMenuAlt, subMenuAltBtnLeft, subMenuAltBtnLeftText, subMenuAltBtnMiddle, subMenuAltBtnMiddleText, subMenuAltBtnRight, subMenuAltBtnRightText, subMenuAltActive1, subMenuActive2) {
+
+	if (subMenuAltActive1 || subMenuActive2) {
+		resetSubMenu(subMenuAlt, subMenuAltBtnLeft, subMenuAltBtnLeftText, subMenuAltBtnMiddle, subMenuAltBtnMiddleText, subMenuAltBtnRight, subMenuAltBtnRightText);
+	};
+
+};
