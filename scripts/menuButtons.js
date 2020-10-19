@@ -496,31 +496,806 @@ var buurtOrange1 = document.getElementById('Path_287-2_1_');
 var buurtOrange2 = document.getElementById('Path_289-2_1_');
 
 
+var bikeColorsActive = false;
+var carColorsActive = false;
+var btn1WeekActive = false;
+var btn1MonthActive = false;
+var btn1YearActive = false;
+
+var shower5ColorsActive = false;
+var shower15ColorsActive = false;
+var btn2WeekActive = false;
+var btn2MonthActive = false;
+var btn2YearActive = false;
+
+var temp4ColorsActive = false;
+var temp0ColorsActive = false;
+var btn3WeekActive = false;
+var btn3MonthActive = false;
+var btn3YearActive = false;
+
+
 
 
 
 function originalColors() {
+	removeAllClassesX5();
+	buurtGreen1.classList.add("greenBuurt");
+	buurtGreen2.classList.add("greenBuurt");
+	buurtLime1.classList.add("limeBuurt");
+	buurtLime2.classList.add("limeBuurt");
+	buurtLime3.classList.add("limeBuurt");
+	buurtLime4.classList.add("limeBuurt");
+	buurtLime5.classList.add("limeBuurt");
+	buurtYellow1.classList.add("yellowBuurt");
+	buurtYellow2.classList.add("yellowBuurt");
+	buurtYellow3.classList.add("yellowBuurt");
+	buurtYellow4.classList.add("yellowBuurt");
+	buurtOrange1.classList.add("orangeBuurt");
+	buurtOrange2.classList.add("orangeBuurt");
+}
 
-	buurtGreen1.style.fill = 'var(--p-green)';
-	buurtGreen2.style.fill = 'var(--p-green)';
-	buurtLime1.style.fill = 'var(--p-lime)';
-	buurtLime2.style.fill = 'var(--p-lime)';
-	buurtLime3.style.fill = 'var(--p-lime)';
-	buurtLime4.style.fill = 'var(--p-lime)';
-	buurtLime5.style.fill = 'var(--p-lime)';
-	buurtYellow1.style.fill = 'var(--p-yellow)';
-	buurtYellow2.style.fill = 'var(--p-yellow)';
-	buurtYellow3.style.fill = 'var(--p-yellow)';
-	buurtYellow4.style.fill = 'var(--p-yellow)';
-	buurtOrange1.style.fill = 'var(--p-orange)';
-	buurtOrange2.style.fill = 'var(--p-orange)';
+
+
+function removeAllClasses() {
+
+	for (i = 0; i < greenBuurts.length; i++) {
+		greenBuurts[i].classList.remove("greenBuurt");
+	}
+	for (i = 0; i < limeBuurts.length; i++) {
+		limeBuurts[i].classList.remove("limeBuurt");
+	}
+	for (i = 0; i < yellowBuurts.length; i++) {
+		yellowBuurts[i].classList.remove("yellowBuurt");
+	}
+	for (i = 0; i < orangeBuurts.length; i++) {
+		orangeBuurts[i].classList.remove("orangeBuurt");
+	}
+	for (i = 0; i < redBuurts.length; i++) {
+		redBuurts[i].classList.remove("redBuurt");
+	}
 
 }
 
 
-function bikeColor() {
 
-	buurtLime2.style.fill = "var(--p-green)";
-	buurtLime3.style.fill = "var(--p-green)";
+function removeAllClassesX5() {
+	removeAllClasses();
+	removeAllClasses();
+	removeAllClasses();
+	removeAllClasses();
+	removeAllClasses();
+}
 
+
+
+
+
+//---------- BTN SETUP ----------//
+
+
+function btnType(classifier, leftActive, rightActive, btnClassifier) {
+
+	if (classifier == 1) {
+
+		if (btnClassifier == 1) {
+			bikeColorsActive = true;
+			carColorsActive = false;
+			shower5ColorsActive = false;
+			shower15ColorsActive = false;
+			temp4ColorsActive = false;
+			temp0ColorsActive = false;
+		} else if (btnClassifier == 2) {
+			bikeColorsActive = false;
+			carColorsActive = false;
+			shower5ColorsActive = true;
+			shower15ColorsActive = false;
+			temp4ColorsActive = false;
+			temp0ColorsActive = false;
+		} else if (btnClassifier == 3) {
+			bikeColorsActive = false;
+			carColorsActive = false;
+			shower5ColorsActive = false;
+			shower15ColorsActive = false;
+			temp4ColorsActive = true;
+			temp0ColorsActive = false;
+		}
+
+		btnCheckCloseOpen(leftActive, btnClassifier);
+
+	} else if (classifier == 2) {
+
+		if (btnClassifier == 1) {
+			bikeColorsActive = false;
+			carColorsActive = true;
+			shower5ColorsActive = false;
+			shower15ColorsActive = false;
+			temp4ColorsActive = false;
+			temp0ColorsActive = false;
+		} else if (btnClassifier == 2) {
+			bikeColorsActive = false;
+			carColorsActive = false;
+			shower5ColorsActive = false;
+			shower15ColorsActive = true;
+			temp4ColorsActive = false;
+			temp0ColorsActive = false;
+		} else if (btnClassifier == 3) {
+			bikeColorsActive = false;
+			carColorsActive = false;
+			shower5ColorsActive = false;
+			shower15ColorsActive = false;
+			temp4ColorsActive = false;
+			temp0ColorsActive = true;
+		}
+
+		btnCheckCloseOpen(rightActive, btnClassifier);
+	}
+
+}
+
+
+
+
+function btnCheckCloseOpen(btn, btnClassifier) {
+	if (btn == true) {
+
+		if (btnClassifier == 1) {
+			if (btn1WeekActive) {
+				btnWeek(btnClassifier);
+			} else if (btn1YearActive) {
+				btnYear(btnClassifier);
+			} else {
+				btnMonth(btnClassifier);
+			}
+		} else if (btnClassifier == 2) {
+			if (btn2WeekActive) {
+				btnWeek(btnClassifier);
+			} else if (btn2YearActive) {
+				btnYear(btnClassifier);
+			} else {
+				btnMonth(btnClassifier);
+			}
+		} else if (btnClassifier == 3) {
+			if (btn3WeekActive) {
+				btnWeek(btnClassifier);
+			} else if (btn3YearActive) {
+				btnYear(btnClassifier);
+			} else {
+				btnYear(btnClassifier);
+			}
+		}
+
+	} else {
+		closeAll();
+		allOpacityOut();
+
+		setTimeout(function(){
+			originalColors();
+			allOpacityIn();
+		}, 400);
+
+		bikeColorsActive = false;
+		carColorsActive = false;
+		shower5ColorsActive = false;
+		shower15ColorsActive = false;
+		temp4ColorsActive = false;
+		temp0ColorsActive = false;
+
+		btn1WeekActive = false;
+		btn1MonthActive = false;
+		btn1YearActive = false;
+		btn2WeekActive = false;
+		btn2MonthActive = false;
+		btn2YearActive = false;
+		btn3WeekActive = false;
+		btn3MonthActive = false;
+		btn3YearActive = false;
+	}
+}
+
+
+
+
+
+//---------- BTNS ----------//
+
+
+function btnWeek(classifier) {
+
+	closeAll();
+	allOpacityOut();
+
+
+	if (classifier = 1) {
+
+		setTimeout(function(){
+
+			if (bikeColorsActive == true) {
+				bikeWeek();
+			} else if (carColorsActive == true) {
+				carWeek();
+			}
+
+			allOpacityIn();
+		}, 400);
+
+		btn2Reset();
+		btn3Reset();
+		btn1WeekActive = true;
+		btn1MonthActive = false;
+		btn1YearActive = false;
+	}
+
+
+	if (classifier = 2) {
+
+		setTimeout(function(){
+
+			if (shower5ColorsActive == true) {
+				shower5Week();
+			} else if (shower15ColorsActive == true) {
+				shower15Week();
+			}
+
+			allOpacityIn();
+		}, 400);
+
+		btn1Reset();
+		btn3Reset();
+		btn2WeekActive = true;
+		btn2MonthActive = false;
+		btn2YearActive = false;
+	}
+
+
+	if (classifier = 3) {
+
+		setTimeout(function(){
+
+			if (temp4ColorsActive == true) {
+				temp4Week();
+			} else if (temp0ColorsActive == true) {
+				temp0Week();
+			}
+
+			allOpacityIn();
+		}, 400);
+
+		btn1Reset();
+		btn2Reset();
+		btn3WeekActive = true;
+		btn3MonthActive = false;
+		btn3YearActive = false;
+	}
+
+}
+
+
+
+
+function btnMonth(classifier) {
+
+	closeAll();
+	allOpacityOut();
+
+
+	if (classifier = 1) {
+
+		setTimeout(function(){
+
+			if (bikeColorsActive == true) {
+				bikeMonth();
+			} else if (carColorsActive == true) {
+				carMonth();
+			}
+
+			allOpacityIn();
+		}, 400);
+
+		btn2Reset();
+		btn3Reset();
+		btn1WeekActive = false;
+		btn1MonthActive = true;
+		btn1YearActive = false;
+	}
+
+
+	if (classifier = 2) {
+
+		setTimeout(function(){
+
+			if (shower5ColorsActive == true) {
+				shower5Month();
+			} else if (shower15ColorsActive == true) {
+				shower15Month();
+			}
+
+			allOpacityIn();
+		}, 400);
+
+		btn1Reset();
+		btn3Reset();
+		btn2WeekActive = false;
+		btn2MonthActive = true;
+		btn2YearActive = false;
+	}
+
+
+	if (classifier = 3) {
+
+		setTimeout(function(){
+
+			if (temp4ColorsActive == true) {
+				temp4Month();
+			} else if (temp0ColorsActive == true) {
+				temp0Month();
+			}
+
+			allOpacityIn();
+		}, 400);
+
+		btn1Reset();
+		btn2Reset();
+		btn3WeekActive = false;
+		btn3MonthActive = true;
+		btn3YearActive = false;
+	}
+
+}
+
+
+
+
+function btnYear(classifier) {
+
+	closeAll();
+	allOpacityOut();
+
+
+	if (classifier = 1) {
+
+		setTimeout(function(){
+
+			if (bikeColorsActive == true) {
+				bikeYear();
+			} else if (carColorsActive == true) {
+				carYear();
+			}
+
+			allOpacityIn();
+		}, 400);
+
+		btn2Reset();
+		btn3Reset();
+		btn1WeekActive = false;
+		btn1MonthActive = false;
+		btn1YearActive = true;
+	}
+
+
+	if (classifier = 2) {
+
+		setTimeout(function(){
+
+			if (shower5ColorsActive == true) {
+				shower5Year();
+			} else if (shower15ColorsActive == true) {
+				shower15Year();
+			}
+
+			allOpacityIn();
+		}, 400);
+
+		btn1Reset();
+		btn3Reset();
+		btn2WeekActive = false;
+		btn2MonthActive = false;
+		btn2YearActive = true;
+	}
+
+
+	if (classifier = 3) {
+
+		setTimeout(function(){
+
+			if (temp4ColorsActive == true) {
+				temp4Year();
+			} else if (temp0ColorsActive == true) {
+				temp0Year();
+			}
+
+			allOpacityIn();
+		}, 400);
+
+		btn1Reset();
+		btn2Reset();
+		btn3WeekActive = false;
+		btn3MonthActive = false;
+		btn3YearActive = true;
+	}
+
+}
+
+
+
+function btn1Reset() {
+	btn1WeekActive = false;
+	btn1MonthActive = false;
+	btn1YearActive = false;
+}
+
+
+
+function btn2Reset() {
+	btn2WeekActive = false;
+	btn2MonthActive = false;
+	btn2YearActive = false;
+}
+
+
+
+function btn3Reset() {
+	btn3WeekActive = false;
+	btn3MonthActive = false;
+	btn3YearActive = false;
+}
+
+
+
+
+
+
+//---------- BTN 1 ----------//
+
+
+function bikeWeek() {
+	removeAllClassesX5();
+	buurtGreen1.classList.add("greenBuurt");
+	buurtGreen2.classList.add("greenBuurt");
+	buurtLime1.classList.add("limeBuurt");
+	buurtLime2.classList.add("limeBuurt");
+	buurtLime3.classList.add("greenBuurt");
+	buurtLime4.classList.add("limeBuurt");
+	buurtLime5.classList.add("limeBuurt");
+	buurtYellow1.classList.add("limeBuurt");
+	buurtYellow2.classList.add("yellowBuurt");
+	buurtYellow3.classList.add("yellowBuurt");
+	buurtYellow4.classList.add("limeBuurt");
+	buurtOrange1.classList.add("orangeBuurt");
+	buurtOrange2.classList.add("orangeBuurt");
+}
+
+
+
+function bikeMonth() {
+	removeAllClassesX5();
+	buurtGreen1.classList.add("greenBuurt");
+	buurtGreen2.classList.add("greenBuurt");
+	buurtLime1.classList.add("greenBuurt");
+	buurtLime2.classList.add("limeBuurt");
+	buurtLime3.classList.add("greenBuurt");
+	buurtLime4.classList.add("limeBuurt");
+	buurtLime5.classList.add("limeBuurt");
+	buurtYellow1.classList.add("limeBuurt");
+	buurtYellow2.classList.add("limeBuurt");
+	buurtYellow3.classList.add("yellowBuurt");
+	buurtYellow4.classList.add("limeBuurt");
+	buurtOrange1.classList.add("orangeBuurt");
+	buurtOrange2.classList.add("yellowBuurt");
+}
+
+
+
+function bikeYear() {
+	removeAllClassesX5();
+	buurtGreen1.classList.add("greenBuurt");
+	buurtGreen2.classList.add("greenBuurt");
+	buurtLime1.classList.add("greenBuurt");
+	buurtLime2.classList.add("limeBuurt");
+	buurtLime3.classList.add("greenBuurt");
+	buurtLime4.classList.add("greenBuurt");
+	buurtLime5.classList.add("limeBuurt");
+	buurtYellow1.classList.add("greenBuurt");
+	buurtYellow2.classList.add("limeBuurt");
+	buurtYellow3.classList.add("limeBuurt");
+	buurtYellow4.classList.add("limeBuurt");
+	buurtOrange1.classList.add("limeBuurt");
+	buurtOrange2.classList.add("limeBuurt");
+}
+
+
+
+function carWeek() {
+	removeAllClassesX5();
+	buurtGreen1.classList.add("greenBuurt");
+	buurtGreen2.classList.add("limeBuurt");
+	buurtLime1.classList.add("limeBuurt");
+	buurtLime2.classList.add("limeBuurt");
+	buurtLime3.classList.add("yellowBuurt");
+	buurtLime4.classList.add("limeBuurt");
+	buurtLime5.classList.add("yellowBuurt");
+	buurtYellow1.classList.add("yellowBuurt");
+	buurtYellow2.classList.add("yellowBuurt");
+	buurtYellow3.classList.add("yellowBuurt");
+	buurtYellow4.classList.add("orangeBuurt");
+	buurtOrange1.classList.add("orangeBuurt");
+	buurtOrange2.classList.add("orangeBuurt");
+}
+
+
+
+function carMonth() {
+	removeAllClassesX5();
+	buurtGreen1.classList.add("limeBuurt");
+	buurtGreen2.classList.add("yellowBuurt");
+	buurtLime1.classList.add("limeBuurt");
+	buurtLime2.classList.add("yellowBuurt");
+	buurtLime3.classList.add("yellowBuurt");
+	buurtLime4.classList.add("yellowBuurt");
+	buurtLime5.classList.add("orangeBuurt");
+	buurtYellow1.classList.add("orangeBuurt");
+	buurtYellow2.classList.add("yellowBuurt");
+	buurtYellow3.classList.add("orangeBuurt");
+	buurtYellow4.classList.add("orangeBuurt");
+	buurtOrange1.classList.add("orangeBuurt");
+	buurtOrange2.classList.add("redBuurt");
+}
+
+
+
+function carYear() {
+	removeAllClassesX5();
+	buurtGreen1.classList.add("yellowBuurt");
+	buurtGreen2.classList.add("orangeBuurt");
+	buurtLime1.classList.add("yellowBuurt");
+	buurtLime2.classList.add("yellowBuurt");
+	buurtLime3.classList.add("redBuurt");
+	buurtLime4.classList.add("orangeBuurt");
+	buurtLime5.classList.add("orangeBuurt");
+	buurtYellow1.classList.add("redBuurt");
+	buurtYellow2.classList.add("redBuurt");
+	buurtYellow3.classList.add("redBuurt");
+	buurtYellow4.classList.add("redBuurt");
+	buurtOrange1.classList.add("redBuurt");
+	buurtOrange2.classList.add("redBuurt");
+}
+
+
+
+
+
+
+//---------- BTN 2 ----------//
+
+
+function shower5Week() {
+	removeAllClassesX5();
+	buurtGreen1.classList.add("greenBuurt");
+	buurtGreen2.classList.add("greenBuurt");
+	buurtLime1.classList.add("limeBuurt");
+	buurtLime2.classList.add("limeBuurt");
+	buurtLime3.classList.add("limeBuurt");
+	buurtLime4.classList.add("greenBuurt");
+	buurtLime5.classList.add("limeBuurt");
+	buurtYellow1.classList.add("yellowBuurt");
+	buurtYellow2.classList.add("yellowBuurt");
+	buurtYellow3.classList.add("limeBuurt");
+	buurtYellow4.classList.add("yellowBuurt");
+	buurtOrange1.classList.add("yellowBuurt");
+	buurtOrange2.classList.add("orangeBuurt");
+}
+
+
+
+function shower5Month() {
+	removeAllClassesX5();
+	buurtGreen1.classList.add("greenBuurt");
+	buurtGreen2.classList.add("greenBuurt");
+	buurtLime1.classList.add("limeBuurt");
+	buurtLime2.classList.add("limeBuurt");
+	buurtLime3.classList.add("limeBuurt");
+	buurtLime4.classList.add("greenBuurt");
+	buurtLime5.classList.add("greenBuurt");
+	buurtYellow1.classList.add("yellowBuurt");
+	buurtYellow2.classList.add("yellowBuurt");
+	buurtYellow3.classList.add("limeBuurt");
+	buurtYellow4.classList.add("limeBuurt");
+	buurtOrange1.classList.add("yellowBuurt");
+	buurtOrange2.classList.add("orangeBuurt");
+}
+
+
+
+function shower5Year() {
+	removeAllClassesX5();
+	buurtGreen1.classList.add("greenBuurt");
+	buurtGreen2.classList.add("greenBuurt");
+	buurtLime1.classList.add("limeBuurt");
+	buurtLime2.classList.add("greenBuurt");
+	buurtLime3.classList.add("limeBuurt");
+	buurtLime4.classList.add("greenBuurt");
+	buurtLime5.classList.add("greenBuurt");
+	buurtYellow1.classList.add("yellowBuurt");
+	buurtYellow2.classList.add("limeBuurt");
+	buurtYellow3.classList.add("limeBuurt");
+	buurtYellow4.classList.add("limeBuurt");
+	buurtOrange1.classList.add("limeBuurt");
+	buurtOrange2.classList.add("yellowBuurt");
+}
+
+
+
+function shower15Week() {
+	removeAllClassesX5();
+	buurtGreen1.classList.add("greenBuurt");
+	buurtGreen2.classList.add("greenBuurt");
+	buurtLime1.classList.add("yellowBuurt");
+	buurtLime2.classList.add("limeBuurt");
+	buurtLime3.classList.add("limeBuurt");
+	buurtLime4.classList.add("limeBuurt");
+	buurtLime5.classList.add("limeBuurt");
+	buurtYellow1.classList.add("yellowBuurt");
+	buurtYellow2.classList.add("yellowBuurt");
+	buurtYellow3.classList.add("yellowBuurt");
+	buurtYellow4.classList.add("orangeBuurt");
+	buurtOrange1.classList.add("orangeBuurt");
+	buurtOrange2.classList.add("orangeBuurt");
+}
+
+
+
+function shower15Month() {
+	removeAllClassesX5();
+	buurtGreen1.classList.add("greenBuurt");
+	buurtGreen2.classList.add("greenBuurt");
+	buurtLime1.classList.add("yellowBuurt");
+	buurtLime2.classList.add("limeBuurt");
+	buurtLime3.classList.add("limeBuurt");
+	buurtLime4.classList.add("yellowBuurt");
+	buurtLime5.classList.add("limeBuurt");
+	buurtYellow1.classList.add("yellowBuurt");
+	buurtYellow2.classList.add("yellowBuurt");
+	buurtYellow3.classList.add("orangeBuurt");
+	buurtYellow4.classList.add("orangeBuurt");
+	buurtOrange1.classList.add("orangeBuurt");
+	buurtOrange2.classList.add("orangeBuurt");
+}
+
+
+
+function shower15Year() {
+	removeAllClassesX5();
+	buurtGreen1.classList.add("limeBuurt");
+	buurtGreen2.classList.add("limeBuurt");
+	buurtLime1.classList.add("yellowBuurt");
+	buurtLime2.classList.add("limeBuurt");
+	buurtLime3.classList.add("yellowBuurt");
+	buurtLime4.classList.add("yellowBuurt");
+	buurtLime5.classList.add("yellowBuurt");
+	buurtYellow1.classList.add("orangeBuurt");
+	buurtYellow2.classList.add("yellowBuurt");
+	buurtYellow3.classList.add("orangeBuurt");
+	buurtYellow4.classList.add("orangeBuurt");
+	buurtOrange1.classList.add("orangeBuurt");
+	buurtOrange2.classList.add("orangeBuurt");
+}
+
+
+
+
+
+
+//---------- BTN 3 ----------//
+
+
+function temp4Week() {
+	removeAllClassesX5();
+	buurtGreen1.classList.add("greenBuurt");
+	buurtGreen2.classList.add("greenBuurt");
+	buurtLime1.classList.add("limeBuurt");
+	buurtLime2.classList.add("limeBuurt");
+	buurtLime3.classList.add("limeBuurt");
+	buurtLime4.classList.add("limeBuurt");
+	buurtLime5.classList.add("greenBuurt");
+	buurtYellow1.classList.add("yellowBuurt");
+	buurtYellow2.classList.add("yellowBuurt");
+	buurtYellow3.classList.add("yellowBuurt");
+	buurtYellow4.classList.add("yellowBuurt");
+	buurtOrange1.classList.add("orangeBuurt");
+	buurtOrange2.classList.add("orangeBuurt");
+}
+
+
+
+function temp4Month() {
+	removeAllClassesX5();
+	buurtGreen1.classList.add("greenBuurt");
+	buurtGreen2.classList.add("greenBuurt");
+	buurtLime1.classList.add("limeBuurt");
+	buurtLime2.classList.add("limeBuurt");
+	buurtLime3.classList.add("limeBuurt");
+	buurtLime4.classList.add("limeBuurt");
+	buurtLime5.classList.add("greenBuurt");
+	buurtYellow1.classList.add("limeBuurt");
+	buurtYellow2.classList.add("limeBuurt");
+	buurtYellow3.classList.add("yellowBuurt");
+	buurtYellow4.classList.add("yellowBuurt");
+	buurtOrange1.classList.add("orangeBuurt");
+	buurtOrange2.classList.add("orangeBuurt");
+}
+
+
+
+function temp4Year() {
+	removeAllClassesX5();
+	buurtGreen1.classList.add("greenBuurt");
+	buurtGreen2.classList.add("greenBuurt");
+	buurtLime1.classList.add("limeBuurt");
+	buurtLime2.classList.add("greenBuurt");
+	buurtLime3.classList.add("limeBuurt");
+	buurtLime4.classList.add("limeBuurt");
+	buurtLime5.classList.add("greenBuurt");
+	buurtYellow1.classList.add("limeBuurt");
+	buurtYellow2.classList.add("limeBuurt");
+	buurtYellow3.classList.add("yellowBuurt");
+	buurtYellow4.classList.add("yellowBuurt");
+	buurtOrange1.classList.add("orangeBuurt");
+	buurtOrange2.classList.add("yellowBuurt");
+}
+
+
+
+function temp0Week() {
+	removeAllClassesX5();
+	buurtGreen1.classList.add("limeBuurt");
+	buurtGreen2.classList.add("greenBuurt");
+	buurtLime1.classList.add("limeBuurt");
+	buurtLime2.classList.add("limeBuurt");
+	buurtLime3.classList.add("yellowBuurt");
+	buurtLime4.classList.add("yellowBuurt");
+	buurtLime5.classList.add("limeBuurt");
+	buurtYellow1.classList.add("yellowBuurt");
+	buurtYellow2.classList.add("yellowBuurt");
+	buurtYellow3.classList.add("yellowBuurt");
+	buurtYellow4.classList.add("yellowBuurt");
+	buurtOrange1.classList.add("orangeBuurt");
+	buurtOrange2.classList.add("orangeBuurt");
+}
+
+
+
+function temp0Month() {
+	removeAllClassesX5();
+	buurtGreen1.classList.add("limeBuurt");
+	buurtGreen2.classList.add("greenBuurt");
+	buurtLime1.classList.add("limeBuurt");
+	buurtLime2.classList.add("yellowBuurt");
+	buurtLime3.classList.add("yellowBuurt");
+	buurtLime4.classList.add("yellowBuurt");
+	buurtLime5.classList.add("limeBuurt");
+	buurtYellow1.classList.add("orangeBuurt");
+	buurtYellow2.classList.add("orangeBuurt");
+	buurtYellow3.classList.add("yellowBuurt");
+	buurtYellow4.classList.add("yellowBuurt");
+	buurtOrange1.classList.add("redBuurt");
+	buurtOrange2.classList.add("orangeBuurt");
+}
+
+
+
+function temp0Year() {
+	removeAllClassesX5();
+	buurtGreen1.classList.add("limeBuurt");
+	buurtGreen2.classList.add("limeBuurt");
+	buurtLime1.classList.add("limeBuurt");
+	buurtLime2.classList.add("yellowBuurt");
+	buurtLime3.classList.add("orangeBuurt");
+	buurtLime4.classList.add("yellowBuurt");
+	buurtLime5.classList.add("yellowBuurt");
+	buurtYellow1.classList.add("orangeBuurt");
+	buurtYellow2.classList.add("orangeBuurt");
+	buurtYellow3.classList.add("orangeBuurt");
+	buurtYellow4.classList.add("orangeBuurt");
+	buurtOrange1.classList.add("redBuurt");
+	buurtOrange2.classList.add("redBuurt");
 }

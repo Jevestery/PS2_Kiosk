@@ -222,7 +222,7 @@ function activateBtn(btnColor, btnColorBG) {
 		console.log(yellowActive);
 		console.log(orangeActive);
 		console.log(redActive);
-	}, 650);
+	}, 600);
 };
 
 
@@ -263,19 +263,38 @@ function closeOneDisplay(label, close) {
 
 
 
+function closeAll() {
+
+	closeOneAnim(greenBtnLabel, greenBtnClose);
+	closeAnim(limeBtnLabel, limeBtnClose, yellowBtnLabel, yellowBtnClose, orangeBtnLabel, orangeBtnClose, redBtnLabel, redBtnClose);
+
+	setTimeout(function(){
+		closeOneDisplay(greenBtnLabel, greenBtnClose);
+		closeDisplay(limeBtnLabel, limeBtnClose, yellowBtnLabel, yellowBtnClose, orangeBtnLabel, orangeBtnClose, redBtnLabel, redBtnClose);
+		greenActive = false;
+		limeActive = false;
+		yellowActive = false;
+		orangeActive = false;
+		redActive = false;
+	}, 600);
+
+}
+
+
+
 function closeAllOther(btnColor) {
 
 	if (btnColor == greenBtn) {
 
-		closeAnim(limeBtnLabel, limeBtnClose, limeBtnLabel, yellowBtnClose, orangeBtnLabel, orangeBtnClose, redBtnLabel, redBtnClose);
+		closeAnim(limeBtnLabel, limeBtnClose, yellowBtnLabel, yellowBtnClose, orangeBtnLabel, orangeBtnClose, redBtnLabel, redBtnClose);
 
 		setTimeout(function(){
-			closeDisplay(limeBtnLabel, limeBtnClose, limeBtnLabel, yellowBtnClose, orangeBtnLabel, orangeBtnClose, redBtnLabel, redBtnClose);
+			closeDisplay(limeBtnLabel, limeBtnClose, yellowBtnLabel, yellowBtnClose, orangeBtnLabel, orangeBtnClose, redBtnLabel, redBtnClose);
 			limeActive = false;
 			yellowActive = false;
 			orangeActive = false;
 			redActive = false;
-		}, 700);
+		}, 600);
 
 	} else if (btnColor == limeBtn) {
 
@@ -287,7 +306,7 @@ function closeAllOther(btnColor) {
 			yellowActive = false;
 			orangeActive = false;
 			redActive = false;
-		}, 700);
+		}, 600);
 
 	} else if (btnColor == yellowBtn) {
 
@@ -299,7 +318,7 @@ function closeAllOther(btnColor) {
 			limeActive = false;
 			orangeActive = false;
 			redActive = false;
-		}, 700);
+		}, 600);
 
 	} else if (btnColor == orangeBtn) {
 
@@ -311,7 +330,7 @@ function closeAllOther(btnColor) {
 			limeActive = false;
 			yellowActive = false;
 			redActive = false;
-		}, 700);
+		}, 600);
 
 	} else if (btnColor == redBtn) {
 
@@ -323,7 +342,7 @@ function closeAllOther(btnColor) {
 			limeActive = false;
 			yellowActive = false;
 			orangeActive = false;
-		}, 700);
+		}, 600);
 
 	};
 };
