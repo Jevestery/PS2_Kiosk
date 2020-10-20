@@ -213,28 +213,23 @@ function btnActive(btn, btnIcon) {
 
 
 
+var btnActivate = 'btnActive';
+var btnIconActivate = 'btnIconActive';
+
+var btnDeactivate = 'btnDeactive';
+var btnIconDeactivate = 'btnIconDeactive';
+
+
 function showBtnActivityRight(btn, btnIcon, btnIconText, leftActive, rightActive, otherBtn, otherBtnIcon, otherBtnIconText) {
 
 	if (!rightActive) {
-		btn.style.animationName = 'btnActive';
-		btnIcon.style.animationName = 'btnIconActive';
-		if (btnIconText != false) {
-			btnIconText.style.animationName = 'btnIconActive';
-		}
+		btnActivity1(btn, btnIcon, btnIconText, btnActivate, btnIconActivate);
 	} else {
-		btn.style.animationName = 'btnDeactive';
-		btnIcon.style.animationName = 'btnIconDeactive';
-		if (btnIconText != false) {
-			btnIconText.style.animationName = 'btnIconDeactive';
-		}
+		btnActivity1(btn, btnIcon, btnIconText, btnDeactivate, btnIconDeactivate);
 	}
 
 	if (leftActive) {
-		otherBtn.style.animationName = 'btnDeactive';
-		otherBtnIcon.style.animationName = 'btnIconDeactive';
-		if (btnIconText != false) {
-			otherBtnIconText.style.animationName = 'btnIconDeactive';
-		}
+		btnActivity2(btnIconText, otherBtn, otherBtnIcon, otherBtnIconText);
 	}
 
 }
@@ -245,27 +240,37 @@ function showBtnActivityRight(btn, btnIcon, btnIconText, leftActive, rightActive
 function showBtnActivityLeft(btn, btnIcon, btnIconText, leftActive, rightActive, otherBtn, otherBtnIcon, otherBtnIconText) {
 
 	if (!leftActive) {
-		btn.style.animationName = 'btnActive';
-		btnIcon.style.animationName = 'btnIconActive';
-		if (btnIconText != false) {
-			btnIconText.style.animationName = 'btnIconActive';
-		}
+		btnActivity1(btn, btnIcon, btnIconText, btnActivate, btnIconActivate);
 	} else {
-		btn.style.animationName = 'btnDeactive';
-		btnIcon.style.animationName = 'btnIconDeactive';
-		if (btnIconText != false) {
-			btnIconText.style.animationName = 'btnIconDeactive';
-		}
+		btnActivity1(btn, btnIcon, btnIconText, btnDeactivate, btnIconDeactivate);
 	}
 
 	if (rightActive) {
-		otherBtn.style.animationName = 'btnDeactive';
-		otherBtnIcon.style.animationName = 'btnIconDeactive';
-		if (btnIconText != false) {
-			otherBtnIconText.style.animationName = 'btnIconDeactive';
-		}
+		btnActivity2(btnIconText, otherBtn, otherBtnIcon, otherBtnIconText);
 	}
 
+}
+
+
+
+
+function btnActivity1(btn, btnIcon, btnIconText, anim1, anim2) {
+	btn.style.animationName = anim1;
+	btnIcon.style.animationName = anim2;
+	if (btnIconText != false) {
+		btnIconText.style.animationName = anim2;
+	}
+}
+
+
+
+
+function btnActivity2(btnIconText, otherBtn, otherBtnIcon, otherBtnIconText) {
+	otherBtn.style.animationName = 'btnDeactive';
+	otherBtnIcon.style.animationName = 'btnIconDeactive';
+	if (btnIconText != false) {
+		otherBtnIconText.style.animationName = 'btnIconDeactive';
+	}
 }
 
 
@@ -420,21 +425,22 @@ function switchSubMenu(menuBtn, menuBtnText, menuBtnAlt1, menuBtnAlt1Text, menuB
 
 
 
+function resetBtnAnim(btn, btnText) {
+	btn.style.marginBottom = '125px';
+	btn.style.animationName = 'subIn';
+	btnText.style.animationName = 'none';
+}
+
+
+
+
 function resetSubMenu(subMenu, btn1, btn1Text, btn2, btn2Text, btn3, btn3Text) {
 
 	subMenu.style.display = 'none';
 
-	btn1.style.marginBottom = '125px';
-	btn1.style.animationName = 'subIn';
-	btn1Text.style.animationName = 'none';
-
-	btn2.style.marginBottom = '125px';
-	btn2.style.animationName = 'subIn';
-	btn2Text.style.animationName = 'none';
-
-	btn3.style.marginBottom = '125px';
-	btn3.style.animationName = 'subIn';
-	btn3Text.style.animationName = 'none';
+	resetBtnAnim(btn1, btn1Text);
+	resetBtnAnim(btn2, btn2Text);
+	resetBtnAnim(btn3, btn3Text);
 
 	if (subMenu = subMenu1) {
 		subMenu1BtnLeftActive = false;
@@ -581,22 +587,16 @@ function btnType(classifier, leftActive, rightActive, btnClassifier) {
 		if (btnClassifier == 1) {
 			bikeColorsActive = true;
 			carColorsActive = false;
-			shower5ColorsActive = false;
-			shower15ColorsActive = false;
-			temp4ColorsActive = false;
-			temp0ColorsActive = false;
+			showerActiveFalse();
+			tempActiveFalse();
 		} else if (btnClassifier == 2) {
-			bikeColorsActive = false;
-			carColorsActive = false;
+			transportActiveFalse();
 			shower5ColorsActive = true;
 			shower15ColorsActive = false;
-			temp4ColorsActive = false;
-			temp0ColorsActive = false;
+			tempActiveFalse();
 		} else if (btnClassifier == 3) {
-			bikeColorsActive = false;
-			carColorsActive = false;
-			shower5ColorsActive = false;
-			shower15ColorsActive = false;
+			transportActiveFalse();
+			showerActiveFalse();
 			temp4ColorsActive = true;
 			temp0ColorsActive = false;
 		}
@@ -608,22 +608,16 @@ function btnType(classifier, leftActive, rightActive, btnClassifier) {
 		if (btnClassifier == 1) {
 			bikeColorsActive = false;
 			carColorsActive = true;
-			shower5ColorsActive = false;
-			shower15ColorsActive = false;
-			temp4ColorsActive = false;
-			temp0ColorsActive = false;
+			showerActiveFalse();
+			tempActiveFalse();
 		} else if (btnClassifier == 2) {
-			bikeColorsActive = false;
-			carColorsActive = false;
+			transportActiveFalse();
 			shower5ColorsActive = false;
 			shower15ColorsActive = true;
-			temp4ColorsActive = false;
-			temp0ColorsActive = false;
+			tempActiveFalse();
 		} else if (btnClassifier == 3) {
-			bikeColorsActive = false;
-			carColorsActive = false;
-			shower5ColorsActive = false;
-			shower15ColorsActive = false;
+			transportActiveFalse();
+			showerActiveFalse();
 			temp4ColorsActive = false;
 			temp0ColorsActive = true;
 		}
@@ -636,33 +630,63 @@ function btnType(classifier, leftActive, rightActive, btnClassifier) {
 
 
 
+function transportActiveFalse() {
+	bikeColorsActive = false;
+	carColorsActive = false;
+}
+
+
+
+
+function showerActiveFalse() {
+	shower5ColorsActive = false;
+	shower15ColorsActive = false;
+}
+
+
+
+
+function tempActiveFalse() {
+	temp4ColorsActive = false;
+	temp0ColorsActive = false;
+}
+
+
+
+
 function btnCheckCloseOpen(btn, btnClassifier) {
 	if (btn == true) {
 
 		if (btnClassifier == 1) {
+
 			if (btn1WeekActive) {
-				btnWeek(btnClassifier);
+				setBtn(btnClassifier, 1);
 			} else if (btn1YearActive) {
-				btnYear(btnClassifier);
+				setBtn(btnClassifier, 3);
 			} else {
-				btnMonth(btnClassifier);
+				setBtn(btnClassifier, 2);
 			}
+
 		} else if (btnClassifier == 2) {
+
 			if (btn2WeekActive) {
-				btnWeek(btnClassifier);
+				setBtn(btnClassifier, 1);
 			} else if (btn2YearActive) {
-				btnYear(btnClassifier);
+				setBtn(btnClassifier, 3);
 			} else {
-				btnMonth(btnClassifier);
+				setBtn(btnClassifier, 2);
 			}
+
 		} else if (btnClassifier == 3) {
+
 			if (btn3WeekActive) {
-				btnWeek(btnClassifier);
+				setBtn(btnClassifier, 1);
 			} else if (btn3YearActive) {
-				btnYear(btnClassifier);
+				setBtn(btnClassifier, 3);
 			} else {
-				btnYear(btnClassifier);
+				setBtn(btnClassifier, 2);
 			}
+
 		}
 
 	} else {
@@ -674,22 +698,13 @@ function btnCheckCloseOpen(btn, btnClassifier) {
 			allOpacityIn();
 		}, 400);
 
-		bikeColorsActive = false;
-		carColorsActive = false;
-		shower5ColorsActive = false;
-		shower15ColorsActive = false;
-		temp4ColorsActive = false;
-		temp0ColorsActive = false;
+		transportActiveFalse();
+		showerActiveFalse();
+		tempActiveFalse();
 
-		btn1WeekActive = false;
-		btn1MonthActive = false;
-		btn1YearActive = false;
-		btn2WeekActive = false;
-		btn2MonthActive = false;
-		btn2YearActive = false;
-		btn3WeekActive = false;
-		btn3MonthActive = false;
-		btn3YearActive = false;
+		btn1Reset();
+		btn2Reset();
+		btn3Reset();
 	}
 }
 
@@ -700,221 +715,164 @@ function btnCheckCloseOpen(btn, btnClassifier) {
 //---------- BTNS ----------//
 
 
-function btnWeek(classifier) {
+
+function setBtn(classifier, timeClassifier) {
 
 	closeAll();
 	allOpacityOut();
 
 
-	if (classifier = 1) {
+	if (classifier == 1) {
 
 		setTimeout(function(){
 
-			if (bikeColorsActive == true) {
-				bikeWeek();
-			} else if (carColorsActive == true) {
-				carWeek();
+			if (timeClassifier == 1) {
+				btn2Reset();
+				btn3Reset();
+				btn1WeekActive = true;
+				btn1MonthActive = false;
+				btn1YearActive = false;
+
+				if (bikeColorsActive) {
+					bikeWeek();
+				} else if (carColorsActive) {
+					carWeek();
+				}
+
+			} else if (timeClassifier == 3) {
+				btn2Reset();
+				btn3Reset();
+				btn1WeekActive = false;
+				btn1MonthActive = false;
+				btn1YearActive = true;
+
+				if (bikeColorsActive) {
+					bikeYear();
+				} else if (carColorsActive) {
+					carYear();
+				}
+
+			} else {
+				btn2Reset();
+				btn3Reset();
+				btn1WeekActive = false;
+				btn1MonthActive = true;
+				btn1YearActive = false;
+
+				if (bikeColorsActive) {
+					bikeMonth();
+				} else if (carColorsActive) {
+					carMonth();
+				}
+
 			}
 
 			allOpacityIn();
 		}, 400);
-
-		btn2Reset();
-		btn3Reset();
-		btn1WeekActive = true;
-		btn1MonthActive = false;
-		btn1YearActive = false;
 	}
 
 
-	if (classifier = 2) {
+	if (classifier == 2) {
 
 		setTimeout(function(){
 
-			if (shower5ColorsActive == true) {
-				shower5Week();
-			} else if (shower15ColorsActive == true) {
-				shower15Week();
+			if (timeClassifier == 1) {
+				btn1Reset();
+				btn3Reset();
+				btn2WeekActive = true;
+				btn2MonthActive = false;
+				btn2YearActive = false;
+
+				if (shower5ColorsActive) {
+					shower5Week();
+				} else if (shower15ColorsActive) {
+					shower15Week();
+				}
+
+			} else if (timeClassifier == 3) {
+				btn1Reset();
+				btn3Reset();
+				btn2WeekActive = false;
+				btn2MonthActive = false;
+				btn2YearActive = true;
+
+				if (shower5ColorsActive) {
+					shower5Year();
+				} else if (shower15ColorsActive) {
+					shower15Year();
+				}
+
+			} else {
+				btn1Reset();
+				btn3Reset();
+				btn2WeekActive = false;
+				btn2MonthActive = true;
+				btn2YearActive = false;
+
+				if (shower5ColorsActive) {
+					shower5Month();
+				} else if (shower15ColorsActive) {
+					shower15Month();
+				}
+
 			}
 
 			allOpacityIn();
 		}, 400);
-
-		btn1Reset();
-		btn3Reset();
-		btn2WeekActive = true;
-		btn2MonthActive = false;
-		btn2YearActive = false;
 	}
 
 
-	if (classifier = 3) {
+	if (classifier == 3) {
 
 		setTimeout(function(){
 
-			if (temp4ColorsActive == true) {
-				temp4Week();
-			} else if (temp0ColorsActive == true) {
-				temp0Week();
+			if (timeClassifier == 1) {
+				btn1Reset();
+				btn2Reset();
+				btn3WeekActive = true;
+				btn3MonthActive = false;
+				btn3YearActive = false;
+
+				if (temp4ColorsActive) {
+					temp4Week();
+				} else if (temp0ColorsActive) {
+					temp0Week();
+				}
+
+			} else if (timeClassifier == 3) {
+				btn1Reset();
+				btn2Reset();
+				btn3WeekActive = false;
+				btn3MonthActive = false;
+				btn3YearActive = true;
+
+				if (temp4ColorsActive) {
+					temp4Year();
+				} else if (temp0ColorsActive) {
+					temp0Year();
+				}
+
+			} else {
+				btn1Reset();
+				btn2Reset();
+				btn3WeekActive = false;
+				btn3MonthActive = true;
+				btn3YearActive = false;
+
+				if (temp4ColorsActive) {
+					temp4Month();
+				} else if (temp0ColorsActive) {
+					temp0Month();
+				}
+
 			}
 
 			allOpacityIn();
 		}, 400);
-
-		btn1Reset();
-		btn2Reset();
-		btn3WeekActive = true;
-		btn3MonthActive = false;
-		btn3YearActive = false;
-	}
-
-}
-
-
-
-
-function btnMonth(classifier) {
-
-	closeAll();
-	allOpacityOut();
-
-
-	if (classifier = 1) {
-
-		setTimeout(function(){
-
-			if (bikeColorsActive == true) {
-				bikeMonth();
-			} else if (carColorsActive == true) {
-				carMonth();
-			}
-
-			allOpacityIn();
-		}, 400);
-
-		btn2Reset();
-		btn3Reset();
-		btn1WeekActive = false;
-		btn1MonthActive = true;
-		btn1YearActive = false;
-	}
-
-
-	if (classifier = 2) {
-
-		setTimeout(function(){
-
-			if (shower5ColorsActive == true) {
-				shower5Month();
-			} else if (shower15ColorsActive == true) {
-				shower15Month();
-			}
-
-			allOpacityIn();
-		}, 400);
-
-		btn1Reset();
-		btn3Reset();
-		btn2WeekActive = false;
-		btn2MonthActive = true;
-		btn2YearActive = false;
-	}
-
-
-	if (classifier = 3) {
-
-		setTimeout(function(){
-
-			if (temp4ColorsActive == true) {
-				temp4Month();
-			} else if (temp0ColorsActive == true) {
-				temp0Month();
-			}
-
-			allOpacityIn();
-		}, 400);
-
-		btn1Reset();
-		btn2Reset();
-		btn3WeekActive = false;
-		btn3MonthActive = true;
-		btn3YearActive = false;
-	}
-
-}
-
-
-
-
-function btnYear(classifier) {
-
-	closeAll();
-	allOpacityOut();
-
-
-	if (classifier = 1) {
-
-		setTimeout(function(){
-
-			if (bikeColorsActive == true) {
-				bikeYear();
-			} else if (carColorsActive == true) {
-				carYear();
-			}
-
-			allOpacityIn();
-		}, 400);
-
-		btn2Reset();
-		btn3Reset();
-		btn1WeekActive = false;
-		btn1MonthActive = false;
-		btn1YearActive = true;
-	}
-
-
-	if (classifier = 2) {
-
-		setTimeout(function(){
-
-			if (shower5ColorsActive == true) {
-				shower5Year();
-			} else if (shower15ColorsActive == true) {
-				shower15Year();
-			}
-
-			allOpacityIn();
-		}, 400);
-
-		btn1Reset();
-		btn3Reset();
-		btn2WeekActive = false;
-		btn2MonthActive = false;
-		btn2YearActive = true;
-	}
-
-
-	if (classifier = 3) {
-
-		setTimeout(function(){
-
-			if (temp4ColorsActive == true) {
-				temp4Year();
-			} else if (temp0ColorsActive == true) {
-				temp0Year();
-			}
-
-			allOpacityIn();
-		}, 400);
-
-		btn1Reset();
-		btn2Reset();
-		btn3WeekActive = false;
-		btn3MonthActive = false;
-		btn3YearActive = true;
 	}
 
 }
+
 
 
 
