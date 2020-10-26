@@ -17,6 +17,99 @@
   left: 0;
   width: var(--screen-width);
   height: var(--screen-height);
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes buurtYellow1Anim {
+  from {
+    width: var(--screen-width);
+    top: 0;
+    left: 0;
+  }
+  to {
+    width: calc(var(--screen-width) * 2.3);
+    top: -200px;
+    left: -465px;
+  }
+}
+
+@keyframes buurtYellow1AnimOut {
+  from {
+    width: calc(var(--screen-width) * 2.3);
+    top: -200px;
+    left: -465px;
+  }
+  to {
+    width: var(--screen-width);
+    top: 0;
+    left: 0;
+  }
+}
+
+@keyframes buurtOrange1Anim {
+  from {
+    width: var(--screen-width);
+    top: 0;
+    left: 0;
+  }
+  to {
+    width: calc(var(--screen-width) * 2.3);
+    top: -225px;
+    left: -300px;
+  }
+}
+
+@keyframes buurtOrange1AnimOut {
+  from {
+    width: calc(var(--screen-width) * 2.3);
+    top: -225px;
+    left: -300px;
+  }
+  to {
+    width: var(--screen-width);
+    top: 0;
+    left: 0;
+  }
+}
+
+
+
+
+
+
+
+/*-----------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------- Map ------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------*/
+
+#neighborhoodBox {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 400px;
+  height: 625px;
+  background-color: var(--b-white);
+  border-radius: 40px;
+  box-shadow: 0 2px 10px var(--b-gray-500);
+}
+
+.neighborhoodBoxContent {
+  margin: 10px 40px;
+}
+
+#buurtName {
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+#buurtColor {
+  display: inline-block;
+  height: 25px;
+  width: 25px;
+  background-color: var(--p-orange);
+  border-radius: 100%;
+  margin-right: 12px;
 }
 
 
