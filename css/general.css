@@ -98,6 +98,10 @@
   cursor: pointer;
 }
 
+.alignCenter {
+  text-align: center;
+}
+
 .margin0 {
   margin: 0 !important;
 }
@@ -105,6 +109,18 @@
 .margin15 {
   margin: 7.5px 0 !important;
 }
+
+
+
+/* CONTENT SPACING */
+
+.nanoFix {
+  padding-top: 25px;
+}
+
+
+
+/* ANIMATIONS */
 
 @keyframes opacity {
   from {opacity: 0;}
@@ -134,14 +150,6 @@
 @keyframes opacity-3-rev {
   from {opacity: 0.2;}
   to {opacity: 1;}
-}
-
-
-
-/* CONTENT SPACING */
-
-.nanoFix {
-  padding-top: 25px;
 }
 
 
