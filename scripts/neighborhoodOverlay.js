@@ -7,6 +7,7 @@
 
 
 var mapElement = document.getElementById('map');
+var overlayElement = document.getElementById('neighborhoodBox');
 
 var buurtGreen1Zoomed = false;
 var buurtGreen2Zoomed = false;
@@ -68,7 +69,11 @@ function zoomIn(buurt, zoomed, buurtAnim, buurtAnimOut) {
 
 	if (zoomed == false) {
 		map.style.animationName = buurtAnim;
+		overlayElement.style.animationName = "opacity";
+		overlayElement.style.display = "block";
 		zoomed = true;
+
+		disableAllOtherBtns();
 
 		if (buurt == buurtGreen1) {
 			buurtGreen1Zoomed = true;
@@ -98,10 +103,17 @@ function zoomIn(buurt, zoomed, buurtAnim, buurtAnimOut) {
 			buurtOrange2Zoomed = true;
 		}
 
+
 	} else {
 		map.style.animationName = buurtAnimOut;
-
+		overlayElement.style.animationName = "opacity-rev";
 		zoomed = false;
+
+		enableAllOtherBtns();
+
+		setTimeout(function(){
+			overlayElement.style.display = "none";
+		}, 500);
 
 		if (buurt == buurtGreen1) {
 			buurtGreen1Zoomed = false;
@@ -132,4 +144,42 @@ function zoomIn(buurt, zoomed, buurtAnim, buurtAnimOut) {
 		}
 	}
 
+}
+
+
+
+
+
+var bottomBtns = document.getElementById('buttons');
+var colorBtns = document.getElementById('colorBtns');
+
+
+
+function disableAllOtherBtns() {
+
+	if (menu1LeftActive == true || menu1RightActive == true || menu2LeftActive == true || menu2RightActive == true || menu3LeftActive == true || menu3RightActive == true) {
+		btnCheckCloseOpen(false, false);
+		resetSubMenu(subMenu1, subMenu1BtnLeft, subMenu1BtnLeftText, subMenu1BtnMiddle, subMenu1BtnMiddleText, subMenu1BtnRight, subMenu1BtnRightText);
+		resetSubMenu(subMenu2, subMenu2BtnLeft, subMenu2BtnLeftText, subMenu2BtnMiddle, subMenu2BtnMiddleText, subMenu2BtnRight, subMenu2BtnRightText);
+		resetSubMenu(subMenu3, subMenu3BtnLeft, subMenu3BtnLeftText, subMenu3BtnMiddle, subMenu3BtnMiddleText, subMenu3BtnRight, subMenu3BtnRightText);
+		deactivateAllBtns(btn1Left, btn1LeftIcon, btn1LeftIconText, menu1LeftActive, btn1Right, btn1RightIcon, btn1RightIconText, menu1RightActive);
+		deactivateAllBtns(btn2Left, btn2LeftIcon, btn2LeftIconText, menu2LeftActive, btn2Right, btn2RightIcon, btn2RightIconText, menu2RightActive);
+		deactivateAllBtns(btn3Left, btn3LeftIcon, btn3LeftIconText, menu3LeftActive, btn3Right, btn3RightIcon, btn3RightIconText, menu3RightActive);
+	}
+
+	bottomBtns.style.animationName = "opacity-3";
+	colorBtns.style.animationName = "opacity-3";
+
+	colorBtnsDisabled = true;
+	menuBtnsDisabled = true;
+}
+
+
+
+function enableAllOtherBtns() {
+	bottomBtns.style.animationName = "opacity-3-rev";
+	colorBtns.style.animationName = "opacity-3-rev";
+
+	colorBtnsDisabled = false;
+	menuBtnsDisabled = false;
 }

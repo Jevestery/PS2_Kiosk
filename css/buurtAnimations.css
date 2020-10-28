@@ -1,0 +1,385 @@
+
+
+
+/*-----------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------ Green Neighborhoods ----------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------*/
+
+
+@keyframes buurtGreen1Anim {
+  from {
+    width: var(--screen-width);
+    top: 0;
+    left: 0;
+  }
+  to {
+    width: calc(var(--screen-width) * 2.3);
+    top: -450px;
+    left: -925px;
+  }
+}
+
+@keyframes buurtGreen1AnimOut {
+  from {
+    width: calc(var(--screen-width) * 2.3);
+    top: -450px;
+    left: -925px;
+  }
+  to {
+    width: var(--screen-width);
+    top: 0;
+    left: 0;
+  }
+}
+
+
+@keyframes buurtGreen2Anim {
+  from {
+    width: var(--screen-width);
+    top: 0;
+    left: 0;
+  }
+  to {
+    width: calc(var(--screen-width) * 2.25);
+    top: -1015px;
+    left: -615px;
+  }
+}
+
+@keyframes buurtGreen2AnimOut {
+  from {
+    width: calc(var(--screen-width) * 2.25);
+    top: -1015px;
+    left: -615px;
+  }
+  to {
+    width: var(--screen-width);
+    top: 0;
+    left: 0;
+  }
+}
+
+
+
+
+
+
+
+/*-----------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------- Lime Neighborhoods ----------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------*/
+
+
+@keyframes buurtLime1Anim {
+  from {
+    width: var(--screen-width);
+    top: 0;
+    left: 0;
+  }
+  to {
+    width: calc(var(--screen-width) * 2.3);
+    top: -125px;
+    left: -650px;
+  }
+}
+
+@keyframes buurtLime1AnimOut {
+  from {
+    width: calc(var(--screen-width) * 2.3);
+    top: -125px;
+    left: -650px;
+  }
+  to {
+    width: var(--screen-width);
+    top: 0;
+    left: 0;
+  }
+}
+
+
+@keyframes buurtLime2Anim {
+  from {
+    width: var(--screen-width);
+    top: 0;
+    left: 0;
+  }
+  to {
+    width: calc(var(--screen-width) * 2.2);
+    top: -15px;
+    left: -685px;
+  }
+}
+
+@keyframes buurtLime2AnimOut {
+  from {
+    width: calc(var(--screen-width) * 2.2);
+    top: -15px;
+    left: -685px;
+  }
+  to {
+    width: var(--screen-width);
+    top: 0;
+    left: 0;
+  }
+}
+
+
+@keyframes buurtLime3Anim {
+  from {
+    width: var(--screen-width);
+    top: 0;
+    left: 0;
+  }
+  to {
+    width: calc(var(--screen-width) * 2.25);
+    top: -640px;
+    left: -285px;
+  }
+}
+
+@keyframes buurtLime3AnimOut {
+  from {
+    width: calc(var(--screen-width) * 2.25);
+    top: -640px;
+    left: -285px;
+  }
+  to {
+    width: var(--screen-width);
+    top: 0;
+    left: 0;
+  }
+}
+
+
+@keyframes buurtLime4Anim {
+  from {
+    width: var(--screen-width);
+    top: 0;
+    left: 0;
+  }
+  to {
+    width: calc(var(--screen-width) * 2.4);
+    top: -1000px;
+    left: -450px;
+  }
+}
+
+@keyframes buurtLime4AnimOut {
+  from {
+    width: calc(var(--screen-width) * 2.4);
+    top: -1000px;
+    left: -450px;
+  }
+  to {
+    width: var(--screen-width);
+    top: 0;
+    left: 0;
+  }
+}
+
+
+@keyframes buurtLime5Anim {
+  from {
+    width: var(--screen-width);
+    top: 0;
+    left: 0;
+  }
+  to {
+    width: calc(var(--screen-width) * 1.9);
+    top: -715px;
+    left: -790px;
+  }
+}
+
+@keyframes buurtLime5AnimOut {
+  from {
+    width: calc(var(--screen-width) * 1.9);
+    top: -715px;
+    left: -790px;
+  }
+  to {
+    width: var(--screen-width);
+    top: 0;
+    left: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+/*-----------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------ Yellow Neighborhoods ---------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------*/
+
+
+@keyframes buurtYellow1Anim {
+  from {
+    width: var(--screen-width);
+    top: 0;
+    left: 0;
+  }
+  to {
+    width: calc(var(--screen-width) * 2.3);
+    top: -200px;
+    left: -465px;
+  }
+}
+
+@keyframes buurtYellow1AnimOut {
+  from {
+    width: calc(var(--screen-width) * 2.3);
+    top: -200px;
+    left: -465px;
+  }
+  to {
+    width: var(--screen-width);
+    top: 0;
+    left: 0;
+  }
+}
+
+
+@keyframes buurtYellow2Anim {
+  from {
+    width: var(--screen-width);
+    left: 0;
+  }
+  to {
+    width: calc(var(--screen-width) * 2.2);
+    left: -875px;
+  }
+}
+
+@keyframes buurtYellow2AnimOut {
+  from {
+    width: calc(var(--screen-width) * 2.2);
+    left: -875px;
+  }
+  to {
+    width: var(--screen-width);
+    left: 0;
+  }
+}
+
+
+@keyframes buurtYellow3Anim {
+  from {
+    width: var(--screen-width);
+    top: 0;
+    left: 0;
+  }
+  to {
+    width: calc(var(--screen-width) * 2.35);
+    top: -600px;
+    left: -600px;
+  }
+}
+
+@keyframes buurtYellow3AnimOut {
+  from {
+    width: calc(var(--screen-width) * 2.35);
+    top: -600px;
+    left: -600px;
+  }
+  to {
+    width: var(--screen-width);
+    top: 0;
+    left: 0;
+  }
+}
+
+
+@keyframes buurtYellow4Anim {
+  from {
+    width: var(--screen-width);
+    top: 0;
+    left: 0;
+  }
+  to {
+    width: calc(var(--screen-width) * 2.6);
+    top: -995px;
+    left: -835px;
+  }
+}
+
+@keyframes buurtYellow4AnimOut {
+  from {
+    width: calc(var(--screen-width) * 2.6);
+    top: -995px;
+    left: -835px;
+  }
+  to {
+    width: var(--screen-width);
+    top: 0;
+    left: 0;
+  }
+}
+
+
+
+
+
+
+
+/*-----------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------ Orange Neighborhoods ---------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------*/
+
+
+@keyframes buurtOrange1Anim {
+  from {
+    width: var(--screen-width);
+    top: 0;
+    left: 0;
+  }
+  to {
+    width: calc(var(--screen-width) * 2.3);
+    top: -225px;
+    left: -300px;
+  }
+}
+
+@keyframes buurtOrange1AnimOut {
+  from {
+    width: calc(var(--screen-width) * 2.3);
+    top: -225px;
+    left: -300px;
+  }
+  to {
+    width: var(--screen-width);
+    top: 0;
+    left: 0;
+  }
+}
+
+
+@keyframes buurtOrange2Anim {
+  from {
+    width: var(--screen-width);
+    top: 0;
+    left: 0;
+  }
+  to {
+    width: calc(var(--screen-width) * 1.8);
+    top: -550px;
+    left: -500px;
+  }
+}
+
+@keyframes buurtOrange2AnimOut {
+  from {
+    width: calc(var(--screen-width) * 1.8);
+    top: -550px;
+    left: -500px;
+  }
+  to {
+    width: var(--screen-width);
+    top: 0;
+    left: 0;
+  }
+}

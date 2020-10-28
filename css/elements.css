@@ -21,58 +21,6 @@
   animation-fill-mode: forwards;
 }
 
-@keyframes buurtYellow1Anim {
-  from {
-    width: var(--screen-width);
-    top: 0;
-    left: 0;
-  }
-  to {
-    width: calc(var(--screen-width) * 2.3);
-    top: -200px;
-    left: -465px;
-  }
-}
-
-@keyframes buurtYellow1AnimOut {
-  from {
-    width: calc(var(--screen-width) * 2.3);
-    top: -200px;
-    left: -465px;
-  }
-  to {
-    width: var(--screen-width);
-    top: 0;
-    left: 0;
-  }
-}
-
-@keyframes buurtOrange1Anim {
-  from {
-    width: var(--screen-width);
-    top: 0;
-    left: 0;
-  }
-  to {
-    width: calc(var(--screen-width) * 2.3);
-    top: -225px;
-    left: -300px;
-  }
-}
-
-@keyframes buurtOrange1AnimOut {
-  from {
-    width: calc(var(--screen-width) * 2.3);
-    top: -225px;
-    left: -300px;
-  }
-  to {
-    width: var(--screen-width);
-    top: 0;
-    left: 0;
-  }
-}
-
 
 
 
@@ -80,7 +28,7 @@
 
 
 /*-----------------------------------------------------------------------------------------------------------------------------
--------------------------------------------------------------- Map ------------------------------------------------------------
+----------------------------------------------------- Neighborhood Overlay ----------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------*/
 
 #neighborhoodBox {
@@ -92,6 +40,8 @@
   background-color: var(--b-white);
   border-radius: 40px;
   box-shadow: 0 2px 10px var(--b-gray-500);
+  animation: opacity 0.5s forwards;
+  display: none;
 }
 
 .neighborhoodBoxContent {
@@ -156,6 +106,8 @@
 
 #colorBtns {
   margin: 50px 0;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
 }
 
 .colorBtnBG {
@@ -266,6 +218,8 @@
 
 #compassBG {
   margin-top: -10px;
+  background-color: var(--b-white);
+  box-shadow: 0 2px 10px var(--b-gray-400);
 }
 
 #compassIcon {
@@ -276,9 +230,9 @@
   height: 43px;
   width: 50px;
   text-align: center;
-  background-color: var(--a-blue);
+  background-color: var(--b-white);
   border-radius: 100% 100% 0 0;
-  box-shadow: 0 2px 10px var(--b-gray-600);
+  box-shadow: 0 2px 10px var(--b-gray-400);
   margin-left: 25px;
 }
 
@@ -286,8 +240,8 @@
   font-family: proxima-nova, sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 27px;
-  color: var(--b-white);
+  font-size: 30px;
+  color: var(--b-gray-600);
   padding-top: 5px;
 }
 
@@ -362,7 +316,8 @@
 /* MAIN */
 
 #buttons {
-
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
 }
 
 

@@ -6,6 +6,9 @@
 // ---------------------------------------------------------------------- //
 
 
+var menuBtnsDisabled = false;
+
+
 // BTN SET 1 //
 
 var btn1Left = document.getElementById('menuBtn1Left');
@@ -100,32 +103,38 @@ var left= "left";
 
 function subAppear(subMenu, clicked) {
 
-	if (subMenu == subMenu1) {
 
-		activateSubMenu(subMenu, menu1LeftActive, menu1RightActive, clicked);
-		closeOther(subMenu2, subMenu2BtnLeft, subMenu2BtnLeftText, subMenu2BtnMiddle, subMenu2BtnMiddleText, subMenu2BtnRight, subMenu2BtnRightText, menu2LeftActive, menu2RightActive);
-		closeOther(subMenu3, subMenu3BtnLeft, subMenu3BtnLeftText, subMenu3BtnMiddle, subMenu3BtnMiddleText, subMenu3BtnRight, subMenu3BtnRightText, menu3LeftActive, menu3RightActive);
-		deactivateAllBtns(btn2Left, btn2LeftIcon, btn2LeftIconText, menu2LeftActive, btn2Right, btn2RightIcon, btn2RightIconText, menu2RightActive);
-		deactivateAllBtns(btn3Left, btn3LeftIcon, btn3LeftIconText, menu3LeftActive, btn3Right, btn3RightIcon, btn3RightIconText, menu3RightActive);
+	if (menuBtnsDisabled == false) {
 
-	} else if (subMenu == subMenu2) {
 
-		activateSubMenu(subMenu, menu2LeftActive, menu2RightActive, clicked);
-		closeOther(subMenu1, subMenu1BtnLeft, subMenu1BtnLeftText, subMenu1BtnMiddle, subMenu1BtnMiddleText, subMenu1BtnRight, subMenu1BtnRightText, menu1LeftActive, menu1RightActive);
-		closeOther(subMenu3, subMenu3BtnLeft, subMenu3BtnLeftText, subMenu3BtnMiddle, subMenu3BtnMiddleText, subMenu3BtnRight, subMenu3BtnRightText, menu3LeftActive, menu3RightActive);
-		deactivateAllBtns(btn1Left, btn1LeftIcon, btn1LeftIconText, menu1LeftActive, btn1Right, btn1RightIcon, btn1RightIconText, menu1RightActive);
-		deactivateAllBtns(btn3Left, btn3LeftIcon, btn3LeftIconText, menu3LeftActive, btn3Right, btn3RightIcon, btn3RightIconText, menu3RightActive);
+		if (subMenu == subMenu1) {
 
-	} else if (subMenu == subMenu3) {
+			activateSubMenu(subMenu, menu1LeftActive, menu1RightActive, clicked);
+			closeOther(subMenu2, subMenu2BtnLeft, subMenu2BtnLeftText, subMenu2BtnMiddle, subMenu2BtnMiddleText, subMenu2BtnRight, subMenu2BtnRightText, menu2LeftActive, menu2RightActive);
+			closeOther(subMenu3, subMenu3BtnLeft, subMenu3BtnLeftText, subMenu3BtnMiddle, subMenu3BtnMiddleText, subMenu3BtnRight, subMenu3BtnRightText, menu3LeftActive, menu3RightActive);
+			deactivateAllBtns(btn2Left, btn2LeftIcon, btn2LeftIconText, menu2LeftActive, btn2Right, btn2RightIcon, btn2RightIconText, menu2RightActive);
+			deactivateAllBtns(btn3Left, btn3LeftIcon, btn3LeftIconText, menu3LeftActive, btn3Right, btn3RightIcon, btn3RightIconText, menu3RightActive);
 
-		activateSubMenu(subMenu, menu3LeftActive, menu3RightActive, clicked);
-		closeOther(subMenu1, subMenu1BtnLeft, subMenu1BtnLeftText, subMenu1BtnMiddle, subMenu1BtnMiddleText, subMenu1BtnRight, subMenu1BtnRightText, menu1LeftActive, menu1RightActive);
-		closeOther(subMenu2, subMenu2BtnLeft, subMenu2BtnLeftText, subMenu2BtnMiddle, subMenu2BtnMiddleText, subMenu2BtnRight, subMenu2BtnRightText, menu2LeftActive, menu2RightActive);
-		deactivateAllBtns(btn1Left, btn1LeftIcon, btn1LeftIconText, menu1LeftActive, btn1Right, btn1RightIcon, btn1RightIconText, menu1RightActive);
-		deactivateAllBtns(btn2Left, btn2LeftIcon, btn2LeftIconText, menu2LeftActive, btn2Right, btn2RightIcon, btn2RightIconText, menu2RightActive);
+		} else if (subMenu == subMenu2) {
+
+			activateSubMenu(subMenu, menu2LeftActive, menu2RightActive, clicked);
+			closeOther(subMenu1, subMenu1BtnLeft, subMenu1BtnLeftText, subMenu1BtnMiddle, subMenu1BtnMiddleText, subMenu1BtnRight, subMenu1BtnRightText, menu1LeftActive, menu1RightActive);
+			closeOther(subMenu3, subMenu3BtnLeft, subMenu3BtnLeftText, subMenu3BtnMiddle, subMenu3BtnMiddleText, subMenu3BtnRight, subMenu3BtnRightText, menu3LeftActive, menu3RightActive);
+			deactivateAllBtns(btn1Left, btn1LeftIcon, btn1LeftIconText, menu1LeftActive, btn1Right, btn1RightIcon, btn1RightIconText, menu1RightActive);
+			deactivateAllBtns(btn3Left, btn3LeftIcon, btn3LeftIconText, menu3LeftActive, btn3Right, btn3RightIcon, btn3RightIconText, menu3RightActive);
+
+		} else if (subMenu == subMenu3) {
+
+			activateSubMenu(subMenu, menu3LeftActive, menu3RightActive, clicked);
+			closeOther(subMenu1, subMenu1BtnLeft, subMenu1BtnLeftText, subMenu1BtnMiddle, subMenu1BtnMiddleText, subMenu1BtnRight, subMenu1BtnRightText, menu1LeftActive, menu1RightActive);
+			closeOther(subMenu2, subMenu2BtnLeft, subMenu2BtnLeftText, subMenu2BtnMiddle, subMenu2BtnMiddleText, subMenu2BtnRight, subMenu2BtnRightText, menu2LeftActive, menu2RightActive);
+			deactivateAllBtns(btn1Left, btn1LeftIcon, btn1LeftIconText, menu1LeftActive, btn1Right, btn1RightIcon, btn1RightIconText, menu1RightActive);
+			deactivateAllBtns(btn2Left, btn2LeftIcon, btn2LeftIconText, menu2LeftActive, btn2Right, btn2RightIcon, btn2RightIconText, menu2RightActive);
+
+		}
+
 
 	}
-
 }
 
 
@@ -156,57 +165,63 @@ function activateSubMenu(subMenu, leftActive, rightActive, clicked) {
 
 function btnActive(btn, btnIcon) {
 
-	if (btn == btn1Right) {
-		showBtnActivityRight(btn, btnIcon, btn1RightIconText, menu1LeftActive, menu1RightActive, btn1Left, btn1LeftIcon, btn1LeftIconText);
-		if (menu1LeftActive) {
-			menu1LeftActive = !menu1LeftActive;
-		}
-		menu1RightActive = !menu1RightActive;
-	}
+
+	if (menuBtnsDisabled == false) {
 
 
-	if (btn == btn1Left) {
-		showBtnActivityLeft(btn, btnIcon, btn1LeftIconText, menu1LeftActive, menu1RightActive, btn1Right, btn1RightIcon, btn1RightIconText);
-		if (menu1RightActive) {
+		if (btn == btn1Right) {
+			showBtnActivityRight(btn, btnIcon, btn1RightIconText, menu1LeftActive, menu1RightActive, btn1Left, btn1LeftIcon, btn1LeftIconText);
+			if (menu1LeftActive) {
+				menu1LeftActive = !menu1LeftActive;
+			}
 			menu1RightActive = !menu1RightActive;
 		}
-		menu1LeftActive = !menu1LeftActive;
-	}
 
 
-	if (btn == btn2Right) {
-		showBtnActivityRight(btn, btnIcon, btn2RightIconText, menu2LeftActive, menu2RightActive, btn2Left, btn2LeftIcon, btn2LeftIconText);
-		if (menu2LeftActive) {
-			menu2LeftActive = !menu2LeftActive;
+		if (btn == btn1Left) {
+			showBtnActivityLeft(btn, btnIcon, btn1LeftIconText, menu1LeftActive, menu1RightActive, btn1Right, btn1RightIcon, btn1RightIconText);
+			if (menu1RightActive) {
+				menu1RightActive = !menu1RightActive;
+			}
+			menu1LeftActive = !menu1LeftActive;
 		}
-		menu2RightActive = !menu2RightActive;
-	}
 
 
-	if (btn == btn2Left) {
-		showBtnActivityLeft(btn, btnIcon, btn2LeftIconText, menu2LeftActive, menu2RightActive, btn2Right, btn2RightIcon, btn2RightIconText);
-		if (menu2RightActive) {
+		if (btn == btn2Right) {
+			showBtnActivityRight(btn, btnIcon, btn2RightIconText, menu2LeftActive, menu2RightActive, btn2Left, btn2LeftIcon, btn2LeftIconText);
+			if (menu2LeftActive) {
+				menu2LeftActive = !menu2LeftActive;
+			}
 			menu2RightActive = !menu2RightActive;
 		}
-		menu2LeftActive = !menu2LeftActive;
-	}
 
 
-	if (btn == btn3Right) {
-		showBtnActivityRight(btn, btnIcon, btn3RightIconText, menu3LeftActive, menu3RightActive, btn3Left, btn3LeftIcon, btn3LeftIconText);
-		if (menu3LeftActive) {
-			menu3LeftActive = !menu3LeftActive;
+		if (btn == btn2Left) {
+			showBtnActivityLeft(btn, btnIcon, btn2LeftIconText, menu2LeftActive, menu2RightActive, btn2Right, btn2RightIcon, btn2RightIconText);
+			if (menu2RightActive) {
+				menu2RightActive = !menu2RightActive;
+			}
+			menu2LeftActive = !menu2LeftActive;
 		}
-		menu3RightActive = !menu3RightActive;
-	}
 
 
-	if (btn == btn3Left) {
-		showBtnActivityLeft(btn, btnIcon, btn3LeftIconText, menu3LeftActive, menu3RightActive, btn3Right, btn3RightIcon, btn3RightIconText);
-		if (menu3RightActive) {
+		if (btn == btn3Right) {
+			showBtnActivityRight(btn, btnIcon, btn3RightIconText, menu3LeftActive, menu3RightActive, btn3Left, btn3LeftIcon, btn3LeftIconText);
+			if (menu3LeftActive) {
+				menu3LeftActive = !menu3LeftActive;
+			}
 			menu3RightActive = !menu3RightActive;
 		}
-		menu3LeftActive = !menu3LeftActive;
+
+
+		if (btn == btn3Left) {
+			showBtnActivityLeft(btn, btnIcon, btn3LeftIconText, menu3LeftActive, menu3RightActive, btn3Right, btn3RightIcon, btn3RightIconText);
+			if (menu3RightActive) {
+				menu3RightActive = !menu3RightActive;
+			}
+			menu3LeftActive = !menu3LeftActive;
+		}
+
 	}
 }
 
@@ -582,49 +597,55 @@ function removeAllClassesX5() {
 
 function btnType(classifier, leftActive, rightActive, btnClassifier) {
 
-	if (classifier == 1) {
 
-		if (btnClassifier == 1) {
-			bikeColorsActive = true;
-			carColorsActive = false;
-			showerActiveFalse();
-			tempActiveFalse();
-		} else if (btnClassifier == 2) {
-			transportActiveFalse();
-			shower5ColorsActive = true;
-			shower15ColorsActive = false;
-			tempActiveFalse();
-		} else if (btnClassifier == 3) {
-			transportActiveFalse();
-			showerActiveFalse();
-			temp4ColorsActive = true;
-			temp0ColorsActive = false;
+	if (menuBtnsDisabled == false) {
+
+
+		if (classifier == 1) {
+
+			if (btnClassifier == 1) {
+				bikeColorsActive = true;
+				carColorsActive = false;
+				showerActiveFalse();
+				tempActiveFalse();
+			} else if (btnClassifier == 2) {
+				transportActiveFalse();
+				shower5ColorsActive = true;
+				shower15ColorsActive = false;
+				tempActiveFalse();
+			} else if (btnClassifier == 3) {
+				transportActiveFalse();
+				showerActiveFalse();
+				temp4ColorsActive = true;
+				temp0ColorsActive = false;
+			}
+
+			btnCheckCloseOpen(leftActive, btnClassifier);
+
+		} else if (classifier == 2) {
+
+			if (btnClassifier == 1) {
+				bikeColorsActive = false;
+				carColorsActive = true;
+				showerActiveFalse();
+				tempActiveFalse();
+			} else if (btnClassifier == 2) {
+				transportActiveFalse();
+				shower5ColorsActive = false;
+				shower15ColorsActive = true;
+				tempActiveFalse();
+			} else if (btnClassifier == 3) {
+				transportActiveFalse();
+				showerActiveFalse();
+				temp4ColorsActive = false;
+				temp0ColorsActive = true;
+			}
+
+			btnCheckCloseOpen(rightActive, btnClassifier);
 		}
 
-		btnCheckCloseOpen(leftActive, btnClassifier);
 
-	} else if (classifier == 2) {
-
-		if (btnClassifier == 1) {
-			bikeColorsActive = false;
-			carColorsActive = true;
-			showerActiveFalse();
-			tempActiveFalse();
-		} else if (btnClassifier == 2) {
-			transportActiveFalse();
-			shower5ColorsActive = false;
-			shower15ColorsActive = true;
-			tempActiveFalse();
-		} else if (btnClassifier == 3) {
-			transportActiveFalse();
-			showerActiveFalse();
-			temp4ColorsActive = false;
-			temp0ColorsActive = true;
-		}
-
-		btnCheckCloseOpen(rightActive, btnClassifier);
 	}
-
 }
 
 

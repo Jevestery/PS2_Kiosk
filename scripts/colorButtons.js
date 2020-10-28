@@ -7,6 +7,8 @@
 
 
 
+var colorBtnsDisabled = false;
+
 var greenActive = false;
 var limeActive = false;
 var yellowActive = false;
@@ -46,183 +48,188 @@ var redBtnClose = document.getElementById('redBtnClose');
 function activateBtn(btnColor, btnColorBG) {
 
 
-	if (btnColor == greenBtn) {
+	if (colorBtnsDisabled == false) {
 
-		limeActive = false;
-		yellowActive = false;
-		orangeActive = false;
-		redActive = false;
 
-		if (greenActive == false) {
+		if (btnColor == greenBtn) {
 
-			showAnim(greenBtnLabel, greenBtnClose);
-			closeAllOther(btnColor);
+			limeActive = false;
+			yellowActive = false;
+			orangeActive = false;
+			redActive = false;
 
-			allOpacityOut();
-			setTimeout(function(){
-				greenOpacityIn();
-			}, 300);
+			if (greenActive == false) {
 
-			setTimeout(function(){
-				greenActive = true;
-			}, 600);
+				showAnim(greenBtnLabel, greenBtnClose);
+				closeAllOther(btnColor);
 
-		} else {
+				allOpacityOut();
+				setTimeout(function(){
+					greenOpacityIn();
+				}, 300);
 
-			closeOneAnim(greenBtnLabel, greenBtnClose);
-			allOpacityIn();
+				setTimeout(function(){
+					greenActive = true;
+				}, 600);
 
-			setTimeout(function(){
-				closeOneDisplay(greenBtnLabel, greenBtnClose);
-				greenActive = false;
-			}, 600);
+			} else {
+
+				closeOneAnim(greenBtnLabel, greenBtnClose);
+				allOpacityIn();
+
+				setTimeout(function(){
+					closeOneDisplay(greenBtnLabel, greenBtnClose);
+					greenActive = false;
+				}, 600);
+			};
+
+
+
+		} else if (btnColor == limeBtn) {
+
+			greenActive = false;
+			yellowActive = false;
+			orangeActive = false;
+			redActive = false;
+
+			if (limeActive == false) {
+
+				showAnim(limeBtnLabel, limeBtnClose);
+				closeAllOther(btnColor);
+
+				allOpacityOut();
+				setTimeout(function(){
+					limeOpacityIn();
+				}, 300);
+
+				setTimeout(function(){
+					limeActive = true;
+				}, 600);
+
+			} else {
+
+				closeOneAnim(limeBtnLabel, limeBtnClose);
+				allOpacityIn();
+
+				setTimeout(function(){
+					closeOneDisplay(limeBtnLabel, limeBtnClose);
+					limeActive = false;
+				}, 600);
+			};
+
+
+
+		} else if (btnColor == yellowBtn) {
+
+			greenActive = false;
+			limeActive = false;
+			orangeActive = false;
+			redActive = false;
+
+			if (yellowActive == false) {
+
+				showAnim(yellowBtnLabel, yellowBtnClose);
+				closeAllOther(btnColor);
+
+				allOpacityOut();
+				setTimeout(function(){
+					yellowOpacityIn();
+				}, 300);
+
+				setTimeout(function(){
+					yellowActive = true;
+				}, 600);
+
+			} else {
+
+				closeOneAnim(yellowBtnLabel, yellowBtnClose);
+				allOpacityIn();
+
+				setTimeout(function(){
+					closeOneDisplay(yellowBtnLabel, yellowBtnClose);
+					yellowActive = false;
+				}, 600);
+			};
+
+
+
+		} else if (btnColor == orangeBtn) {
+
+			greenActive = false;
+			limeActive = false;
+			yellowActive = false;
+			redActive = false;
+
+			if (orangeActive == false) {
+
+				showAnim(orangeBtnLabel, orangeBtnClose);
+				closeAllOther(btnColor);
+
+				allOpacityOut();
+				setTimeout(function(){
+					orangeOpacityIn();
+				}, 300);
+
+				setTimeout(function(){
+					orangeActive = true;
+				}, 600);
+
+			} else {
+
+				closeOneAnim(orangeBtnLabel, orangeBtnClose);
+				allOpacityIn();
+
+				setTimeout(function(){
+					closeOneDisplay(orangeBtnLabel, orangeBtnClose);
+					orangeActive = false;
+				}, 600);
+			};
+
+
+
+		} else if (btnColor == redBtn) {
+
+			greenActive = false;
+			limeActive = false;
+			orangeActive = false;
+			orangeActive = false;
+
+			if (redActive == false) {
+
+				showAnim(redBtnLabel, redBtnClose);
+				closeAllOther(btnColor);
+
+				allOpacityOut();
+				setTimeout(function(){
+					redOpacityIn();
+				}, 300);
+
+				setTimeout(function(){
+					redActive = true;
+				}, 600);
+
+			} else {
+
+				closeOneAnim(redBtnLabel, redBtnClose);
+				allOpacityIn();
+
+				setTimeout(function(){
+					closeOneDisplay(redBtnLabel, redBtnClose);
+					redActive = false;
+				}, 600);
+			};
+
 		};
 
+		setTimeout(function(){
+			console.log(greenActive);
+			console.log(limeActive);
+			console.log(yellowActive);
+			console.log(orangeActive);
+			console.log(redActive);
+		}, 600);
 
-
-	} else if (btnColor == limeBtn) {
-
-		greenActive = false;
-		yellowActive = false;
-		orangeActive = false;
-		redActive = false;
-
-		if (limeActive == false) {
-
-			showAnim(limeBtnLabel, limeBtnClose);
-			closeAllOther(btnColor);
-
-			allOpacityOut();
-			setTimeout(function(){
-				limeOpacityIn();
-			}, 300);
-
-			setTimeout(function(){
-				limeActive = true;
-			}, 600);
-
-		} else {
-
-			closeOneAnim(limeBtnLabel, limeBtnClose);
-			allOpacityIn();
-
-			setTimeout(function(){
-				closeOneDisplay(limeBtnLabel, limeBtnClose);
-				limeActive = false;
-			}, 600);
-		};
-
-
-
-	} else if (btnColor == yellowBtn) {
-
-		greenActive = false;
-		limeActive = false;
-		orangeActive = false;
-		redActive = false;
-
-		if (yellowActive == false) {
-
-			showAnim(yellowBtnLabel, yellowBtnClose);
-			closeAllOther(btnColor);
-
-			allOpacityOut();
-			setTimeout(function(){
-				yellowOpacityIn();
-			}, 300);
-
-			setTimeout(function(){
-				yellowActive = true;
-			}, 600);
-
-		} else {
-
-			closeOneAnim(yellowBtnLabel, yellowBtnClose);
-			allOpacityIn();
-
-			setTimeout(function(){
-				closeOneDisplay(yellowBtnLabel, yellowBtnClose);
-				yellowActive = false;
-			}, 600);
-		};
-
-
-
-	} else if (btnColor == orangeBtn) {
-
-		greenActive = false;
-		limeActive = false;
-		yellowActive = false;
-		redActive = false;
-
-		if (orangeActive == false) {
-
-			showAnim(orangeBtnLabel, orangeBtnClose);
-			closeAllOther(btnColor);
-
-			allOpacityOut();
-			setTimeout(function(){
-				orangeOpacityIn();
-			}, 300);
-
-			setTimeout(function(){
-				orangeActive = true;
-			}, 600);
-
-		} else {
-
-			closeOneAnim(orangeBtnLabel, orangeBtnClose);
-			allOpacityIn();
-
-			setTimeout(function(){
-				closeOneDisplay(orangeBtnLabel, orangeBtnClose);
-				orangeActive = false;
-			}, 600);
-		};
-
-
-
-	} else if (btnColor == redBtn) {
-
-		greenActive = false;
-		limeActive = false;
-		orangeActive = false;
-		orangeActive = false;
-
-		if (redActive == false) {
-
-			showAnim(redBtnLabel, redBtnClose);
-			closeAllOther(btnColor);
-
-			allOpacityOut();
-			setTimeout(function(){
-				redOpacityIn();
-			}, 300);
-
-			setTimeout(function(){
-				redActive = true;
-			}, 600);
-
-		} else {
-
-			closeOneAnim(redBtnLabel, redBtnClose);
-			allOpacityIn();
-
-			setTimeout(function(){
-				closeOneDisplay(redBtnLabel, redBtnClose);
-				redActive = false;
-			}, 600);
-		};
-
-	};
-
-	setTimeout(function(){
-		console.log(greenActive);
-		console.log(limeActive);
-		console.log(yellowActive);
-		console.log(orangeActive);
-		console.log(redActive);
-	}, 600);
+	}
 };
 
 
