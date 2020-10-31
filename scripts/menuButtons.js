@@ -595,6 +595,11 @@ function removeAllClassesX5() {
 //---------- BTN SETUP ----------//
 
 
+
+var mapBG = document.getElementById('mapBG');
+
+
+
 function btnType(classifier, leftActive, rightActive, btnClassifier) {
 
 
@@ -644,7 +649,34 @@ function btnType(classifier, leftActive, rightActive, btnClassifier) {
 			btnCheckCloseOpen(rightActive, btnClassifier);
 		}
 
+		mapBG.onclick = function() {closeAll();
+			setTimeout(function(){
 
+				setTimeout(function(){
+					originalColors();
+					allOpacityIn();
+				}, 400);
+
+				transportActiveFalse();
+				showerActiveFalse();
+				tempActiveFalse();
+
+				btn1Reset();
+				btn2Reset();
+				btn3Reset();
+
+				resetSubMenu(subMenu1, subMenu1BtnLeft, subMenu1BtnLeftText, subMenu1BtnMiddle, subMenu1BtnMiddleText, subMenu1BtnRight, subMenu1BtnRightText);
+				resetSubMenu(subMenu2, subMenu2BtnLeft, subMenu2BtnLeftText, subMenu2BtnMiddle, subMenu2BtnMiddleText, subMenu2BtnRight, subMenu2BtnRightText);
+				resetSubMenu(subMenu3, subMenu3BtnLeft, subMenu3BtnLeftText, subMenu3BtnMiddle, subMenu3BtnMiddleText, subMenu3BtnRight, subMenu3BtnRightText);
+
+				deactivateAllBtns(btn1Left, btn1LeftIcon, btn1LeftIconText, menu1LeftActive, btn1Right, btn1RightIcon, btn1RightIconText, menu1RightActive);
+				deactivateAllBtns(btn2Left, btn2LeftIcon, btn2LeftIconText, menu2LeftActive, btn2Right, btn2RightIcon, btn2RightIconText, menu2RightActive);
+				deactivateAllBtns(btn3Left, btn3LeftIcon, btn3LeftIconText, menu3LeftActive, btn3Right, btn3RightIcon, btn3RightIconText, menu3RightActive);
+			}, 50);
+		}
+
+	} else {
+		mapBG.onclick = function() { }
 	}
 }
 

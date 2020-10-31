@@ -106,16 +106,27 @@
   margin: 0 !important;
 }
 
+.margin10 {
+  margin: 5px 0 !important;
+}
+
 .margin15 {
   margin: 7.5px 0 !important;
 }
 
+.padding0 {
+  padding: 0;
+}
 
 
 /* CONTENT SPACING */
 
 .nanoFix {
   padding-top: 25px;
+}
+
+.smallFix {
+  padding-top: 40px;
 }
 
 
@@ -201,9 +212,18 @@ p, ul, th, td {
   font-family: acumin-pro,sans-serif;
   font-weight: 300;
   font-style: normal;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 30px;
   color: var(--b-black);
+}
+
+table, td, tr {
+  border: none;
+  border-collapse: collapse;
+}
+
+td {
+  padding-bottom: 5px;
 }
 
 p a {

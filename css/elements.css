@@ -68,11 +68,14 @@
 
 table {
   width: 100%;
+  border: none;
 }
 
-.tableRow {
-  text-align: center;
-  width: 85px;
+.tableHead {
+  font-weight: bold;
+  background-color: var(--b-gray-200);
+  padding-left: 15px;
+  width: 200px;
 }
 
 
