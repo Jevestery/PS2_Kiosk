@@ -69,7 +69,7 @@ var buurtOrange2AnimOut = "buurtOrange2AnimOut";
 function zoomIn(buurt, zoomed, buurtAnim, buurtAnimOut) {
 
 	if (zoomed == false) {
-		map.style.animationName = buurtAnim;
+		mapElement.style.animationName = buurtAnim;
 		overlayElement.style.animationName = "opacity";
 		overlayElement.style.display = "block";
 		zoomed = true;
@@ -134,7 +134,7 @@ function zoomIn(buurt, zoomed, buurtAnim, buurtAnimOut) {
 
 
 	} else {
-		map.style.animationName = buurtAnimOut;
+		mapElement.style.animationName = buurtAnimOut;
 		overlayElement.style.animationName = "opacity-rev";
 		zoomed = false;
 
@@ -199,7 +199,7 @@ function resetMap(buurt, zoomed, buurtAnim, buurtAnimOut) {
 	setTimeout(function(){
 		resetAllOnclicks();
 	}, 50);
-	map.onclick = function() { };
+	mapElement.onclick = function() { };
 }
 
 
@@ -310,7 +310,7 @@ function opacityInAllOther(buurt, zoomed, buurtAnim, buurtAnimOut) {
 		buurtArray[i].style.animationName = "buurtOpacityOut";
 		buurtArray[i].onclick = function() { };
 		setTimeout(function(){
-			map.onclick = function() { resetMap(buurt, zoomed, buurtAnim, buurtAnimOut); };
+			mapElement.onclick = function() { resetMap(buurt, zoomed, buurtAnim, buurtAnimOut); };
 		}, 50);
 	}
 }

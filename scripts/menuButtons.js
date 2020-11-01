@@ -924,6 +924,12 @@ function setBtn(classifier, timeClassifier) {
 		}, 400);
 	}
 
+
+	setTimeout(function(){
+		sendNewSerial2();
+	}, 600);
+
+
 }
 
 

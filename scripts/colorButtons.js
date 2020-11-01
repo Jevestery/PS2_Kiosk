@@ -222,11 +222,7 @@ function activateBtn(btnColor, btnColorBG) {
 		};
 
 		setTimeout(function(){
-			console.log(greenActive);
-			console.log(limeActive);
-			console.log(yellowActive);
-			console.log(orangeActive);
-			console.log(redActive);
+			sendNewSerial();
 		}, 600);
 
 	}
