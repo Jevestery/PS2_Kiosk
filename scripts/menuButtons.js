@@ -554,6 +554,7 @@ function originalColors() {
 	buurtYellow4.classList.add("yellowBuurt");
 	buurtOrange1.classList.add("orangeBuurt");
 	buurtOrange2.classList.add("orangeBuurt");
+	annoying("x");
 }
 
 
@@ -980,6 +981,7 @@ function bikeWeek() {
 	buurtYellow4.classList.add("limeBuurt");
 	buurtOrange1.classList.add("orangeBuurt");
 	buurtOrange2.classList.add("orangeBuurt");
+	annoying("f");
 }
 
 
@@ -999,6 +1001,7 @@ function bikeMonth() {
 	buurtYellow4.classList.add("limeBuurt");
 	buurtOrange1.classList.add("orangeBuurt");
 	buurtOrange2.classList.add("yellowBuurt");
+	annoying("g");
 }
 
 
@@ -1018,6 +1021,7 @@ function bikeYear() {
 	buurtYellow4.classList.add("limeBuurt");
 	buurtOrange1.classList.add("limeBuurt");
 	buurtOrange2.classList.add("limeBuurt");
+	annoying("h");
 }
 
 
@@ -1037,6 +1041,7 @@ function carWeek() {
 	buurtYellow4.classList.add("orangeBuurt");
 	buurtOrange1.classList.add("orangeBuurt");
 	buurtOrange2.classList.add("orangeBuurt");
+	annoying("x");
 }
 
 
@@ -1056,6 +1061,7 @@ function carMonth() {
 	buurtYellow4.classList.add("orangeBuurt");
 	buurtOrange1.classList.add("orangeBuurt");
 	buurtOrange2.classList.add("redBuurt");
+	annoying("i");
 }
 
 
@@ -1075,6 +1081,7 @@ function carYear() {
 	buurtYellow4.classList.add("redBuurt");
 	buurtOrange1.classList.add("redBuurt");
 	buurtOrange2.classList.add("redBuurt");
+	annoying("j");
 }
 
 
@@ -1100,6 +1107,7 @@ function shower5Week() {
 	buurtYellow4.classList.add("yellowBuurt");
 	buurtOrange1.classList.add("yellowBuurt");
 	buurtOrange2.classList.add("orangeBuurt");
+	annoying("x");
 }
 
 
@@ -1119,6 +1127,7 @@ function shower5Month() {
 	buurtYellow4.classList.add("limeBuurt");
 	buurtOrange1.classList.add("yellowBuurt");
 	buurtOrange2.classList.add("orangeBuurt");
+	annoying("x");
 }
 
 
@@ -1138,6 +1147,7 @@ function shower5Year() {
 	buurtYellow4.classList.add("limeBuurt");
 	buurtOrange1.classList.add("limeBuurt");
 	buurtOrange2.classList.add("yellowBuurt");
+	annoying("k");
 }
 
 
@@ -1157,6 +1167,7 @@ function shower15Week() {
 	buurtYellow4.classList.add("orangeBuurt");
 	buurtOrange1.classList.add("orangeBuurt");
 	buurtOrange2.classList.add("orangeBuurt");
+	annoying("l");
 }
 
 
@@ -1176,6 +1187,7 @@ function shower15Month() {
 	buurtYellow4.classList.add("orangeBuurt");
 	buurtOrange1.classList.add("orangeBuurt");
 	buurtOrange2.classList.add("orangeBuurt");
+	annoying("l");
 }
 
 
@@ -1195,6 +1207,7 @@ function shower15Year() {
 	buurtYellow4.classList.add("orangeBuurt");
 	buurtOrange1.classList.add("orangeBuurt");
 	buurtOrange2.classList.add("orangeBuurt");
+	annoying("m");
 }
 
 
@@ -1220,6 +1233,7 @@ function temp4Week() {
 	buurtYellow4.classList.add("yellowBuurt");
 	buurtOrange1.classList.add("orangeBuurt");
 	buurtOrange2.classList.add("orangeBuurt");
+	annoying("x");
 }
 
 
@@ -1239,6 +1253,7 @@ function temp4Month() {
 	buurtYellow4.classList.add("yellowBuurt");
 	buurtOrange1.classList.add("orangeBuurt");
 	buurtOrange2.classList.add("orangeBuurt");
+	annoying("n");
 }
 
 
@@ -1258,6 +1273,7 @@ function temp4Year() {
 	buurtYellow4.classList.add("yellowBuurt");
 	buurtOrange1.classList.add("orangeBuurt");
 	buurtOrange2.classList.add("yellowBuurt");
+	annoying("o");
 }
 
 
@@ -1277,6 +1293,7 @@ function temp0Week() {
 	buurtYellow4.classList.add("yellowBuurt");
 	buurtOrange1.classList.add("orangeBuurt");
 	buurtOrange2.classList.add("orangeBuurt");
+	annoying("p");
 }
 
 
@@ -1296,6 +1313,7 @@ function temp0Month() {
 	buurtYellow4.classList.add("yellowBuurt");
 	buurtOrange1.classList.add("redBuurt");
 	buurtOrange2.classList.add("orangeBuurt");
+	annoying("q");
 }
 
 
@@ -1315,4 +1333,5 @@ function temp0Year() {
 	buurtYellow4.classList.add("orangeBuurt");
 	buurtOrange1.classList.add("redBuurt");
 	buurtOrange2.classList.add("redBuurt");
+	annoying("r");
 }

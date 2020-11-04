@@ -8,7 +8,7 @@ function setup() {
   serial = new p5.SerialPort();
 
   serial.list();
-  serial.open('COM2');
+  serial.open('COM4');
 
   serial.on('connected', serverConnected);
   serial.on('list', gotList);
@@ -27,11 +27,11 @@ function serverConnected() {
 
 
 function gotList(thelist) {
-  // print("List of Serial Ports:");
-  //
-  // for (let i = 0; i < thelist.length; i++) {
-  //   print(i + " " + thelist[i]);
-  // }
+  print("List of Serial Ports:");
+
+  for (let i = 0; i < thelist.length; i++) {
+    print(i + " " + thelist[i]);
+  }
 }
 
 
@@ -131,18 +131,26 @@ function updateNewSerial2(buurt) {
 
 
 function sendNewSerial() {
+  serial.write("<");
   updateNewSerial(buurtLime1);
   updateNewSerial(buurtGreen1);
   updateNewSerial(buurtOrange2);
   updateNewSerial(buurtYellow1);
-  serial.write("\n");
+  serial.write(">");
 }
 
 
 function sendNewSerial2() {
-  updateNewSerial2(buurtLime1);
-  updateNewSerial2(buurtGreen1);
-  updateNewSerial2(buurtOrange2);
-  updateNewSerial2(buurtYellow1);
-  serial.write("\n");
+  serial.write("<");
+  updateNewSerial(buurtLime1);
+  updateNewSerial(buurtGreen1);
+  updateNewSerial(buurtOrange2);
+  updateNewSerial(buurtYellow1);
+  serial.write(">");
+}
+
+
+function annoying(character) {
+  serial.write(character);
+  print(character);
 }

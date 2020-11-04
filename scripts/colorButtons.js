@@ -72,6 +72,8 @@ function activateBtn(btnColor, btnColorBG) {
 					greenActive = true;
 				}, 600);
 
+				annoying("a");
+
 			} else {
 
 				closeOneAnim(greenBtnLabel, greenBtnClose);
@@ -81,7 +83,12 @@ function activateBtn(btnColor, btnColorBG) {
 					closeOneDisplay(greenBtnLabel, greenBtnClose);
 					greenActive = false;
 				}, 600);
+
+				annoying("x");
 			};
+
+
+
 
 
 
@@ -106,6 +113,8 @@ function activateBtn(btnColor, btnColorBG) {
 					limeActive = true;
 				}, 600);
 
+				annoying("b");
+
 			} else {
 
 				closeOneAnim(limeBtnLabel, limeBtnClose);
@@ -115,7 +124,12 @@ function activateBtn(btnColor, btnColorBG) {
 					closeOneDisplay(limeBtnLabel, limeBtnClose);
 					limeActive = false;
 				}, 600);
+
+				annoying("x");
 			};
+
+
+
 
 
 
@@ -140,6 +154,8 @@ function activateBtn(btnColor, btnColorBG) {
 					yellowActive = true;
 				}, 600);
 
+				annoying("c");
+
 			} else {
 
 				closeOneAnim(yellowBtnLabel, yellowBtnClose);
@@ -149,7 +165,11 @@ function activateBtn(btnColor, btnColorBG) {
 					closeOneDisplay(yellowBtnLabel, yellowBtnClose);
 					yellowActive = false;
 				}, 600);
+
+				annoying("x");
 			};
+
+
 
 
 
@@ -174,6 +194,8 @@ function activateBtn(btnColor, btnColorBG) {
 					orangeActive = true;
 				}, 600);
 
+				annoying("d");
+
 			} else {
 
 				closeOneAnim(orangeBtnLabel, orangeBtnClose);
@@ -183,7 +205,12 @@ function activateBtn(btnColor, btnColorBG) {
 					closeOneDisplay(orangeBtnLabel, orangeBtnClose);
 					orangeActive = false;
 				}, 600);
+
+				annoying("x");
 			};
+
+
+
 
 
 
@@ -208,6 +235,8 @@ function activateBtn(btnColor, btnColorBG) {
 					redActive = true;
 				}, 600);
 
+				annoying("e");
+
 			} else {
 
 				closeOneAnim(redBtnLabel, redBtnClose);
@@ -217,13 +246,12 @@ function activateBtn(btnColor, btnColorBG) {
 					closeOneDisplay(redBtnLabel, redBtnClose);
 					redActive = false;
 				}, 600);
+
+				annoying("x");
 			};
 
-		};
 
-		setTimeout(function(){
-			sendNewSerial();
-		}, 600);
+		};
 
 	}
 };
