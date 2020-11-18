@@ -281,5 +281,5 @@ main {
   width: var(--screen-width);
   height: var(--screen-height);
   overflow: hidden;
-  background: #ECECEC;
+  background: var(--b-white);
 }
