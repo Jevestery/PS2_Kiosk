@@ -2,34 +2,43 @@
 <html lang="en">
 
   <head>
-      <meta charset="UTF-8">
-      <meta name="author" content="Justus Bremer">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      <title>Kiosk Screen</title>
+    <!-- Metatags & Title -->
 
-      <link rel="stylesheet" href="css/general.css">
-      <link rel="stylesheet" href="css/icons.css">
-      <link rel="stylesheet" href="css/elements.css">
-      <link rel="stylesheet" href="css/buurtAnimations.css">
+    <meta charset="UTF-8">
+    <meta name="author" content="Justus Bremer">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      <script src="scripts/smoothScroll.js" defer></script>
-      <script src="scripts/colorButtons.js" defer></script>
-      <script src="scripts/menuButtons.js" defer></script>
-      <script src="scripts/neighborhoodOverlay.js" defer></script>
-      <script src="scripts/p5.js" defer></script>
-      <script src="scripts/p5.serialport.js" defer></script>
-      <script src="scripts/serialConnection.js" defer></script>
+    <title>Kiosk Screen</title>
 
 
-      <!-- Fonts and Icons -->
-      <link rel="stylesheet" href="https://use.typekit.net/ahj7nfe.css">
-      <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined|Material+Icons+Round" rel="stylesheet">
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/elements.css">
+    <link rel="stylesheet" href="css/buurtAnimations.css">
 
 
+    <!-- JavaScript -->
+
+    <script src="scripts/smoothScroll.js" defer></script>
+    <script src="scripts/colorButtons.js" defer></script>
+    <script src="scripts/menuButtons.js" defer></script>
+    <script src="scripts/neighborhoodOverlay.js" defer></script>
+    <script src="scripts/p5.js" defer></script>
+    <script src="scripts/p5.serialport.js" defer></script>
+    <script src="scripts/serialConnection.js" defer></script>
+
+
+    <!-- Fonts and Icons -->
+
+    <link rel="stylesheet" href="https://use.typekit.net/ahj7nfe.css">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined|Material+Icons+Round" rel="stylesheet">
 
   </head>
+
+
 
 
 
@@ -40,17 +49,8 @@
   ||++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 
 
+
   <body>
-
-
-    <header>
-
-        <nav id="nav">
-        </nav>
-
-    </header>
-
-
 
 
     <main>
@@ -60,6 +60,7 @@
       <!-- ++++++++++++++++++++++++++++++++||
       ||_______________ MAP _______________||
       ||+++++++++++++++++++++++++++++++++ -->
+
 
       <div id="map">
 
@@ -1286,41 +1287,54 @@
 
 
 
+
       <!-- ++++++++++++++++++++++++++++++++||
       ||____________ INFO PAGES ___________||
       ||+++++++++++++++++++++++++++++++++ -->
 
-      <div id="neighborhoodOverlay">
-        <div id="neighborhoodBox">
-          <div class="neighborhoodBoxContent">
-            <div id="buurtColor"></div>
-            <h1 id="buurtName">Voordijkshoorn</h1>
-            <hr>
-            <div class="smallFix"></div>
-            <table>
-              <tr>
-                <td class="tableHead">Residents:</td>
-                <td id="buurtResidents" class="alignCenter">8900</td>
-              </tr>
-              <tr>
-                <td class="tableHead">Area:</td>
-                <td id="buurtArea" class="alignCenter">160 ha</td>
-              </tr>
-              <tr>
-                <td class="tableHead">Postcode:</td>
-                <td id="buurtPostcode" class="alignCenter">2614</td>
-              </tr>
-              <tr>
-                <td class="tableHead">Monthly Emissions:</td>
-                <td id="buurtEmissions" class="alignCenter">3560 kg</td>
-              </tr>
-              <tr>
-                <td class="tableHead">Delft Green Rank:</td>
-                <td id="buurtRank" class="alignCenter">12</td>
-              </tr>
-            </table>
-          </div>
+
+
+      <div id="neighborhoodBox">
+
+        <div class="neighborhoodBoxContent">
+
+
+          <!-- Main Information -->
+
+          <div id="buurtColor"></div>
+          <h1 id="buurtName">Voordijkshoorn</h1>
+          <hr>
+          <div class="smallFix"></div>
+
+
+          <!-- Information Table -->
+
+          <table>
+            <tr>
+              <td class="tableHead">Residents:</td>
+              <td id="buurtResidents" class="alignCenter">8900</td>
+            </tr>
+            <tr>
+              <td class="tableHead">Area:</td>
+              <td id="buurtArea" class="alignCenter">160 ha</td>
+            </tr>
+            <tr>
+              <td class="tableHead">Postcode:</td>
+              <td id="buurtPostcode" class="alignCenter">2614</td>
+            </tr>
+            <tr>
+              <td class="tableHead">Monthly Emissions:</td>
+              <td id="buurtEmissions" class="alignCenter">3560 kg</td>
+            </tr>
+            <tr>
+              <td class="tableHead">Delft Green Rank:</td>
+              <td id="buurtRank" class="alignCenter">12</td>
+            </tr>
+          </table>
+
+
         </div>
+
       </div>
 
 
@@ -1331,53 +1345,58 @@
       ||_________ RIGHT SIDE MENU  ________||
       ||+++++++++++++++++++++++++++++++++ -->
 
+
       <div id="rightMenu">
 
-        <!-- <div id="infoBtnBG" class="clickable" onclick="infoBlackout()"></div>
-        <i id="infoIcon" class="material-icons-outlined b-white extra-large clickable" onclick="infoBlackout()">info</i> -->
 
+        <!-- Color Buttons -->
 
         <div id="colorBtns">
-          <div id="greenBtnLabel" class="btnLabel"><p class="colorGreen">&gt;&nbsp;100&nbsp;<i class="fas fa-star"></i></p></div>
+
+          <div id="greenBtnLabel" class="btnLabel"><p class="colorGreen">&gt;&nbsp;100&nbsp;pt</p></div>
           <div id="greenBtnClose" class="btnLabelClose clickable" onclick="activateBtn(greenBtn)"><i class="material-icons-outlined btnLabelCloseIcon b-black small clickable">close</i></div>
           <div id="greenBtnBG" class="colorBtnBG clickable"></div>
           <div id="greenBtn" class="colorBtn clickable" onclick="activateBtn(greenBtn)"></div>
 
           <div class="margin20"></div>
 
-          <div id="limeBtnLabel" class="btnLabel"><p class="colorLime">80-99&nbsp;<i class="fas fa-star"></i></p></div>
+          <div id="limeBtnLabel" class="btnLabel"><p class="colorLime">80-99&nbsp;pt</p></div>
           <div id="limeBtnClose" class="btnLabelClose clickable" onclick="activateBtn(limeBtn)"><i class="material-icons-outlined btnLabelCloseIcon b-black small clickable">close</i></div>
           <div id="limeBtnBG" class="colorBtnBG clickable"></div>
           <div id="limeBtn" class="colorBtn clickable" onclick="activateBtn(limeBtn)"></div>
 
           <div class="margin20"></div>
 
-          <div id="yellowBtnLabel" class="btnLabel"><p class="colorYellowAlt">60-79&nbsp;<i class="fas fa-star"></i></p></div>
+          <div id="yellowBtnLabel" class="btnLabel"><p class="colorYellowAlt">60-79&nbsp;pt</i></p></div>
           <div id="yellowBtnClose" class="btnLabelClose clickable" onclick="activateBtn(yellowBtn)"><i class="material-icons-outlined btnLabelCloseIcon b-black small clickable">close</i></div>
           <div id="yellowBtnBG" class="colorBtnBG clickable"></div>
           <div id="yellowBtn" class="colorBtn clickable" onclick="activateBtn(yellowBtn)"></div>
 
           <div class="margin20"></div>
 
-          <div id="orangeBtnLabel" class="btnLabel"><p class="colorOrange">40-59&nbsp;<i class="fas fa-star"></i></p></div>
+          <div id="orangeBtnLabel" class="btnLabel"><p class="colorOrange">40-59&nbsp;pt</i></p></div>
           <div id="orangeBtnClose" class="btnLabelClose clickable" onclick="activateBtn(orangeBtn)"><i class="material-icons-outlined btnLabelCloseIcon b-black small clickable">close</i></div>
           <div id="orangeBtnBG" class="colorBtnBG clickable"></div>
           <div id="orangeBtn" class="colorBtn clickable" onclick="activateBtn(orangeBtn)"></div>
 
           <div class="margin20"></div>
 
-          <div id="redBtnLabel" class="btnLabel"><p class="colorRed">&lt;&nbsp;40&nbsp;<i class="fas fa-star"></i></p></div>
+          <div id="redBtnLabel" class="btnLabel"><p class="colorRed">&lt;&nbsp;40&nbsp;pt</i></p></div>
           <div id="redBtnClose" class="btnLabelClose clickable" onclick="activateBtn(redBtn)"><i class="material-icons-outlined btnLabelCloseIcon b-black small clickable">close</i></div>
           <div id="redBtnBG" class="colorBtnBG clickable"></div>
           <div id="redBtn" class="colorBtn clickable" onclick="activateBtn(redBtn)"></div>
+
         </div>
 
 
+        <!-- Compass Icon -->
+
         <div id="north"><p>N<p></div>
-        <div id="compassBG"></div>
-        <i id="compassIcon" class="material-icons-outlined b-gray-500 extra-large">explore</i>
+        <div id="compassBG"><i id="compassIcon" class="material-icons-outlined b-gray-500 extra-large">explore</i></div>
+
 
       </div>
+
 
 
 
@@ -1386,7 +1405,11 @@
       ||_____________ BUTTONS _____________||
       ||+++++++++++++++++++++++++++++++++ -->
 
+
       <div id="buttons">
+
+
+        <!-- Left Button Group -->
 
         <div id="menuBtn1">
           <div id="menuBtn1Sub" class="menuBtnSub">
@@ -1403,6 +1426,8 @@
         </div>
 
 
+        <!-- Middle Button Group -->
+
         <div id="menuBtn2">
           <div id="menuBtn2Sub" class="menuBtnSub">
             <div class="menuBtnSubBtn menuBtnSubBGFix"></div>
@@ -1418,6 +1443,8 @@
         </div>
 
 
+        <!-- Right Button Group -->
+
         <div id="menuBtn3">
           <div id="menuBtn3Sub" class="menuBtnSub">
             <div class="menuBtnSubBtn menuBtnSubBGFix"></div>
@@ -1432,34 +1459,13 @@
           <div class="menuBtn"><h3>What if we all set our fridge to...?<h3></div>
         </div>
 
-      </div>
 
-
-
-
-      <!-- ++++++++++++++++++++++++++++++++||
-      ||____________ INFO PAGES ___________||
-      ||+++++++++++++++++++++++++++++++++ -->
-
-      <div id="blackout"></div>
-
-      <div id="closeInfoBtn">
-        <div id="closeInfoBtnBG" class="clickable" onclick="infoBlackout()"></div>
-        <i id="closeInfoIcon" class="material-icons-outlined b-white extra-large clickable" onclick="infoBlackout()">highlight_off</i>
       </div>
 
 
 
 
     </main>
-
-
-
-
-    <footer id="footer">
-
-    </footer>
-
 
   </body>
 
