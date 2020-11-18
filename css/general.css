@@ -17,6 +17,7 @@
   --b-gray-200: #F0F0F0;
   --b-gray-300: #E1E1E1;
   --b-gray-400: #C8C8C8;
+  --b-gray-450: rgba(0, 0, 0, 0.18);
   --b-gray-500: #8C8C8C;
   --b-gray-600: #505050;
   --b-black: #1E1E1E;
@@ -114,6 +115,10 @@
   margin: 7.5px 0 !important;
 }
 
+.margin20 {
+  margin: 10px 0 !important;
+}
+
 .padding0 {
   padding: 0;
 }
@@ -189,16 +194,16 @@ h2 {}
 
 h3 {
   font-family: proxima-nova, sans-serif;
-  font-weight: 700;
+  font-weight: 600;
   font-style: normal;
-  font-size: 20px;
-  line-height: 1.8rem;
+  font-size: 18.5px;
+  line-height: 1.6rem;
   color: var(--b-gray-600);
 }
 
 h4 {
   font-family: proxima-nova, sans-serif;
-  font-weight: 700;
+  font-weight: 600;
   font-style: normal;
   font-size: 17px;
   color: var(--b-black);
@@ -276,5 +281,5 @@ main {
   width: var(--screen-width);
   height: var(--screen-height);
   overflow: hidden;
-  background: var(--p-orange);
+  background: #ECECEC;
 }

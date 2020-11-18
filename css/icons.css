@@ -104,7 +104,7 @@
 }
 
 .material-icons-outlined.medium, .material-icons-round.medium {
-  font-size: 34px;
+  font-size: 33px;
 }
 
 .material-icons-outlined.large, .material-icons-round.large {
@@ -112,5 +112,5 @@
 }
 
 .material-icons-outlined.extra-large, .material-icons-round.extra-large {
-  font-size: 90px;
+  font-size: 80px;
 }

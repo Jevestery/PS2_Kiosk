@@ -66,91 +66,11 @@ function gotData() {
 
 
 function draw() {
-  // background(255,255,255);
-  // fill(0,0,0);
-  // text(latestData, 10, 10);
 }
 
 
 
-
-
-var neighborhoodSerial1;
-var neighborhoodSerial2;
-var neighborhoodSerial3;
-var neighborhoodSerial4;
-
-
-function updateNewSerial(buurt) {
-  if (buurt.classList.contains("greenBuurt") && greenActive == false) {
-    serial.write("0");
-  } else if (buurt.classList.contains("limeBuurt") && limeActive == false) {
-    serial.write("0");
-  } else if (buurt.classList.contains("yellowBuurt") && yellowActive == false) {
-    serial.write("0");
-  } else if (buurt.classList.contains("orangeBuurt") && orangeActive == false) {
-    serial.write("0");
-  } else if (buurt.classList.contains("redBuurt") && redActive == false) {
-    serial.write("0");
-  } else {
-
-    if (buurt.classList.contains("greenBuurt")) {
-      serial.write("1");
-    } else if ((buurt.classList.contains("limeBuurt"))) {
-      serial.write("2");
-    } else if ((buurt.classList.contains("yellowBuurt"))) {
-      serial.write("3");
-    } else if ((buurt.classList.contains("orangeBuurt"))) {
-      serial.write("4");
-    } else if ((buurt.classList.contains("redBuurt"))) {
-      serial.write("5");
-    }
-
-  }
-}
-
-
-
-function updateNewSerial2(buurt) {
-
-    if (buurt.classList.contains("greenBuurt")) {
-      serial.write("1");
-    } else if ((buurt.classList.contains("limeBuurt"))) {
-      serial.write("2");
-    } else if ((buurt.classList.contains("yellowBuurt"))) {
-      serial.write("3");
-    } else if ((buurt.classList.contains("orangeBuurt"))) {
-      serial.write("4");
-    } else if ((buurt.classList.contains("redBuurt"))) {
-      serial.write("5");
-    }
-
-}
-
-
-
-
-function sendNewSerial() {
-  serial.write("<");
-  updateNewSerial(buurtLime1);
-  updateNewSerial(buurtGreen1);
-  updateNewSerial(buurtOrange2);
-  updateNewSerial(buurtYellow1);
-  serial.write(">");
-}
-
-
-function sendNewSerial2() {
-  serial.write("<");
-  updateNewSerial(buurtLime1);
-  updateNewSerial(buurtGreen1);
-  updateNewSerial(buurtOrange2);
-  updateNewSerial(buurtYellow1);
-  serial.write(">");
-}
-
-
-function annoying(character) {
+function updateSerial(character) {
   serial.write(character);
   print(character);
 }

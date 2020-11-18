@@ -72,7 +72,7 @@ function activateBtn(btnColor, btnColorBG) {
 					greenActive = true;
 				}, 600);
 
-				annoying("a");
+				updateSerial("a");
 
 			} else {
 
@@ -84,7 +84,7 @@ function activateBtn(btnColor, btnColorBG) {
 					greenActive = false;
 				}, 600);
 
-				annoying("x");
+				updateSerial("x");
 			};
 
 
@@ -113,7 +113,7 @@ function activateBtn(btnColor, btnColorBG) {
 					limeActive = true;
 				}, 600);
 
-				annoying("b");
+				updateSerial("b");
 
 			} else {
 
@@ -125,7 +125,7 @@ function activateBtn(btnColor, btnColorBG) {
 					limeActive = false;
 				}, 600);
 
-				annoying("x");
+				updateSerial("x");
 			};
 
 
@@ -154,7 +154,7 @@ function activateBtn(btnColor, btnColorBG) {
 					yellowActive = true;
 				}, 600);
 
-				annoying("c");
+				updateSerial("c");
 
 			} else {
 
@@ -166,7 +166,7 @@ function activateBtn(btnColor, btnColorBG) {
 					yellowActive = false;
 				}, 600);
 
-				annoying("x");
+				updateSerial("x");
 			};
 
 
@@ -194,7 +194,7 @@ function activateBtn(btnColor, btnColorBG) {
 					orangeActive = true;
 				}, 600);
 
-				annoying("d");
+				updateSerial("d");
 
 			} else {
 
@@ -206,7 +206,7 @@ function activateBtn(btnColor, btnColorBG) {
 					orangeActive = false;
 				}, 600);
 
-				annoying("x");
+				updateSerial("x");
 			};
 
 
@@ -235,7 +235,7 @@ function activateBtn(btnColor, btnColorBG) {
 					redActive = true;
 				}, 600);
 
-				annoying("e");
+				updateSerial("e");
 
 			} else {
 
@@ -247,7 +247,7 @@ function activateBtn(btnColor, btnColorBG) {
 					redActive = false;
 				}, 600);
 
-				annoying("x");
+				updateSerial("x");
 			};
 
 

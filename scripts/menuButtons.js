@@ -419,18 +419,18 @@ function subBtnActive(menu, menuBtn) {
 
 function switchSubMenu(menuBtn, menuBtnText, menuBtnAlt1, menuBtnAlt1Text, menuBtnAlt1Active, menuBtnAlt2, menuBtnAlt2Text, menuBtnAlt2Active) {
 
-	menuBtn.style.marginBottom = '165px';
+	menuBtn.style.marginBottom = '158px';
 	menuBtn.style.animationName = 'subBtnIn';
 	menuBtnText.style.animationName = 'subBtnTextIn';
 
 	if (menuBtnAlt1Active) {
-		menuBtnAlt1.style.marginBottom = '165px';
+		menuBtnAlt1.style.marginBottom = '158px';
 		menuBtnAlt1.style.animationName = 'subBtnOut';
 		menuBtnAlt1Text.style.animationName = 'subBtnTextOut';
 	}
 
 	if (menuBtnAlt2Active) {
-		menuBtnAlt2.style.marginBottom = '165px';
+		menuBtnAlt2.style.marginBottom = '158px';
 		menuBtnAlt2.style.animationName = 'subBtnOut';
 		menuBtnAlt2Text.style.animationName = 'subBtnTextOut';
 	}
@@ -554,7 +554,7 @@ function originalColors() {
 	buurtYellow4.classList.add("yellowBuurt");
 	buurtOrange1.classList.add("orangeBuurt");
 	buurtOrange2.classList.add("orangeBuurt");
-	annoying("x");
+	updateSerial("x");
 }
 
 
@@ -925,12 +925,6 @@ function setBtn(classifier, timeClassifier) {
 		}, 400);
 	}
 
-
-	setTimeout(function(){
-		sendNewSerial2();
-	}, 600);
-
-
 }
 
 
@@ -981,7 +975,7 @@ function bikeWeek() {
 	buurtYellow4.classList.add("limeBuurt");
 	buurtOrange1.classList.add("orangeBuurt");
 	buurtOrange2.classList.add("orangeBuurt");
-	annoying("f");
+	updateSerial("f");
 }
 
 
@@ -1001,7 +995,7 @@ function bikeMonth() {
 	buurtYellow4.classList.add("limeBuurt");
 	buurtOrange1.classList.add("orangeBuurt");
 	buurtOrange2.classList.add("yellowBuurt");
-	annoying("g");
+	updateSerial("g");
 }
 
 
@@ -1021,7 +1015,7 @@ function bikeYear() {
 	buurtYellow4.classList.add("limeBuurt");
 	buurtOrange1.classList.add("limeBuurt");
 	buurtOrange2.classList.add("limeBuurt");
-	annoying("h");
+	updateSerial("h");
 }
 
 
@@ -1041,7 +1035,7 @@ function carWeek() {
 	buurtYellow4.classList.add("orangeBuurt");
 	buurtOrange1.classList.add("orangeBuurt");
 	buurtOrange2.classList.add("orangeBuurt");
-	annoying("x");
+	updateSerial("x");
 }
 
 
@@ -1061,7 +1055,7 @@ function carMonth() {
 	buurtYellow4.classList.add("orangeBuurt");
 	buurtOrange1.classList.add("orangeBuurt");
 	buurtOrange2.classList.add("redBuurt");
-	annoying("i");
+	updateSerial("i");
 }
 
 
@@ -1081,7 +1075,7 @@ function carYear() {
 	buurtYellow4.classList.add("redBuurt");
 	buurtOrange1.classList.add("redBuurt");
 	buurtOrange2.classList.add("redBuurt");
-	annoying("j");
+	updateSerial("j");
 }
 
 
@@ -1107,7 +1101,7 @@ function shower5Week() {
 	buurtYellow4.classList.add("yellowBuurt");
 	buurtOrange1.classList.add("yellowBuurt");
 	buurtOrange2.classList.add("orangeBuurt");
-	annoying("x");
+	updateSerial("x");
 }
 
 
@@ -1127,7 +1121,7 @@ function shower5Month() {
 	buurtYellow4.classList.add("limeBuurt");
 	buurtOrange1.classList.add("yellowBuurt");
 	buurtOrange2.classList.add("orangeBuurt");
-	annoying("x");
+	updateSerial("x");
 }
 
 
@@ -1147,7 +1141,7 @@ function shower5Year() {
 	buurtYellow4.classList.add("limeBuurt");
 	buurtOrange1.classList.add("limeBuurt");
 	buurtOrange2.classList.add("yellowBuurt");
-	annoying("k");
+	updateSerial("k");
 }
 
 
@@ -1167,7 +1161,7 @@ function shower15Week() {
 	buurtYellow4.classList.add("orangeBuurt");
 	buurtOrange1.classList.add("orangeBuurt");
 	buurtOrange2.classList.add("orangeBuurt");
-	annoying("l");
+	updateSerial("l");
 }
 
 
@@ -1187,7 +1181,7 @@ function shower15Month() {
 	buurtYellow4.classList.add("orangeBuurt");
 	buurtOrange1.classList.add("orangeBuurt");
 	buurtOrange2.classList.add("orangeBuurt");
-	annoying("l");
+	updateSerial("l");
 }
 
 
@@ -1207,7 +1201,7 @@ function shower15Year() {
 	buurtYellow4.classList.add("orangeBuurt");
 	buurtOrange1.classList.add("orangeBuurt");
 	buurtOrange2.classList.add("orangeBuurt");
-	annoying("m");
+	updateSerial("m");
 }
 
 
@@ -1233,7 +1227,7 @@ function temp4Week() {
 	buurtYellow4.classList.add("yellowBuurt");
 	buurtOrange1.classList.add("orangeBuurt");
 	buurtOrange2.classList.add("orangeBuurt");
-	annoying("x");
+	updateSerial("x");
 }
 
 
@@ -1253,7 +1247,7 @@ function temp4Month() {
 	buurtYellow4.classList.add("yellowBuurt");
 	buurtOrange1.classList.add("orangeBuurt");
 	buurtOrange2.classList.add("orangeBuurt");
-	annoying("n");
+	updateSerial("n");
 }
 
 
@@ -1273,7 +1267,7 @@ function temp4Year() {
 	buurtYellow4.classList.add("yellowBuurt");
 	buurtOrange1.classList.add("orangeBuurt");
 	buurtOrange2.classList.add("yellowBuurt");
-	annoying("o");
+	updateSerial("o");
 }
 
 
@@ -1293,7 +1287,7 @@ function temp0Week() {
 	buurtYellow4.classList.add("yellowBuurt");
 	buurtOrange1.classList.add("orangeBuurt");
 	buurtOrange2.classList.add("orangeBuurt");
-	annoying("p");
+	updateSerial("p");
 }
 
 
@@ -1313,7 +1307,7 @@ function temp0Month() {
 	buurtYellow4.classList.add("yellowBuurt");
 	buurtOrange1.classList.add("redBuurt");
 	buurtOrange2.classList.add("orangeBuurt");
-	annoying("q");
+	updateSerial("q");
 }
 
 
@@ -1333,5 +1327,5 @@ function temp0Year() {
 	buurtYellow4.classList.add("orangeBuurt");
 	buurtOrange1.classList.add("redBuurt");
 	buurtOrange2.classList.add("redBuurt");
-	annoying("r");
+	updateSerial("r");
 }
