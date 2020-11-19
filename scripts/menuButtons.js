@@ -427,12 +427,14 @@ function switchSubMenu(menuBtn, menuBtnText, menuBtnAlt1, menuBtnAlt1Text, menuB
 		menuBtnAlt1.style.marginBottom = '158px';
 		menuBtnAlt1.style.animationName = 'subBtnOut';
 		menuBtnAlt1Text.style.animationName = 'subBtnTextOut';
+		console.log(menuBtnAlt1Text.style.animationName);
 	}
 
 	if (menuBtnAlt2Active) {
 		menuBtnAlt2.style.marginBottom = '158px';
 		menuBtnAlt2.style.animationName = 'subBtnOut';
 		menuBtnAlt2Text.style.animationName = 'subBtnTextOut';
+			console.log(menuBtnAlt2Text.style.animationName);
 	}
 
 }

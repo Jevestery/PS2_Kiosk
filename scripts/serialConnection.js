@@ -71,6 +71,6 @@ function draw() {
 
 
 function updateSerial(character) {
-  serial.write(character);
-  print(character);
+  // serial.write(character);
+  // print(character);
 }

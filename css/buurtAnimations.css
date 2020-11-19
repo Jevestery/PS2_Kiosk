@@ -6,6 +6,10 @@
 -----------------------------------------------------------------------------------------------------------------------------*/
 
 
+
+
+/* NEIGHBORHOOD 1 */
+
 @keyframes buurtGreen1Anim {
   from {
     width: var(--screen-width);
@@ -32,6 +36,11 @@
   }
 }
 
+
+
+
+
+/* NEIGHBORHOOD 2 */
 
 @keyframes buurtGreen2Anim {
   from {
@@ -70,6 +79,11 @@
 -----------------------------------------------------------------------------------------------------------------------------*/
 
 
+
+
+
+/* NEIGHBORHOOD 1 */
+
 @keyframes buurtLime1Anim {
   from {
     width: var(--screen-width);
@@ -96,6 +110,11 @@
   }
 }
 
+
+
+
+
+/* NEIGHBORHOOD 2 */
 
 @keyframes buurtLime2Anim {
   from {
@@ -124,6 +143,11 @@
 }
 
 
+
+
+
+/* NEIGHBORHOOD 3 */
+
 @keyframes buurtLime3Anim {
   from {
     width: var(--screen-width);
@@ -151,6 +175,11 @@
 }
 
 
+
+
+
+/* NEIGHBORHOOD 4 */
+
 @keyframes buurtLime4Anim {
   from {
     width: var(--screen-width);
@@ -177,6 +206,11 @@
   }
 }
 
+
+
+
+
+/* NEIGHBORHOOD 5 */
 
 @keyframes buurtLime5Anim {
   from {
@@ -210,12 +244,15 @@
 
 
 
-
-
 /*-----------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------ Yellow Neighborhoods ---------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------*/
 
+
+
+
+
+/* NEIGHBORHOOD 1 */
 
 @keyframes buurtYellow1Anim {
   from {
@@ -244,6 +281,11 @@
 }
 
 
+
+
+
+/* NEIGHBORHOOD 2 */
+
 @keyframes buurtYellow2Anim {
   from {
     width: var(--screen-width);
@@ -266,6 +308,11 @@
   }
 }
 
+
+
+
+
+/* NEIGHBORHOOD 3 */
 
 @keyframes buurtYellow3Anim {
   from {
@@ -293,6 +340,11 @@
   }
 }
 
+
+
+
+
+/* NEIGHBORHOOD 4 */
 
 @keyframes buurtYellow4Anim {
   from {
@@ -331,6 +383,11 @@
 -----------------------------------------------------------------------------------------------------------------------------*/
 
 
+
+
+
+/* NEIGHBORHOOD 1 */
+
 @keyframes buurtOrange1Anim {
   from {
     width: var(--screen-width);
@@ -357,6 +414,11 @@
   }
 }
 
+
+
+
+
+/* NEIGHBORHOOD 2 */
 
 @keyframes buurtOrange2Anim {
   from {

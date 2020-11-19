@@ -9,11 +9,12 @@
 
 
 
+
+
 /* BASE COLORS */
 
 :root {
   --b-white: #FFFFFF;
-  --b-gray-100: #FAFAFA;
   --b-gray-200: #F0F0F0;
   --b-gray-300: #E1E1E1;
   --b-gray-400: #C8C8C8;
@@ -25,6 +26,8 @@
 
 
 
+
+
 /* PRIMARY COLORS */
 
 :root {
@@ -33,8 +36,9 @@
   --p-orange: #FB9D50;
   --p-yellow: #FFE39E;
   --p-yellow-alt: #EDCE80;
-  --p-mint: #86DFC6;
 }
+
+
 
 
 
@@ -47,15 +51,9 @@
 
 
 
-/* SHORTHAND CLASSES */
 
-.colorWhite {
-  color: var(--b-white) !important;
-}
 
-.colorBlack {
-  color: var(--b-black) !important;
-}
+/* SHORTHAND COLOR CLASSES */
 
 .colorGreen {
   color: var(--p-green) !important;
@@ -93,6 +91,8 @@
 
 
 
+
+
 /* STYLES */
 
 .clickable {
@@ -103,25 +103,12 @@
   text-align: center;
 }
 
-.margin0 {
-  margin: 0 !important;
-}
-
-.margin10 {
-  margin: 5px 0 !important;
-}
-
-.margin15 {
-  margin: 7.5px 0 !important;
-}
-
 .margin20 {
   margin: 10px 0 !important;
 }
 
-.padding0 {
-  padding: 0;
-}
+
+
 
 
 /* CONTENT SPACING */
@@ -133,6 +120,8 @@
 .smallFix {
   padding-top: 40px;
 }
+
+
 
 
 
@@ -148,22 +137,12 @@
   to {opacity: 0;}
 }
 
-@keyframes opacity-9 {
-  from {opacity: 0;}
-  to {opacity: 0.9;}
-}
-
-@keyframes opacity-9-rev {
-  from {opacity: 0.9;}
-  to {opacity: 0;}
-}
-
-@keyframes opacity-3 {
+@keyframes opacity-2 {
   from {opacity: 1;}
   to {opacity: 0.2;}
 }
 
-@keyframes opacity-3-rev {
+@keyframes opacity-2-rev {
   from {opacity: 0.2;}
   to {opacity: 1;}
 }
@@ -180,34 +159,35 @@
 
 
 
+
+
 /* HEADERS */
 
-h1 {
+h1, h2, h3 {
   font-family: proxima-nova, sans-serif;
-  font-weight: 700;
   font-style: normal;
+}
+
+h1 {
+  font-weight: 700;
   font-size: 40px;
   color: var(--b-black);
 }
 
-h2 {}
-
-h3 {
-  font-family: proxima-nova, sans-serif;
+h2 {
   font-weight: 600;
-  font-style: normal;
   font-size: 18.5px;
   line-height: 1.6rem;
   color: var(--b-gray-600);
 }
 
-h4 {
-  font-family: proxima-nova, sans-serif;
+h3 {
   font-weight: 600;
-  font-style: normal;
   font-size: 17px;
   color: var(--b-black);
 }
+
+
 
 
 
@@ -231,16 +211,6 @@ td {
   padding-bottom: 5px;
 }
 
-p a {
-  font-style: italic;
-  text-decoration: none;
-  color: var(--p-mint);
-}
-
-.acumin-bold {
-  font-weight: 600;
-}
-
 
 
 
@@ -250,6 +220,8 @@ p a {
 /*-----------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------- General -----------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------*/
+
+
 
 
 
@@ -274,8 +246,6 @@ main {
 
   /********************************************************
   ****** KIOSK DIMENSIONS: 1368px wide x 912px heigh ******
-  *********************************************************
-  *************** DELETE FOR FINAL PROTOTYPE **************
   ********************************************************/
 
   width: var(--screen-width);

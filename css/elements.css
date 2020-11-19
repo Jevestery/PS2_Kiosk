@@ -9,6 +9,8 @@
 
 
 
+
+
 /* MAP MAIN */
 
 #map {
@@ -31,6 +33,12 @@
 ----------------------------------------------------- Neighborhood Overlay ----------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------*/
 
+
+
+
+
+/* BOX */
+
 #neighborhoodBox {
   position: absolute;
   top: 50px;
@@ -43,6 +51,12 @@
   animation: opacity 0.5s forwards;
   display: none;
 }
+
+
+
+
+
+/* TITLE */
 
 .neighborhoodBoxContent {
   margin: 10px 40px;
@@ -95,32 +109,17 @@ table {
 #rightMenu {
   position: fixed;
   right: calc(100vw - var(--screen-width));
-  top: 75px;
   margin-right: 30px;
 }
 
 
-
-/* INFO BUTTON */
-
-#infoBtnBG, #compassBG {
-  width: 90px;
-  height: 90px;
-  background-color: var(--a-blue);
-  border-radius: 100%;
-}
-
-/* #infoIcon, #compassIcon {
-  position: absolute;
-  margin: -85px 0 0 5px;
-} */
 
 
 
 /* COLOR BUTTONS */
 
 #colorBtns {
-  margin: 65px 0 55px 0;
+  margin: 140px 0 55px 0;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
 }
@@ -180,12 +179,10 @@ table {
 
 .btnLabel p {
   font-family: proxima-nova, sans-serif;
-  font-weight: 700;
   font-weight: 600;
   font-size: 20px;
   line-height: 0;
-  padding-top: 11px;
-  margin-left: 22px;
+  padding: 11px 0 0 22px;
 }
 
 .btnLabelClose {
@@ -228,12 +225,14 @@ table {
 
 
 
-
 /* COMPASS */
 
 #compassBG {
-  margin-top: -11px;
+  width: 90px;
+  height: 90px;
   background-color: var(--b-white);
+  border-radius: 100%;
+  margin-top: -11px;
 }
 
 #compassIcon {
@@ -273,9 +272,13 @@ table {
 
 
 
+
+
 /*-----------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------- MAP -------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------*/
+
+
 
 
 
@@ -303,6 +306,8 @@ table {
 
 
 
+
+
 /* OPACITY */
 
 #Path_288-2_1_, #Path_294-2_1_, #Path_285-2_1_, #Path_284-2_1_, #Path_291-2_1_, #Path_293-2_1_, #Path_295-2_1_, #Path_286-2_1_, #Path_283-2_1_, #Path_290-2_1_, #Path_292-2_1_, #Path_287-2_1_, #Path_289-2_1_ {
@@ -317,22 +322,11 @@ table {
 
 
 
-
-
-
-
 /*-----------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------ Buttons ----------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------*/
 
 
-
-/* MAIN */
-
-#buttons {
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-}
 
 
 
@@ -362,21 +356,21 @@ table {
   text-align: center;
 }
 
-.menuBtn {
+.menuBtn, .menuBtnBGFix {
   width: 400px;
-  height: 65px;
   background-color: var(--b-white);
+  box-shadow: 0 2px 10px var(--b-gray-450);
+}
+
+.menuBtn {
+  height: 65px;
   border-radius: 35px 35px 0 0;
   bottom: 0;
-  box-shadow: 0 2px 10px var(--b-gray-450);
 }
 
 .menuBtnBGFix {
   position: fixed;
-  width: 400px;
   height: 55px;
-  background-color: var(--b-white);
-  box-shadow: 0 2px 10px var(--b-gray-450);
   border-radius: 0 0 35px 35px;
 }
 
@@ -385,17 +379,18 @@ table {
   padding-top: 4px;
 }
 
+
+
+
+
+/* LEFT & RIGHT MENU BUTTONS */
+
 .leftMenuBtn, .rightMenuBtn {
   width: 200px;
   height: 55px;
   background-color: var(--p-lime);
   border-bottom: var(--b-white) 3px solid;
   border-left: var(--b-white) 3px solid;
-}
-
-.leftMenuBtn i, .rightMenuBtn i {
-  display: inline-block;
-  padding-top: 11px;
 }
 
 .leftMenuBtn {
@@ -408,10 +403,42 @@ table {
   border-radius: 0 0 35px 0;
 }
 
+.leftMenuBtn i, .rightMenuBtn i {
+  display: inline-block;
+  padding-top: 11px;
+}
+
 .btnText {
   position: absolute;
   display: inline-block;
   margin: 17px 10px;
+}
+
+#menuBtn2LeftIcon {
+  margin-left: -45px;
+}
+
+#menuBtn2RightIcon {
+  margin-left: -65px;
+}
+
+#menuBtn3LeftIcon {
+  margin-left: -20px;
+}
+
+#menuBtn3RightIcon {
+  margin-left: -30px;
+}
+
+
+
+
+
+/* LEFT & RIGHT MENU BUTTONS ANIMATIONS */
+
+.leftMenuBtn, .rightMenuBtn, .btnText, .btnIconClass, .menuBtnSubBtn h3 {
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
 }
 
 @keyframes btnActive {
@@ -434,26 +461,7 @@ table {
   to {color: var(--b-black);}
 }
 
-#menuBtn1Left, #menuBtn2Left, #menuBtn3Left, #menuBtn1Right, #menuBtn2Right, #menuBtn3Right, #menuBtn1LeftIcon, #menuBtn2LeftIcon, #menuBtn3LeftIcon, #menuBtn1RightIcon, #menuBtn2RightIcon, #menuBtn3RightIcon, #menuBtn2LeftIconText, #menuBtn2RightIconText, #menuBtn3LeftIconText, #menuBtn3RightIconText {
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-}
 
-#menuBtn2LeftIcon {
-  margin-left: -45px;
-}
-
-#menuBtn2RightIcon {
-  margin-left: -65px;
-}
-
-#menuBtn3LeftIcon {
-  margin-left: -20px;
-}
-
-#menuBtn3RightIcon {
-  margin-left: -30px;
-}
 
 
 
@@ -473,10 +481,8 @@ table {
   display: none;
 }
 
-.menuBtnSub div h4 {
-  margin-top: 15px;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
+..menuBtnSubBtn h3 {
+  margin-top: 16px;
 }
 
 .leftMenuBtnSub {
@@ -501,6 +507,12 @@ table {
   box-shadow: 0 2px 10px var(--b-gray-450);
 }
 
+
+
+
+
+/* SUB BUTTON SPECIFICATIONS */
+
 #menuBtn2SubMiddle, #menuBtn2SubRight {
   margin-left: 434px;
 }
@@ -508,6 +520,20 @@ table {
 #menuBtn3SubMiddle, #menuBtn3SubRight {
   margin-left: 868px;
 }
+
+#menuBtn1SubMiddle, #menuBtn2SubMiddle, #menuBtn3SubMiddle {
+  background-color: var(--b-black);
+}
+
+#menuBtn1SubMiddleText, #menuBtn2SubMiddleText, #menuBtn3SubMiddleText {
+  color: var(--b-white);
+}
+
+
+
+
+
+/* SUB BUTTON ANIMATIONS */
 
 @keyframes subIn {
   from {margin-bottom: 125px; opacity: 0;}
@@ -517,14 +543,6 @@ table {
 @keyframes subOut {
   from {margin-bottom: 158px; opacity: 1;}
   to {margin-bottom: 125px; opacity: 1;}
-}
-
-#menuBtn1SubMiddle, #menuBtn2SubMiddle, #menuBtn3SubMiddle {
-  background-color: var(--b-black);
-}
-
-#menuBtn1SubMiddleText, #menuBtn2SubMiddleText, #menuBtn3SubMiddleText {
-  color: var(--b-white);
 }
 
 @keyframes subBtnIn {
@@ -545,50 +563,4 @@ table {
 @keyframes subBtnTextOut {
   from {color: var(--b-white);}
   to {color: var(--b-black);}
-}
-
-
-
-
-
-
-
-/*-----------------------------------------------------------------------------------------------------------------------------
------------------------------------------------------- INFORMATION PAGES ------------------------------------------------------
------------------------------------------------------------------------------------------------------------------------------*/
-
-
-
-/* OVERLAY */
-
-#blackout {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: var(--screen-width);
-  height: var(--screen-height);
-  background-color: black;
-  animation: opacity-9 0.4s forwards;
-  display: none;
-}
-
-#closeInfoBtn {
-  position: fixed;
-  right: calc(100vw - var(--screen-width));
-  top: 50px;
-  margin-right: 50px;
-  display: none;
-}
-
-#closeInfoBtnBG {
-  width: 100px;
-  height: 100px;
-  background-color: var(--a-blue);
-  border-radius: 100%;
-  box-shadow: 0 2px 10px var(--b-gray-600);
-}
-
-#closeInfoIcon {
-  position: absolute;
-  margin: -95px 0 0 5px;
 }

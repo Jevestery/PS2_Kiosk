@@ -9,39 +9,38 @@
 
 
 
+
 /* ICON BASE COLORS */
 
 .material-icons-outlined.b-white, .material-icons-round.b-white {
   color: var(--b-white);
 }
 
-.material-icons-outlined.b-gray-100 {
-  color: var(--b-gray-100);
-}
-
-.material-icons-outlined.b-gray-200 {
+.material-icons-outlined.b-gray-200, .material-icons-round.b-gray-200 {
   color: var(--b-gray-200);
 }
 
-.material-icons-outlined.b-gray-300 {
+.material-icons-outlined.b-gray-300, .material-icons-round.b-gray-300 {
   color: var(--b-gray-300);
 }
 
-.material-icons-outlined.b-gray-400 {
+.material-icons-outlined.b-gray-400, .material-icons-round.b-gray-400 {
   color: var(--b-gray-400);
 }
 
-.material-icons-outlined.b-gray-500 {
+.material-icons-outlined.b-gray-500, .material-icons-round.b-gray-500 {
   color: var(--b-gray-500);
 }
 
-.material-icons-outlined.b-gray-600 {
+.material-icons-outlined.b-gray-600, .material-icons-round.b-gray-600 {
   color: var(--b-gray-600);
 }
 
 .material-icons-outlined.b-black, .material-icons-round.b-black {
   color: var(--b-black);
 }
+
+
 
 
 
@@ -63,9 +62,7 @@
   color: var(--p-yellow);
 }
 
-.material-icons-outlined.p-mint, .material-icons-round.p-mint {
-  color: var(--p-mint);
-}
+
 
 
 
@@ -91,16 +88,12 @@
 
 
 
-.material-icons-outlined.extra-small, .material-icons-round.extra-small {
-  font-size: 18px;
-}
+
+
+/* ICON SIZES */
 
 .material-icons-outlined.small, .material-icons-round.small {
   font-size: 22px;
-}
-
-.material-icons-outlined.regular, .material-icons-round.regular {
-  font-size: 26px;
 }
 
 .material-icons-outlined.medium, .material-icons-round.medium {
@@ -108,9 +101,5 @@
 }
 
 .material-icons-outlined.large, .material-icons-round.large {
-  font-size: 50px;
-}
-
-.material-icons-outlined.extra-large, .material-icons-round.extra-large {
   font-size: 80px;
 }

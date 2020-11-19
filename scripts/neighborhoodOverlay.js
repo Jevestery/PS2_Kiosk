@@ -256,8 +256,8 @@ function disableAllOtherBtns(buurt) {
 		deactivateAllBtns(btn3Left, btn3LeftIcon, btn3LeftIconText, menu3LeftActive, btn3Right, btn3RightIcon, btn3RightIconText, menu3RightActive);
 	}
 
-	bottomBtns.style.animationName = "opacity-3";
-	colorBtns.style.animationName = "opacity-3";
+	bottomBtns.style.animationName = "opacity-2";
+	colorBtns.style.animationName = "opacity-2";
 
 	colorBtnsDisabled = true;
 	menuBtnsDisabled = true;
@@ -275,8 +275,8 @@ function clickedColorIn(buurt) {
 
 
 function enableAllOtherBtns() {
-	bottomBtns.style.animationName = "opacity-3-rev";
-	colorBtns.style.animationName = "opacity-3-rev";
+	bottomBtns.style.animationName = "opacity-2-rev";
+	colorBtns.style.animationName = "opacity-2-rev";
 
 	colorBtnsDisabled = false;
 	menuBtnsDisabled = false;
