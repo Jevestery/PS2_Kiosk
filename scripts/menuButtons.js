@@ -334,81 +334,126 @@ function subBtnActive(menu, menuBtn) {
 
 	if (menu == subMenu1) {
 		if (menuBtn == subMenu1BtnLeft) {
-			switchSubMenu(subMenu1BtnLeft, subMenu1BtnLeftText, subMenu1BtnMiddle, subMenu1BtnMiddleText, subMenu1BtnMiddleActive, subMenu1BtnRight, subMenu1BtnRightText, subMenu1BtnRightActive);
 
-			subMenu1BtnLeftActive = true;
-			subMenu1BtnMiddleActive = false;
-			subMenu1BtnRightActive = false;
+			if (subMenu1BtnLeftActive == true) {
+				deactivateMenuBtns();
+			} else {
+				switchSubMenu(subMenu1BtnLeft, subMenu1BtnLeftText, subMenu1BtnMiddle, subMenu1BtnMiddleText, subMenu1BtnMiddleActive, subMenu1BtnRight, subMenu1BtnRightText, subMenu1BtnRightActive);
+
+				subMenu1BtnLeftActive = true;
+				subMenu1BtnMiddleActive = false;
+				subMenu1BtnRightActive = false;
+			}
+
 		}
 
 		if (menuBtn == subMenu1BtnMiddle) {
-			switchSubMenu(subMenu1BtnMiddle, subMenu1BtnMiddleText, subMenu1BtnLeft, subMenu1BtnLeftText, subMenu1BtnLeftActive, subMenu1BtnRight, subMenu1BtnRightText, subMenu1BtnRightActive);
 
-			subMenu1BtnLeftActive = false;
-			subMenu1BtnMiddleActive = true;
-			subMenu1BtnRightActive = false;
+			if (subMenu1BtnMiddleActive == true) {
+				deactivateMenuBtns();
+			} else {
+				switchSubMenu(subMenu1BtnMiddle, subMenu1BtnMiddleText, subMenu1BtnLeft, subMenu1BtnLeftText, subMenu1BtnLeftActive, subMenu1BtnRight, subMenu1BtnRightText, subMenu1BtnRightActive);
+
+				subMenu1BtnLeftActive = false;
+				subMenu1BtnMiddleActive = true;
+				subMenu1BtnRightActive = false;
+			}
 		}
 
 		if (menuBtn == subMenu1BtnRight) {
-			switchSubMenu(subMenu1BtnRight, subMenu1BtnRightText, subMenu1BtnLeft, subMenu1BtnLeftText, subMenu1BtnLeftActive, subMenu1BtnMiddle, subMenu1BtnMiddleText, subMenu1BtnMiddleActive);
 
-			subMenu1BtnLeftActive = false;
-			subMenu1BtnMiddleActive = false;
-			subMenu1BtnRightActive = true;
+			if (subMenu1BtnRightActive == true) {
+				deactivateMenuBtns();
+			} else {
+				switchSubMenu(subMenu1BtnRight, subMenu1BtnRightText, subMenu1BtnLeft, subMenu1BtnLeftText, subMenu1BtnLeftActive, subMenu1BtnMiddle, subMenu1BtnMiddleText, subMenu1BtnMiddleActive);
+
+				subMenu1BtnLeftActive = false;
+				subMenu1BtnMiddleActive = false;
+				subMenu1BtnRightActive = true;
+			}
 		}
 	}
 
 
 	if (menu == subMenu2) {
 		if (menuBtn == subMenu2BtnLeft) {
-			switchSubMenu(subMenu2BtnLeft, subMenu2BtnLeftText, subMenu2BtnMiddle, subMenu2BtnMiddleText, subMenu2BtnMiddleActive, subMenu2BtnRight, subMenu2BtnRightText, subMenu2BtnRightActive);
 
-			subMenu2BtnLeftActive = true;
-			subMenu2BtnMiddleActive = false;
-			subMenu2BtnRightActive = false;
+			if (subMenu2BtnLeftActive == true) {
+				deactivateMenuBtns();
+			} else {
+				switchSubMenu(subMenu2BtnLeft, subMenu2BtnLeftText, subMenu2BtnMiddle, subMenu2BtnMiddleText, subMenu2BtnMiddleActive, subMenu2BtnRight, subMenu2BtnRightText, subMenu2BtnRightActive);
+
+				subMenu2BtnLeftActive = true;
+				subMenu2BtnMiddleActive = false;
+				subMenu2BtnRightActive = false;
+			}
 		}
 
 		if (menuBtn == subMenu2BtnMiddle) {
-			switchSubMenu(subMenu2BtnMiddle, subMenu2BtnMiddleText, subMenu2BtnLeft, subMenu2BtnLeftText, subMenu2BtnLeftActive, subMenu2BtnRight, subMenu2BtnRightText, subMenu2BtnRightActive);
 
-			subMenu2BtnLeftActive = false;
-			subMenu2BtnMiddleActive = true;
-			subMenu2BtnRightActive = false;
+			if (subMenu2BtnMiddleActive == true) {
+				deactivateMenuBtns();
+			} else {
+				switchSubMenu(subMenu2BtnMiddle, subMenu2BtnMiddleText, subMenu2BtnLeft, subMenu2BtnLeftText, subMenu2BtnLeftActive, subMenu2BtnRight, subMenu2BtnRightText, subMenu2BtnRightActive);
+
+				subMenu2BtnLeftActive = false;
+				subMenu2BtnMiddleActive = true;
+				subMenu2BtnRightActive = false;
+			}
 		}
 
 		if (menuBtn == subMenu2BtnRight) {
-			switchSubMenu(subMenu2BtnRight, subMenu2BtnRightText, subMenu2BtnLeft, subMenu2BtnLeftText, subMenu2BtnLeftActive, subMenu2BtnMiddle, subMenu2BtnMiddleText, subMenu2BtnMiddleActive);
 
-			subMenu2BtnLeftActive = false;
-			subMenu2BtnMiddleActive = false;
-			subMenu2BtnRightActive = true;
+			if (subMenu2BtnRightActive == true) {
+				deactivateMenuBtns();
+			} else {
+				switchSubMenu(subMenu2BtnRight, subMenu2BtnRightText, subMenu2BtnLeft, subMenu2BtnLeftText, subMenu2BtnLeftActive, subMenu2BtnMiddle, subMenu2BtnMiddleText, subMenu2BtnMiddleActive);
+
+				subMenu2BtnLeftActive = false;
+				subMenu2BtnMiddleActive = false;
+				subMenu2BtnRightActive = true;
+			}
 		}
 	}
 
 
 	if (menu == subMenu3) {
 		if (menuBtn == subMenu3BtnLeft) {
-			switchSubMenu(subMenu3BtnLeft, subMenu3BtnLeftText, subMenu3BtnMiddle, subMenu3BtnMiddleText, subMenu3BtnMiddleActive, subMenu3BtnRight, subMenu3BtnRightText, subMenu3BtnRightActive);
 
-			subMenu3BtnLeftActive = true;
-			subMenu3BtnMiddleActive = false;
-			subMenu3BtnRightActive = false;
+			if (subMenu3BtnLeftActive == true) {
+				deactivateMenuBtns();
+			} else {
+				switchSubMenu(subMenu3BtnLeft, subMenu3BtnLeftText, subMenu3BtnMiddle, subMenu3BtnMiddleText, subMenu3BtnMiddleActive, subMenu3BtnRight, subMenu3BtnRightText, subMenu3BtnRightActive);
+
+				subMenu3BtnLeftActive = true;
+				subMenu3BtnMiddleActive = false;
+				subMenu3BtnRightActive = false;
+			}
 		}
 
 		if (menuBtn == subMenu3BtnMiddle) {
-			switchSubMenu(subMenu3BtnMiddle, subMenu3BtnMiddleText, subMenu3BtnLeft, subMenu3BtnLeftText, subMenu3BtnLeftActive, subMenu3BtnRight, subMenu3BtnRightText, subMenu3BtnRightActive);
 
-			subMenu3BtnLeftActive = false;
-			subMenu3BtnMiddleActive = true;
-			subMenu3BtnRightActive = false;
+			if (subMenu3BtnMiddleActive == true) {
+				deactivateMenuBtns();
+			} else {
+				switchSubMenu(subMenu3BtnMiddle, subMenu3BtnMiddleText, subMenu3BtnLeft, subMenu3BtnLeftText, subMenu3BtnLeftActive, subMenu3BtnRight, subMenu3BtnRightText, subMenu3BtnRightActive);
+
+				subMenu3BtnLeftActive = false;
+				subMenu3BtnMiddleActive = true;
+				subMenu3BtnRightActive = false;
+			}
 		}
 
 		if (menuBtn == subMenu3BtnRight) {
-			switchSubMenu(subMenu3BtnRight, subMenu3BtnRightText, subMenu3BtnLeft, subMenu3BtnLeftText, subMenu3BtnLeftActive, subMenu3BtnMiddle, subMenu3BtnMiddleText, subMenu3BtnMiddleActive);
+			if (subMenu3BtnRightActive == true) {
+				deactivateMenuBtns();
+			} else {
+				switchSubMenu(subMenu3BtnRight, subMenu3BtnRightText, subMenu3BtnLeft, subMenu3BtnLeftText, subMenu3BtnLeftActive, subMenu3BtnMiddle, subMenu3BtnMiddleText, subMenu3BtnMiddleActive);
 
-			subMenu3BtnLeftActive = false;
-			subMenu3BtnMiddleActive = false;
-			subMenu3BtnRightActive = true;
+				subMenu3BtnLeftActive = false;
+				subMenu3BtnMiddleActive = false;
+				subMenu3BtnRightActive = true;
+			}
 		}
 	}
 
@@ -427,14 +472,12 @@ function switchSubMenu(menuBtn, menuBtnText, menuBtnAlt1, menuBtnAlt1Text, menuB
 		menuBtnAlt1.style.marginBottom = '158px';
 		menuBtnAlt1.style.animationName = 'subBtnOut';
 		menuBtnAlt1Text.style.animationName = 'subBtnTextOut';
-		console.log(menuBtnAlt1Text.style.animationName);
 	}
 
 	if (menuBtnAlt2Active) {
 		menuBtnAlt2.style.marginBottom = '158px';
 		menuBtnAlt2.style.animationName = 'subBtnOut';
 		menuBtnAlt2Text.style.animationName = 'subBtnTextOut';
-			console.log(menuBtnAlt2Text.style.animationName);
 	}
 
 }
@@ -442,8 +485,7 @@ function switchSubMenu(menuBtn, menuBtnText, menuBtnAlt1, menuBtnAlt1Text, menuB
 
 
 
-function resetBtnAnim(btn, btnText) {
-	btn.style.marginBottom = '125px';
+function resetBtnAnim(btn, btnText, subMenu) {
 	btn.style.animationName = 'subIn';
 	btnText.style.animationName = 'none';
 }
@@ -652,35 +694,45 @@ function btnType(classifier, leftActive, rightActive, btnClassifier) {
 			btnCheckCloseOpen(rightActive, btnClassifier);
 		}
 
-		mapBG.onclick = function() {closeAll();
-			setTimeout(function(){
-
-				setTimeout(function(){
-					originalColors();
-					allOpacityIn();
-				}, 400);
-
-				transportActiveFalse();
-				showerActiveFalse();
-				tempActiveFalse();
-
-				btn1Reset();
-				btn2Reset();
-				btn3Reset();
-
-				resetSubMenu(subMenu1, subMenu1BtnLeft, subMenu1BtnLeftText, subMenu1BtnMiddle, subMenu1BtnMiddleText, subMenu1BtnRight, subMenu1BtnRightText);
-				resetSubMenu(subMenu2, subMenu2BtnLeft, subMenu2BtnLeftText, subMenu2BtnMiddle, subMenu2BtnMiddleText, subMenu2BtnRight, subMenu2BtnRightText);
-				resetSubMenu(subMenu3, subMenu3BtnLeft, subMenu3BtnLeftText, subMenu3BtnMiddle, subMenu3BtnMiddleText, subMenu3BtnRight, subMenu3BtnRightText);
-
-				deactivateAllBtns(btn1Left, btn1LeftIcon, btn1LeftIconText, menu1LeftActive, btn1Right, btn1RightIcon, btn1RightIconText, menu1RightActive);
-				deactivateAllBtns(btn2Left, btn2LeftIcon, btn2LeftIconText, menu2LeftActive, btn2Right, btn2RightIcon, btn2RightIconText, menu2RightActive);
-				deactivateAllBtns(btn3Left, btn3LeftIcon, btn3LeftIconText, menu3LeftActive, btn3Right, btn3RightIcon, btn3RightIconText, menu3RightActive);
-			}, 50);
+		mapBG.onclick = function() {
+			deactivateMenuBtns();
 		}
 
 	} else {
 		mapBG.onclick = function() { }
 	}
+}
+
+
+
+
+function deactivateMenuBtns() {
+	allOpacityOut();
+	closeAll();
+
+	setTimeout(function(){
+
+		setTimeout(function(){
+			originalColors();
+			allOpacityIn();
+		}, 400);
+
+		transportActiveFalse();
+		showerActiveFalse();
+		tempActiveFalse();
+
+		btn1Reset();
+		btn2Reset();
+		btn3Reset();
+
+		resetSubMenu(subMenu1, subMenu1BtnLeft, subMenu1BtnLeftText, subMenu1BtnMiddle, subMenu1BtnMiddleText, subMenu1BtnRight, subMenu1BtnRightText);
+		resetSubMenu(subMenu2, subMenu2BtnLeft, subMenu2BtnLeftText, subMenu2BtnMiddle, subMenu2BtnMiddleText, subMenu2BtnRight, subMenu2BtnRightText);
+		resetSubMenu(subMenu3, subMenu3BtnLeft, subMenu3BtnLeftText, subMenu3BtnMiddle, subMenu3BtnMiddleText, subMenu3BtnRight, subMenu3BtnRightText);
+
+		deactivateAllBtns(btn1Left, btn1LeftIcon, btn1LeftIconText, menu1LeftActive, btn1Right, btn1RightIcon, btn1RightIconText, menu1RightActive);
+		deactivateAllBtns(btn2Left, btn2LeftIcon, btn2LeftIconText, menu2LeftActive, btn2Right, btn2RightIcon, btn2RightIconText, menu2RightActive);
+		deactivateAllBtns(btn3Left, btn3LeftIcon, btn3LeftIconText, menu3LeftActive, btn3Right, btn3RightIcon, btn3RightIconText, menu3RightActive);
+	}, 50);
 }
 
 

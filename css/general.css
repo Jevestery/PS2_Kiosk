@@ -16,6 +16,7 @@
 :root {
   --b-white: #FFFFFF;
   --b-gray-200: #F0F0F0;
+  --b-gray-250: #EBEBEB;
   --b-gray-300: #E1E1E1;
   --b-gray-400: #C8C8C8;
   --b-gray-450: rgba(0, 0, 0, 0.18);
@@ -35,7 +36,7 @@
   --p-lime: #9DDB57;
   --p-orange: #FB9D50;
   --p-yellow: #FFE39E;
-  --p-yellow-alt: #EDCE80;
+  --p-yellow-alt: #F9D477;
 }
 
 
@@ -101,6 +102,10 @@
 
 .alignCenter {
   text-align: center;
+}
+
+.fontBold {
+  font-weight: bold;
 }
 
 .margin20 {
@@ -170,14 +175,14 @@ h1, h2, h3 {
 
 h1 {
   font-weight: 700;
-  font-size: 40px;
+  font-size: 37px;
   color: var(--b-black);
 }
 
 h2 {
   font-weight: 600;
   font-size: 18.5px;
-  line-height: 1.6rem;
+  line-height: 2.4rem;
   color: var(--b-gray-600);
 }
 
@@ -194,12 +199,12 @@ h3 {
 /* PARAGRAPHS */
 
 p, ul, th, td {
-  font-family: acumin-pro,sans-serif;
+  font-family: proxima-nova, sans-serif;
   font-weight: 300;
   font-style: normal;
-  font-size: 20px;
-  line-height: 30px;
-  color: var(--b-black);
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--b-gray-600);
 }
 
 table, td, tr {

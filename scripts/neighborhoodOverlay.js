@@ -78,55 +78,68 @@ function zoomIn(buurt, zoomed, buurtAnim, buurtAnimOut) {
 
 		if (buurt == buurtGreen1) {
 			buurtGreen1Zoomed = true;
-			buurtInformation("Wippolder", "var(--p-green)", "13025", "312 ha", "2616-2628", "3220 kg", "1<sup>st</sup>");
+			buurtInformation("Wippolder", "var(--p-green)", "13025", "312 ha", "448 pt", "96 pt", "91 pt", "127 pt", "134 pt", "1");
+			setGraph("1");
 			fillArray(buurtGreen2, buurtLime1, buurtLime2, buurtLime3, buurtLime4, buurtLime5, buurtYellow1, buurtYellow2, buurtYellow3, buurtYellow4, buurtOrange1, buurtOrange2);
 		} else if (buurt == buurtGreen2) {
 			buurtGreen2Zoomed = true;
-			buurtInformation("Abtswoude", "var(--p-green)", "30", "160 ha", "2623-2626", "23 kg", "2<sup>nd</sup>");
+			buurtInformation("Abtswoude", "var(--p-green)", "30", "160 ha", "402 pt", "78 pt", "99 pt", "107 pt", "118 pt", "2");
+			setGraph("2");
 			fillArray(buurtGreen1, buurtLime1, buurtLime2, buurtLime3, buurtLime4, buurtLime5, buurtYellow1, buurtYellow2, buurtYellow3, buurtYellow4, buurtOrange1, buurtOrange2);
 		} else if (buurt == buurtLime1) {
 			buurtLime1Zoomed = true;
-			buurtInformation("Binnenstad", "var(--p-lime)", "12440", "148 ha", "2611-2613", "3580 kg", "3<sup>rd</sup>");
+			buurtInformation("Binnenstad", "var(--p-lime)", "12440", "148 ha", "375 pt", "61 pt", "55 pt", "107 pt", "152 pt", "3");
+			setGraph("3");
 			fillArray(buurtGreen1, buurtGreen2, buurtLime2, buurtLime3, buurtLime4, buurtLime5, buurtYellow1, buurtYellow2, buurtYellow3, buurtYellow4, buurtOrange1, buurtOrange2);
 		} else if (buurt == buurtLime2) {
 			buurtLime2Zoomed = true;
-			buurtInformation("Vrijenban", "var(--p-lime)", "9530", "152 ha", "2612", "3390 kg", "6<sup>th</sup>");
+			buurtInformation("Vrijenban", "var(--p-lime)", "9530", "152 ha", "324 pt", "71 pt", "59 pt", "107 pt", "87 pt", "6");
+			setGraph("6");
 			fillArray(buurtGreen1, buurtGreen2, buurtLime1, buurtLime3, buurtLime4, buurtLime5, buurtYellow1, buurtYellow2, buurtYellow3, buurtYellow4, buurtOrange1, buurtOrange2);
 		} else if (buurt == buurtLime3) {
 			buurtLime3Zoomed = true;
-			buurtInformation("Buitenhof", "var(--p-lime)", "13650", "226 ha", "2625", "3435 kg", "4<sup>th</sup>");
+			buurtInformation("Buitenhof", "var(--p-lime)", "13650", "226 ha", "356 pt", "71 pt", "75 pt", "89 pt", "121 pt", "4");
+			setGraph("4");
 			fillArray(buurtGreen1, buurtGreen2, buurtLime1, buurtLime2, buurtLime4, buurtLime5, buurtYellow1, buurtYellow2, buurtYellow3, buurtYellow4, buurtOrange1, buurtOrange2);
 		} else if (buurt == buurtLime4) {
 			buurtLime4Zoomed = true;
-			buurtInformation("Tanthof-West", "var(--p-lime)", "8010", "124 ha", "2622", "3250 kg", "7<sup>th</sup>");
+			buurtInformation("Tanthof-West", "var(--p-lime)", "8010", "124 ha", "313 pt", "68 pt", "69 pt", "93 pt", "83 pt", "7");
+			setGraph("7");
 			fillArray(buurtGreen1, buurtGreen2, buurtLime1, buurtLime2, buurtLime3, buurtLime5, buurtYellow1, buurtYellow2, buurtYellow3, buurtYellow4, buurtOrange1, buurtOrange2);
 		} else if (buurt == buurtLime5) {
 			buurtLime5Zoomed = true;
-			buurtInformation("Ruiven", "var(--p-lime)", "320", "254 ha", "2629", "55 kg", "5<sup>th</sup>");
+			buurtInformation("Ruiven", "var(--p-lime)", "320", "254 ha", "325 pt", "81 pt", "65 pt", "87 pt", "92 pt", "5");
+			setGraph("5");
 			fillArray(buurtGreen1, buurtGreen2, buurtLime1, buurtLime2, buurtLime3, buurtLime4, buurtYellow1, buurtYellow2, buurtYellow3, buurtYellow4, buurtOrange1, buurtOrange2);
 		} else if (buurt == buurtYellow1) {
 			buurtYellow1Zoomed = true;
-			buurtInformation("Hof van Delft", "var(--p-yellow)", "13090", "152 ha", "2613-2624", "3795 kg", "8<sup>th</sup>");
+			buurtInformation("Hof van Delft", "var(--p-yellow-alt)", "13090", "152 ha", "299 pt", "52 pt", "75 pt", "80 pt", "92 pt", "8");
+			setGraph("8");
 			fillArray(buurtGreen1, buurtGreen2, buurtLime1, buurtLime2, buurtLime3, buurtLime4, buurtLime5, buurtYellow2, buurtYellow3, buurtYellow4, buurtOrange1, buurtOrange2);
 		} else if (buurt == buurtYellow2) {
 			buurtYellow2Zoomed = true;
-			buurtInformation("Delftse Hout", "var(--p-yellow)", "85", "300 ha", "2616", "75 kg", "11<sup>th</sup>");
+			buurtInformation("Delftse Hout", "var(--p-yellow-alt)", "85", "300 ha", "208 pt", "48 pt", "59 pt", "52 pt", "29 pt", "11");
+			setGraph("11");
 			fillArray(buurtGreen1, buurtGreen2, buurtLime1, buurtLime2, buurtLime3, buurtLime4, buurtLime5, buurtYellow1, buurtYellow3, buurtYellow4, buurtOrange1, buurtOrange2);
 		} else if (buurt == buurtYellow3) {
 			buurtYellow3Zoomed = true;
-			buurtInformation("Voorhof", "var(--p-yellow)", "13490", "129 ha", "2624", "3905 kg", "9<sup>th</sup>");
+			buurtInformation("Voorhof", "var(--p-yellow-alt)", "13490", "129 ha", "286 pt", "71 pt", "62 pt", "78 pt", "75 pt", "9");
+			setGraph("9");
 			fillArray(buurtGreen1, buurtGreen2, buurtLime1, buurtLime2, buurtLime3, buurtLime4, buurtLime5, buurtYellow1, buurtYellow2, buurtYellow4, buurtOrange1, buurtOrange2);
 		} else if (buurt == buurtYellow4) {
 			buurtYellow4Zoomed = true;
-			buurtInformation("Tanthof-Oost", "var(--p-yellow)", "6045", "96 ha", "2623", "3105 kg", "10<sup>th</sup>");
+			buurtInformation("Tanthof-Oost", "var(--p-yellow-alt)", "6045", "96 ha", "244 pt", "53 pt", "62 pt", "74 pt", "55 pt", "10");
+			setGraph("10");
 			fillArray(buurtGreen1, buurtGreen2, buurtLime1, buurtLime2, buurtLime3, buurtLime4, buurtLime5, buurtYellow1, buurtYellow2, buurtYellow3, buurtOrange1, buurtOrange2);
 		} else if (buurt == buurtOrange1) {
 			buurtOrange1Zoomed = true;
-			buurtInformation("Voordijkshoorn", "var(--p-orange)", "12620", "160 ha", "2614-2625", "4010 kg", "11<sup>th</sup>");
+			buurtInformation("Voordijkshoorn", "var(--p-orange)", "12620", "160 ha", "174 pt", "38 pt", "43 pt", "41 pt", "52 pt", "12");
+			setGraph("12");
 			fillArray(buurtGreen1, buurtGreen2, buurtLime1, buurtLime2, buurtLime3, buurtLime4, buurtLime5, buurtYellow1, buurtYellow2, buurtYellow3, buurtYellow4, buurtOrange2);
 		} else if (buurt == buurtOrange2) {
 			buurtOrange2Zoomed = true;
-			buurtInformation("Schieweg", "var(--p-orange)", "1240", "204 ha", "2614-2625", "2130 kg", "12<sup>th</sup>");
+			buurtInformation("Schieweg", "var(--p-orange)", "1240", "204 ha", "151 pt", "29 pt", "37 pt", "31 pt", "54 pt", "13");
+			setGraph("13");
 			fillArray(buurtGreen1, buurtGreen2, buurtLime1, buurtLime2, buurtLime3, buurtLime4, buurtLime5, buurtYellow1, buurtYellow2, buurtYellow3, buurtYellow4, buurtOrange1);
 		}
 
@@ -235,7 +248,7 @@ var colorBtns = document.getElementById('colorBtns');
 
 function disableAllOtherBtns(buurt) {
 
-	if (menu1LeftActive == true || menu1RightActive == true || menu2LeftActive == true || menu2RightActive == true || menu3LeftActive == true || menu3RightActive == true) {
+	if (menu1LeftActive == true || menu1RightActive == true || menu2LeftActive == true || menu2RightActive == true || menu3LeftActive == true || menu3RightActive == true  || greenActive == true || limeActive == true || yellowActive == true || orangeActive == true || redActive == true) {
 		closeAll();
 		allOpacityOut();
 		setTimeout(function(){
@@ -339,20 +352,36 @@ var buurtName = document.getElementById('buurtName');
 var buurtColor = document.getElementById('buurtColor');
 var buurtResidents = document.getElementById('buurtResidents');
 var buurtArea = document.getElementById('buurtArea');
-var buurtPostcode = document.getElementById('buurtPostcode');
-var buurtEmissions = document.getElementById('buurtEmissions');
+var buurtTotal = document.getElementById('buurtTotal');
+var buurtTransportation = document.getElementById('buurtTransportation');
+var buurtFood = document.getElementById('buurtFood');
+var buurtEnergy = document.getElementById('buurtEnergy');
+var buurtHeating = document.getElementById('buurtHeating');
 var buurtRank = document.getElementById('buurtRank');
 
 
 
 
 
-function buurtInformation(name, color, residents, area, postcode, emissions, rank) {
+function buurtInformation(name, color, residents, area, total, transportation, food, energy, heating, rank) {
 	buurtName.innerHTML = name;
 	buurtColor.style.backgroundColor = color;
 	buurtResidents.innerHTML = residents;
 	buurtArea.innerHTML = area;
-	buurtPostcode.innerHTML = postcode;
-	buurtEmissions.innerHTML = emissions;
+	buurtTotal.innerHTML = total;
+	buurtTransportation.innerHTML = transportation;
+	buurtFood.innerHTML = food;
+	buurtEnergy.innerHTML = energy;
+	buurtHeating.innerHTML = heating;
 	buurtRank.innerHTML = rank;
+}
+
+
+
+
+var graph = document.getElementById('buurtGraph');
+
+
+function setGraph(src) {
+	graph.src = "images/graphs/buurt" + src + ".svg";
 }

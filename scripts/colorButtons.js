@@ -76,18 +76,9 @@ function activateBtn(btnColor, btnColorBG) {
 
 			} else {
 
-				closeOneAnim(greenBtnLabel, greenBtnClose);
-				allOpacityIn();
+				closeColorBtn(greenBtnLabel, greenBtnClose);
 
-				setTimeout(function(){
-					closeOneDisplay(greenBtnLabel, greenBtnClose);
-					greenActive = false;
-				}, 600);
-
-				updateSerial("x");
 			};
-
-
 
 
 
@@ -117,18 +108,9 @@ function activateBtn(btnColor, btnColorBG) {
 
 			} else {
 
-				closeOneAnim(limeBtnLabel, limeBtnClose);
-				allOpacityIn();
+				closeColorBtn(limeBtnLabel, limeBtnClose);
 
-				setTimeout(function(){
-					closeOneDisplay(limeBtnLabel, limeBtnClose);
-					limeActive = false;
-				}, 600);
-
-				updateSerial("x");
 			};
-
-
 
 
 
@@ -158,18 +140,9 @@ function activateBtn(btnColor, btnColorBG) {
 
 			} else {
 
-				closeOneAnim(yellowBtnLabel, yellowBtnClose);
-				allOpacityIn();
+				closeColorBtn(yellowBtnLabel, yellowBtnClose);
 
-				setTimeout(function(){
-					closeOneDisplay(yellowBtnLabel, yellowBtnClose);
-					yellowActive = false;
-				}, 600);
-
-				updateSerial("x");
 			};
-
-
 
 
 
@@ -198,18 +171,9 @@ function activateBtn(btnColor, btnColorBG) {
 
 			} else {
 
-				closeOneAnim(orangeBtnLabel, orangeBtnClose);
-				allOpacityIn();
+				closeColorBtn(orangeBtnLabel, orangeBtnClose);
 
-				setTimeout(function(){
-					closeOneDisplay(orangeBtnLabel, orangeBtnClose);
-					orangeActive = false;
-				}, 600);
-
-				updateSerial("x");
 			};
-
-
 
 
 
@@ -239,15 +203,8 @@ function activateBtn(btnColor, btnColorBG) {
 
 			} else {
 
-				closeOneAnim(redBtnLabel, redBtnClose);
-				allOpacityIn();
+				closeColorBtn(redBtnLabel, redBtnClose);
 
-				setTimeout(function(){
-					closeOneDisplay(redBtnLabel, redBtnClose);
-					redActive = false;
-				}, 600);
-
-				updateSerial("x");
 			};
 
 
@@ -255,6 +212,38 @@ function activateBtn(btnColor, btnColorBG) {
 
 	}
 };
+
+
+
+
+
+function closeColorBtn(colorLabel, colorClose) {
+
+	closeOneAnim(colorLabel, colorClose);
+	allOpacityIn();
+
+
+	if (colorLabel == greenBtnLabel) {
+		greenActive = false;
+	} else if (colorLabel == limeBtnLabel) {
+		limeActive = false;
+	} else if (colorLabel == yellowBtnLabel) {
+		yellowActive = false;
+	} else if (colorLabel == orangeBtnLabel) {
+		orangeActive = false;
+	} else if (colorLabel == redBtnLabel) {
+		redActive = false;
+	}
+
+
+	setTimeout(function(){
+		closeOneDisplay(colorLabel, colorClose);
+	}, 600);
+
+	updateSerial("x");
+
+}
+
 
 
 
