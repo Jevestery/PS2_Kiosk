@@ -104,10 +104,6 @@
   text-align: center;
 }
 
-.fontBold {
-  font-weight: bold;
-}
-
 .margin20 {
   margin: 10px 0 !important;
 }
@@ -199,12 +195,12 @@ h3 {
 /* PARAGRAPHS */
 
 p, ul, th, td {
-  font-family: proxima-nova, sans-serif;
+  font-family: acumin-pro, sans-serif;
   font-weight: 300;
   font-style: normal;
   font-size: 18px;
   line-height: 28px;
-  color: var(--b-gray-600);
+  color: var(--b-black);
 }
 
 table, td, tr {

@@ -119,7 +119,7 @@ table {
 }
 
 .tableHead {
-  font-style: italic;
+  font-weight: bold;
   padding-left: 30px;
   width: 200px;
 }
