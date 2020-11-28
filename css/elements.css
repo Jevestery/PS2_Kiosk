@@ -164,7 +164,7 @@ table {
 #rightMenu {
   position: fixed;
   right: calc(100vw - var(--screen-width));
-  margin-right: 30px;
+  margin-right: 50px;
 }
 
 
@@ -246,24 +246,24 @@ table {
   width: 30px;
   background-color: var(--b-white);
   border-radius: 100%;
-  box-shadow: 0 2px 10px var(--b-gray-500);
+  box-shadow: 0 2px 10px var(--b-gray-450);
   margin-top: 15px;
   animation: labelCloseAppear 0.6s forwards;
   display: none;
 }
 
 .btnLabelCloseIcon {
-  padding: 5.5px 0 0 4px;
+  padding: 6px 0 0 4px;
 }
 
 @keyframes labelAppear {
-  from {width: 100px; opacity: 0;}
-  to {width: 175px; opacity: 1;}
+  from {width: 130px; opacity: 0;}
+  to {width: 205px; opacity: 1;}
 }
 
 @keyframes labelDisappear {
-  from {width: 175px; opacity: 1;}
-  to {width: 100px; opacity: 0;}
+  from {width: 205px; opacity: 1;}
+  to {width: 130px; opacity: 0;}
 }
 
 @keyframes labelCloseAppear {
